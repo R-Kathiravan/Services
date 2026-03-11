@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Earnings | Partners </title>
+    <link rel="stylesheet" href="shared.css">
+    <link rel="stylesheet" href="earning.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@400;600;700;800;900&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+</head>
+
+<body class="driver-theme">
+
+    <header class="driver-header">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">
+                <img src="./assets/Stackly-logo-green.webp" alt="Stackly Partners" class="logo">
+            </a>
+
+            <nav class="nav-links" id="navMenu">
+                <div class="home-nav">
+                    <a href="index.html" class="home-btn nav-link">Home</a>
+                    <span class="material-icons dropdown-icon" id="homeDropdownBtn">
+                        expand_more
+                    </span>
+                    <div class="home-select" id="homeDropdown">
+                        <a href="../index.html" class="nav-link">Home Page 1</a>
+                    </div>
+                </div> <a href="requirments.html">Requirements</a>
+                <a href="earnings.html" class="active">Earnings</a>
+                <a href="support.html">Support</a>
+                <div class="close-btn material-icons" id="closeMenu">close</div>
+                <div class="nav-actions mob-view">
+                    <a href="login.html" class="nav-login btn-driver-primary">Log In</a>
+                </div>
+            </nav>
+
+            <div class="nav-actions">
+                <a href="login.html" class="nav-login btn-driver-primary">Log In</a>
+            </div>
+
+            <div class="hamburger" id="hamburger">
+                <span class="material-icons">menu</span>
+            </div>
+        </div>
+    </header>
+    <section class="earnings-hero">
+        <div class="hero-glow-blob"></div>
+        <div class="container hero-container">
+
+            <div class="hero-content reveal-up">
+                <div class="hero-badge">Transparent Payouts</div>
+                <h1 class="hero-title">
+                    Clear pricing, <br>
+                    <span class="text-gradient-green">higher payouts.</span>
+                </h1>
+                <p class="hero-subtitle">
+                    No hidden fees, no confusing math. With Stackly, you know exactly how much you’re making on every
+                    single trip, and you keep 100% of your tips.
+                </p>
+                <div class="hero-actions">
+                    <button class="btn-driver-primary btn-large">Start Earning</button>
+                </div>
+            </div>
+
+            <div class="hero-visual reveal-left delay-200">
+
+                <div class="receipt-card float-anim">
+                    <div class="receipt-header">
+                        <i class="fas fa-check-circle text-gradient-green"></i>
+                        <span>Trip Completed</span>
+                    </div>
+                    <div class="receipt-route">
+                        <div class="route-dots">
+                            <span class="dot-start"></span>
+                            <span class="route-line"></span>
+                            <span class="dot-end"></span>
+                        </div>
+                        <div class="route-text">
+                            <p>Koramangala, Bangalore</p>
+                            <p>Kempegowda Int. Airport</p>
+                        </div>
+                    </div>
+                    <div class="receipt-breakdown">
+                        <div class="receipt-row"><span>Base Fare</span><span>₹60.00</span></div>
+                        <div class="receipt-row"><span>Distance (42km)</span><span>₹540.00</span></div>
+                        <div class="receipt-row"><span>Time (55m)</span><span>₹82.50</span></div>
+                        <div class="receipt-row highlight-row"><span>Rider Tip (100% yours)</span><span>₹100.00</span>
+                        </div>
+                        <div class="receipt-divider"></div>
+                        <div class="receipt-total">
+                            <span>Your Payout</span>
+                            <span class="total-amount text-gradient-green" id="receiptTotal">₹0.00</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="formula-section reveal-up">
+        <div class="container">
+            <div class="section-header text-center mb-8">
+                <h2 class="section-title">How your payout is calculated</h2>
+                <p class="section-subtitle">We break down every fare into four simple components so you’re never left
+                    guessing.</p>
+            </div>
+
+            <div class="formula-wrapper">
+                <div class="formula-card">
+                    <div class="formula-icon"><i class="fas fa-flag-checkered"></i></div>
+                    <h4>Base Fare</h4>
+                    <p>A flat rate just for picking up the rider.</p>
+                </div>
+
+                <div class="math-symbol"><i class="fas fa-plus"></i></div>
+
+                <div class="formula-card">
+                    <div class="formula-icon"><i class="fas fa-route"></i></div>
+                    <h4>Time & Distance</h4>
+                    <p>Earn per minute and per kilometer driven.</p>
+                </div>
+
+                <div class="math-symbol"><i class="fas fa-plus"></i></div>
+
+                <div class="formula-card">
+                    <div class="formula-icon"><i class="fas fa-bolt"></i></div>
+                    <h4>Surge Pricing</h4>
+                    <p>Multipliers applied during peak busy hours.</p>
+                </div>
+
+                <div class="math-symbol"><i class="fas fa-plus"></i></div>
+
+                <div class="formula-card highlight-card">
+                    <div class="formula-icon text-gradient-green"><i class="fas fa-hand-holding-usd"></i></div>
+                    <h4>100% Tips</h4>
+                    <p>Every rupee tipped goes directly to you.</p>
+                </div>
+
+                <div class="math-symbol symbol-equals"><i class="fas fa-equals"></i></div>
+
+                <div class="formula-total">
+                    <h3>Total Payout</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="smart-tools-section">
+        <div class="container">
+            <div class="section-header text-center mb-8 reveal-up">
+                <h2 class="section-title">Boost your bottom line</h2>
+                <p class="section-subtitle">Stackly offers powerful promotions to help you maximize your hourly rate.
+                </p>
+            </div>
+
+            <div class="tool-row reveal-up">
+                <div class="tool-content">
+                    <div class="tool-icon"><i class="fas fa-fire"></i></div>
+                    <h3>Consecutive Trip Bonuses</h3>
+                    <p>Stay online during rush hours and complete 3 consecutive rides in a row to unlock an instant cash
+                        bonus on top of your standard fares. No strings attached.</p>
+                </div>
+                <div class="tool-visual">
+                    <div class="mock-streak">
+                        <span class="streak-circle active"><i class="fas fa-check"></i></span>
+                        <span class="streak-line active"></span>
+                        <span class="streak-circle active"><i class="fas fa-check"></i></span>
+                        <span class="streak-line"></span>
+                        <span class="streak-circle">3</span>
+                        <div class="streak-reward">+ ₹250 Bonus</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tool-row reverse reveal-up">
+                <div class="tool-content">
+                    <div class="tool-icon"><i class="fas fa-calendar-check"></i></div>
+                    <h3>Weekly Quests</h3>
+                    <p>Set your own goals. Choose a target number of trips at the start of the week. Hit the target
+                        before Sunday midnight, and a massive lump-sum bonus is yours.</p>
+                </div>
+                <div class="tool-visual">
+                    <div class="mock-quest">
+                        <div class="quest-header"><span>Weekend Quest</span><span>42 / 50 Trips</span></div>
+                        <div class="quest-bar-bg">
+                            <div class="quest-bar-fill" style="width: 84%;"></div>
+                        </div>
+                        <div class="quest-reward">Reward: ₹1,500</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="payout-section reveal-up">
+        <div class="container">
+            <div class="section-header text-center mb-8">
+                <h2 class="section-title">Get paid on your terms</h2>
+                <p class="section-subtitle">Your money, your schedule. Choose how and when you want to cash out.</p>
+            </div>
+
+            <div class="payout-grid">
+                <div class="payout-card">
+                    <div class="payout-icon"><i class="fas fa-calendar-alt"></i></div>
+                    <h3>Standard Weekly Payout</h3>
+                    <p>Your earnings are automatically tallied and deposited into your registered bank account every
+                        Tuesday by 9:00 AM.</p>
+                    <ul class="payout-features">
+                        <li><i class="fas fa-check text-gradient-green"></i> 100% Free transfers</li>
+                        <li><i class="fas fa-check text-gradient-green"></i> Fully automatic</li>
+                    </ul>
+                </div>
+
+                <div class="payout-card premium-payout">
+                    <div class="payout-badge">Most Popular</div>
+                    <div class="payout-icon text-gradient-green"><i class="fas fa-bolt"></i></div>
+                    <h3>Instant Flex Pay</h3>
+                    <p>Need cash right now? Transfer your current balance directly to your debit card in seconds, up to
+                        5 times a day.</p>
+                    <ul class="payout-features">
+                        <li><i class="fas fa-check text-gradient-green"></i> Funds arrive in under 2 minutes</li>
+                        <li><i class="fas fa-check text-gradient-green"></i> Available 24/7/365</li>
+                        <li><i class="fas fa-check text-gradient-green"></i> Tiny flat fee of ₹10 per transfer</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="driver-footer">
+        <div class="container">
+            <div class="footer-grid">
+
+                <div class="footer-col brand-col">
+                    <a href="index.html" class="footer-logo">
+                        <img src="./assets/Stackly-logo-green.webp" alt="Stackly">
+                    </a>
+                    <p class="footer-desc">Empowering drivers with the tools, support, and earnings they deserve. Move
+                        your city forward with Stackly.</p>
+                    <div class="app-store-btns">
+                        <a href="404page.html" class="store-btn"><i class="fab fa-apple"></i> App Store</a>
+                        <a href="404page.html" class="store-btn"><i class="fab fa-google-play"></i> Google Play</a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Company</h4>
+                    <a href="index.html">Home</a>
+                    <a href="requirments.html">Requirments</a>
+                    <a href="earnings.html">Earnings</a>
+                    <a href="support.html">Support</a>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Partners</h4>
+                    <a href="404page.html">Driver Requirements</a>
+                    <a href="404page.html">Vehicle Standards</a>
+                    <a href="404page.html">Earnings & Payouts</a>
+                    <a href="404page.html">Insurance Coverage</a>
+                </div>
+
+
+                <div class="footer-col">
+                    <h4>Support</h4>
+                    <a href="404page.html">Help Center</a>
+                    <a href="404page.html">Safety</a>
+                    <a href="404page.html">Community Guidelines</a>
+                    <a href="404page.html">Contact Us</a>
+                </div>
+
+            </div>
+
+            <div class="footer-bottom">
+                <div class="copyright">
+                    &copy; 2026. All rights reserved.
+                </div>
+                <div class="legal-social">
+                    <div class="legal-links">
+                        <a href="404page.html">Terms</a>
+                        <a href="404page.html">Privacy</a>
+                    </div>
+                    <div class="social-icons">
+                        <a href="404page.html"><i class="fab fa-twitter"></i></a>
+                        <a href="404page.html"><i class="fab fa-instagram"></i></a>
+                        <a href="404page.html"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+
+            // Target the receipt total
+            const receiptTotalDisplay = document.getElementById('receiptTotal');
+            if (!receiptTotalDisplay) return;
+
+            // The calculated sum of the receipt (60 + 540 + 82.50 + 100)
+            const targetAmount = 782.50;
+            const duration = 2000; // 2 seconds
+            const frameRate = 1000 / 60;
+            const totalFrames = Math.round(duration / frameRate);
+
+            let frame = 0;
+
+            const countUpReceipt = () => {
+                frame++;
+                // EaseOutQuart for smooth deceleration
+                const progress = 1 - Math.pow(1 - frame / totalFrames, 4);
+                const currentAmount = targetAmount * progress;
+
+                // Format as Indian Rupee
+                receiptTotalDisplay.textContent = '₹' + currentAmount.toLocaleString('en-IN', {
+                    minimumFractionDigits: 2,
+                    maximumFractionDigits: 2
+                });
+
+                if (frame < totalFrames) {
+                    requestAnimationFrame(countUpReceipt);
+                } else {
+                    // Ensure exact final value at the end
+                    receiptTotalDisplay.textContent = '₹' + targetAmount.toLocaleString('en-IN', {
+                        minimumFractionDigits: 2,
+                        maximumFractionDigits: 2
+                    });
+                }
+            };
+
+            // Start counter slightly after page load so user sees it
+            setTimeout(() => requestAnimationFrame(countUpReceipt), 500);
+        });
+    </script>
+</body>
+
+</html>

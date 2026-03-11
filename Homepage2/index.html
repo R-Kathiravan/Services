@@ -1,1 +1,583 @@
-<h1>Working on it</h1>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home | Partners </title>
+    <link rel="stylesheet" href="shared.css">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@400;600;700;800;900&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+</head>
+
+<body class="driver-theme">
+
+    <header class="driver-header">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">
+                <img src="./assets/Stackly-logo-green.webp" alt="Stackly Partners" class="logo">
+            </a>
+
+            <nav class="nav-links" id="navMenu">
+                <div class="home-nav active">
+                    <a href="index.html" class="home-btn nav-link active">Home</a>
+                    <span class="material-icons dropdown-icon" id="homeDropdownBtn">
+                        expand_more
+                    </span>
+                    <div class="home-select" id="homeDropdown">
+                        <a href="../index.html" class="nav-link">Home Page 1</a>
+                    </div>
+                </div> <a href="requirments.html">Requirements</a>
+                <a href="earnings.html">Earnings</a>
+                <a href="support.html">Support</a>
+                <div class="close-btn material-icons" id="closeMenu">close</div>
+                <div class="nav-actions mob-view">
+                    <a href="login.html" class="nav-login btn-driver-primary">Log In</a>
+                </div>
+            </nav>
+
+            <div class="nav-actions">
+                <a href="login.html" class="nav-login btn-driver-primary">Log In</a>
+            </div>
+
+            <div class="hamburger" id="hamburger">
+                <span class="material-icons">menu</span>
+            </div>
+        </div>
+    </header>
+
+    <section class="driver-hero">
+        <div class="hero-glow-blob"></div>
+
+        <div class="hero-container">
+            <div class="hero-content reveal-up">
+                <div class="hero-badge">Turn kilometers into cash</div>
+                <h1 class="hero-title">
+                    Drive when you want, <br>
+                    <span class="text-gradient-green">earn what you need.</span>
+                </h1>
+                <p class="hero-subtitle">
+                    Set your own schedule, be your own boss, and get paid instantly. Join the highest-earning network of
+                    partner drivers today.
+                </p>
+                <div class="hero-actions">
+                    <a href="404page.html" class="btn-driver-primary btn-large">Start Earning</a>
+                    <a href="404page.html" class="btn-driver-secondary btn-large">Calculate Payouts &darr;</a>
+                </div>
+            </div>
+
+            <div class="hero-visual reveal-left delay-200">
+                <div class="widgets-cluster">
+
+                    <div class="glass-widget widget-earnings float-1">
+                        <div class="widget-header">
+                            <span class="widget-title">Weekly Payout</span>
+                            <span class="widget-trend text-gradient-green">+14.2%</span>
+                        </div>
+                        <div class="widget-amount" id="clusterEarnings">$0</div>
+                        <div class="bar-chart" id="earningsChart">
+                            <div class="bar-col">
+                                <div class="bar" data-height="40%"></div>
+                            </div>
+                            <div class="bar-col">
+                                <div class="bar" data-height="65%"></div>
+                            </div>
+                            <div class="bar-col">
+                                <div class="bar" data-height="50%"></div>
+                            </div>
+                            <div class="bar-col">
+                                <div class="bar" data-height="85%"></div>
+                            </div>
+                            <div class="bar-col">
+                                <div class="bar active-bar" data-height="100%"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="glass-widget widget-radar float-2">
+                        <div class="radar-container">
+                            <div class="radar-ring ring-1"></div>
+                            <div class="radar-ring ring-2"></div>
+                            <div class="radar-ring ring-3"></div>
+                            <div class="radar-pin">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                        </div>
+                        <div class="radar-text">
+                            <span class="radar-title">High Demand Zone</span>
+                            <span class="radar-sub">Surge pricing active in your area</span>
+                        </div>
+                    </div>
+
+                    <div class="glass-widget widget-status float-3">
+                        <div class="status-avatar">
+                            <i class="fas fa-star text-gradient-blue"></i>
+                        </div>
+                        <div class="status-info">
+                            <span class="status-name">Top Rated Partner</span>
+                            <span class="status-rating">4.98 Average Rating</span>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="earnings-section reveal-up" id="earnings">
+        <div class="container">
+
+            <div class="section-header text-center mb-8">
+                <h2 class="section-title">See what you could earn</h2>
+                <p class="section-subtitle">Select your city and how many hours you want to drive to see your estimated
+                    monthly payout.</p>
+            </div>
+
+            <div class="calculator-card">
+
+                <div class="calc-inputs">
+
+                    <div class="form-group mb-6">
+                        <label class="calc-label" for="calcCity">Where will you drive?</label>
+                        <div class="select-wrapper">
+                            <select class="form-select" id="calcCity">
+                                <option value="25">Bangalore (Premium Market)</option>
+                                <option value="22">Mumbai (High Demand)</option>
+                                <option value="18">Delhi NCR (Standard)</option>
+                                <option value="20">Other City</option>
+                            </select>
+                            <span class="select-arrow"><i class="fas fa-chevron-down"></i></span>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="slider-header">
+                            <label class="calc-label" for="calcHours">Hours per week</label>
+                            <span class="hours-display" id="hoursDisplay">20 hours</span>
+                        </div>
+
+                        <div class="range-container">
+                            <input type="range" id="calcHours" class="custom-slider" min="5" max="60" step="1"
+                                value="20">
+                        </div>
+                        <div class="slider-labels">
+                            <span>Part-time</span>
+                            <span>Full-time</span>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="calc-result">
+                    <span class="result-label">Estimated Monthly Earnings</span>
+                    <div class="result-amount text-gradient-green" id="resultAmount">$2,000</div>
+                    <p class="result-disclaimer">
+                        *Estimates are based on historical data. Actual earnings may vary based on time of day, demand,
+                        and location.
+                    </p>
+                    <a href="404page.html" class="btn-driver-primary btn-block mt-4">Start Earning Today</a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <section class="perks-bento-section reveal-up">
+        <div class="container">
+            <div class="section-header text-center mb-8">
+                <h2 class="section-title">Why partner with Stackly?</h2>
+                <p class="section-subtitle">We offer the best benefits in the industry to keep our partners earning more
+                    and stressing less.</p>
+            </div>
+
+            <div class="bento-grid">
+
+                <div class="bento-card bento-large">
+                    <div class="bento-icon"><i class="fas fa-wallet"></i></div>
+                    <div class="bento-content">
+                        <h3>Instant Payouts</h3>
+                        <p>Why wait a week? Cash out your earnings directly to your bank account up to 5 times a day
+                            with zero transfer fees.</p>
+                    </div>
+                    <div class="bento-visual visual-payout">
+                        <div class="mock-notification">+$142.50 Transferred</div>
+                    </div>
+                </div>
+
+                <div class="bento-card">
+                    <div class="bento-icon"><span class="material-icons">map</span></div>
+                    <div class="bento-content">
+                        <h3>Live Demand Heatmaps</h3>
+                        <p>Stop guessing. Our live map shows you exactly where surge pricing and high demand zones are
+                            right now.</p>
+                    </div>
+                </div>
+
+                <div class="bento-card">
+                    <div class="bento-icon"><span class="material-icons">safety_check</span></div>
+                    <div class="bento-content">
+                        <h3>Premium Insurance</h3>
+                        <p>Rest easy. You and your vehicle are fully covered by our commercial insurance policy from the
+                            moment you accept a ride.</p>
+                    </div>
+                </div>
+
+                <div class="bento-card bento-wide">
+                    <div class="bento-content flex-row">
+                        <div class="bento-icon"><i class="fas fa-headset"></i></div>
+                        <div>
+                            <h3>24/7 Priority Support</h3>
+                            <p>Real human help, right inside the app. Whether it's a dispute or an emergency, our
+                                dedicated partner team has your back day and night.</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="onboarding-section reveal-up">
+        <div class="container">
+            <div class="section-header text-center mb-8">
+                <h2 class="section-title">Get on the road in days</h2>
+                <p class="section-subtitle">Our streamlined onboarding process gets you approved and earning faster than
+                    the competition.</p>
+            </div>
+
+            <div class="timeline-wrapper" id="timelineWrapper">
+                <div class="timeline-track">
+                    <div class="timeline-fill" id="timelineFill"></div>
+                </div>
+
+                <div class="timeline-step step-1">
+                    <div class="step-indicator"><i class="fas fa-laptop"></i></div>
+                    <div class="step-content">
+                        <h3>1. Sign up online</h3>
+                        <p>Create your account in 2 minutes. Tell us about yourself and the vehicle you plan to drive.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="timeline-step step-2">
+                    <div class="step-indicator"><i class="fas fa-file-upload"></i></div>
+                    <div class="step-content">
+                        <h3>2. Upload documents</h3>
+                        <p>Snap a photo of your driver's license, vehicle registration, and proof of insurance right
+                            from your phone.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-step step-3">
+                    <div class="step-indicator"><i class="fas fa-car"></i></div>
+                    <div class="step-content">
+                        <h3>3. Hit the road</h3>
+                        <p>Once your background check clears (usually 2-3 days), download the partner app and go online.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center mt-4">
+                <a href="404page.html" class="btn-driver-primary btn-large">Start Your Application</a>
+            </div>
+        </div>
+    </section>
+    <section class="testimonials-section reveal-up">
+        <div class="container">
+            <div class="section-header text-center mb-8">
+                <h2 class="section-title">Hear from our partners</h2>
+                <p class="section-subtitle">Join thousands of drivers who are taking control of their financial future.
+                </p>
+            </div>
+
+            <div class="testimonial-carousel">
+                <div class="testimonial-track" id="testimonialTrack">
+
+                    <div class="testimonial-card active">
+                        <div class="quote-icon"><i class="fas fa-quote-left"></i></div>
+                        <p class="testimonial-text">"The instant payouts are a game-changer. Whenever I need extra cash
+                            for groceries or bills, I just hop online for a few hours and cash out immediately. No other
+                            app does it this smoothly."</p>
+                        <div class="testimonial-author">
+                            <img src="./assets/review5.webp" alt="Driver" class="author-img">
+                            <div class="author-info">
+                                <h4>Rajesh K.</h4>
+                                <span>Driving in Bangalore • 2 Years</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="testimonial-card">
+                        <div class="quote-icon"><i class="fas fa-quote-left"></i></div>
+                        <p class="testimonial-text">"I tried other platforms, but Stackly's demand heatmaps actually
+                            work. It guides me straight to the surge zones, meaning I spend less time waiting and way
+                            more time earning."</p>
+                        <div class="testimonial-author">
+                            <img src="./assets/team2.webp" alt="Driver" class="author-img">
+                            <div class="author-info">
+                                <h4>Priya S.</h4>
+                                <span>Driving in Mumbai • 8 Months</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="testimonial-card">
+                        <div class="quote-icon"><i class="fas fa-quote-left"></i></div>
+                        <p class="testimonial-text">"The 24/7 support team is incredible. Once I had an issue with a
+                            rider, and I got a real human on the phone in less than two minutes. They genuinely care
+                            about their drivers here."</p>
+                        <div class="testimonial-author">
+                            <img src="./assets/review4.webp" alt="Driver" class="author-img">
+                            <div class="author-info">
+                                <h4>Amit M.</h4>
+                                <span>Driving in Delhi NCR • 3 Years</span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="carousel-dots" id="carouselDots">
+                    <button class="dot active" data-index="0"></button>
+                    <button class="dot" data-index="1"></button>
+                    <button class="dot" data-index="2"></button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="driver-cta-section reveal-up">
+        <div class="cta-glow-bg"></div>
+        <div class="container relative z-10 text-center">
+            <h2 class="cta-huge-title">Ready to take the wheel?</h2>
+            <p class="cta-sub">Sign up today and complete your first 10 trips to unlock a <strong
+                    class="text-gradient-green">₹5,000 guarantee bonus</strong>.</p>
+            <a href="404page.html" class="btn-driver-primary btn-large mt-4">Apply to Drive Now</a>
+            <p class="cta-micro-text mt-4">Takes less than 2 minutes to apply.</p>
+        </div>
+    </section>
+
+    <footer class="driver-footer">
+        <div class="container">
+            <div class="footer-grid">
+
+                <div class="footer-col brand-col">
+                    <a href="index.html" class="footer-logo">
+                        <img src="./assets/Stackly-logo-green.webp" alt="Stackly">
+                    </a>
+                    <p class="footer-desc">Empowering drivers with the tools, support, and earnings they deserve. Move
+                        your city forward with Stackly.</p>
+                    <div class="app-store-btns">
+                        <a href="404page.html" class="store-btn"><i class="fab fa-apple"></i> App Store</a>
+                        <a href="404page.html" class="store-btn"><i class="fab fa-google-play"></i> Google Play</a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Company</h4>
+                    <a href="index.html">Home</a>
+                    <a href="requirments.html">Requirments</a>
+                    <a href="earnings.html">Earnings</a>
+                    <a href="support.html">Support</a>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Partners</h4>
+                    <a href="404page.html">Driver Requirements</a>
+                    <a href="404page.html">Vehicle Standards</a>
+                    <a href="404page.html">Earnings & Payouts</a>
+                    <a href="404page.html">Insurance Coverage</a>
+                </div>
+
+
+                <div class="footer-col">
+                    <h4>Support</h4>
+                    <a href="404page.html">Help Center</a>
+                    <a href="404page.html">Safety</a>
+                    <a href="404page.html">Community Guidelines</a>
+                    <a href="404page.html">Contact Us</a>
+                </div>
+
+            </div>
+
+            <div class="footer-bottom">
+                <div class="copyright">
+                    &copy; 2026. All rights reserved.
+                </div>
+                <div class="legal-social">
+                    <div class="legal-links">
+                        <a href="404page.html">Terms</a>
+                        <a href="404page.html">Privacy</a>
+                    </div>
+                    <div class="social-icons">
+                        <a href="404page.html"><i class="fab fa-twitter"></i></a>
+                        <a href="404page.html"><i class="fab fa-instagram"></i></a>
+                        <a href="404page.html"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="script.js" defer></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+
+            const bars = document.querySelectorAll('.bar');
+
+            setTimeout(() => {
+                bars.forEach(bar => {
+                    const targetHeight = bar.getAttribute('data-height');
+                    bar.style.height = targetHeight;
+                });
+            }, 400);
+
+            const clusterEarningsDisplay = document.getElementById('clusterEarnings');
+            const targetAmount = 1248.50;
+            const duration = 2000;
+            const frameRate = 1000 / 60;
+            const totalFrames = Math.round(duration / frameRate);
+            let frame = 0;
+
+            const countUpCluster = () => {
+                frame++;
+                const progress = 1 - Math.pow(1 - frame / totalFrames, 4);
+                const currentAmount = targetAmount * progress;
+
+                clusterEarningsDisplay.textContent = '$' + currentAmount.toLocaleString('en-US', {
+                    minimumFractionDigits: 2,
+                    maximumFractionDigits: 2
+                });
+
+                if (frame < totalFrames) {
+                    requestAnimationFrame(countUpCluster);
+                } else {
+                    clusterEarningsDisplay.textContent = '$' + targetAmount.toLocaleString('en-US', {
+                        minimumFractionDigits: 2,
+                        maximumFractionDigits: 2
+                    });
+                }
+            };
+
+            setTimeout(() => requestAnimationFrame(countUpCluster), 600);
+        });
+        document.addEventListener('DOMContentLoaded', () => {
+
+            const citySelect = document.getElementById('calcCity');
+            const hoursSlider = document.getElementById('calcHours');
+            const hoursDisplay = document.getElementById('hoursDisplay');
+            const resultAmount = document.getElementById('resultAmount');
+
+            const calculateEarnings = () => {
+                const hourlyRate = parseFloat(citySelect.value);
+                const hoursPerWeek = parseInt(hoursSlider.value);
+
+                const monthlyEarnings = hourlyRate * hoursPerWeek * 4;
+
+                hoursDisplay.textContent = `${hoursPerWeek} hours`;
+
+                resultAmount.textContent = '$' + monthlyEarnings.toLocaleString('en-US');
+
+                resultAmount.classList.add('bump');
+                setTimeout(() => {
+                    resultAmount.classList.remove('bump');
+                }, 100);
+
+                const min = hoursSlider.min;
+                const max = hoursSlider.max;
+                const percentage = ((hoursPerWeek - min) / (max - min)) * 100;
+
+                hoursSlider.style.setProperty('--slider-fill', `${percentage}%`);
+            };
+
+            hoursSlider.addEventListener('input', calculateEarnings);
+            citySelect.addEventListener('change', calculateEarnings);
+
+            calculateEarnings();
+
+            const timelineWrapper = document.getElementById('timelineWrapper');
+            const timelineFill = document.getElementById('timelineFill');
+            const steps = document.querySelectorAll('.timeline-step');
+
+            if (!timelineWrapper || !timelineFill) return;
+
+            const animateTimeline = () => {
+                const rect = timelineWrapper.getBoundingClientRect();
+
+                const triggerPoint = window.innerHeight * 0.6;
+                let scrollDistance = triggerPoint - rect.top;
+
+                let percentage = (scrollDistance / rect.height) * 100;
+                percentage = Math.max(0, Math.min(percentage, 100));
+                timelineFill.style.height = `${percentage}%`;
+                if (percentage > 5) {
+                    steps[0].classList.add('active');
+                } else {
+                    steps[0].classList.remove('active');
+                }
+
+                if (percentage > 50) {
+                    steps[1].classList.add('active');
+                } else {
+                    steps[1].classList.remove('active');
+                }
+
+                if (percentage > 95) {
+                    steps[2].classList.add('active');
+                } else {
+                    steps[2].classList.remove('active');
+                }
+            };
+
+            window.addEventListener('scroll', animateTimeline);
+            animateTimeline();
+        });
+        document.addEventListener('DOMContentLoaded', () => {
+            const cards = document.querySelectorAll('.testimonial-card');
+            const dots = document.querySelectorAll('.dot');
+            let currentIndex = 0;
+            let autoplayInterval;
+
+            if (cards.length === 0) return;
+
+            const goToSlide = (index) => {
+                cards.forEach(card => card.classList.remove('active'));
+                dots.forEach(dot => dot.classList.remove('active'));
+                cards[index].classList.add('active');
+                dots[index].classList.add('active');
+                currentIndex = index;
+            };
+
+            const nextSlide = () => {
+                let nextIndex = currentIndex + 1;
+                if (nextIndex >= cards.length) {
+                    nextIndex = 0;
+                }
+                goToSlide(nextIndex);
+            };
+            const startAutoplay = () => {
+                autoplayInterval = setInterval(nextSlide, 6000);
+            };
+
+            const resetAutoplay = () => {
+                clearInterval(autoplayInterval);
+                startAutoplay();
+            };
+
+            dots.forEach((dot, index) => {
+                dot.addEventListener('click', () => {
+                    if (currentIndex !== index) {
+                        goToSlide(index);
+                        resetAutoplay();
+                    }
+                });
+            });
+
+            startAutoplay();
+        });
+    </script>
+</body>
+
+<body>

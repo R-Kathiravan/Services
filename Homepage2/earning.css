@@ -1,0 +1,465 @@
+/* =========================================
+   Section 1: Hero & Floating Receipt
+   ========================================= */
+.earnings-hero {
+    position: relative;
+    padding: 160px 5% 80px;
+    background-color: var(--bg-main);
+    overflow: hidden;
+}
+
+/* 3D Glass Receipt */
+.receipt-card {
+    background: rgba(17, 24, 39, 0.85);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: var(--radius-xl);
+    padding: var(--space-6);
+    width: 360px;
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.6), 0 0 40px rgba(16, 185, 129, 0.1);
+}
+
+.receipt-header {
+    display: flex;
+    align-items: center;
+    gap: var(--space-2);
+    font-weight: 700;
+    font-size: 1.1rem;
+    margin-bottom: var(--space-5);
+    border-bottom: 1px dashed var(--border-light);
+    padding-bottom: var(--space-4);
+}
+
+.receipt-route {
+    display: flex;
+    gap: var(--space-4);
+    margin-bottom: var(--space-5);
+}
+
+.route-dots {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 5px;
+}
+
+.dot-start {
+    width: 10px;
+    height: 10px;
+    background: var(--color-accent);
+    border-radius: 50%;
+}
+
+.route-line {
+    width: 2px;
+    height: 25px;
+    background: var(--border-light);
+    margin: 4px 0;
+}
+
+.dot-end {
+    width: 10px;
+    height: 10px;
+    background: var(--color-primary);
+    border-radius: 50%;
+}
+
+.route-text p {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    margin-bottom: 14px;
+}
+
+.route-text p:last-child {
+    margin-bottom: 0;
+    color: var(--text-primary);
+    font-weight: 500;
+}
+
+.receipt-row {
+    display: flex;
+    justify-content: space-between;
+    font-family: 'Courier New', monospace;
+    /* Receipt style font */
+    font-size: 0.95rem;
+    color: var(--text-secondary);
+    margin-bottom: var(--space-3);
+}
+
+.highlight-row {
+    color: var(--color-primary);
+    font-weight: 700;
+}
+
+.receipt-divider {
+    border-top: 1px dashed var(--border-light);
+    margin: var(--space-4) 0;
+}
+
+.receipt-total {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.2rem;
+    font-weight: 800;
+}
+
+.total-amount {
+    font-size: 2rem;
+    font-family: var(--font-heading);
+}
+
+/* =========================================
+   Section 2: The Formula Wrapper
+   ========================================= */
+.formula-section {
+    padding: var(--space-12) 5%;
+    background-color: var(--bg-surface);
+    border-top: 1px solid var(--border-light);
+}
+
+.formula-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--space-4);
+    flex-wrap: nowrap;
+}
+
+.formula-card {
+    background-color: var(--bg-main);
+    border: 1px solid var(--border-light);
+    border-radius: var(--radius-lg);
+    padding: var(--space-4);
+    text-align: center;
+    flex: 1;
+    min-width: 150px;
+    box-shadow: var(--shadow-md);
+}
+
+.highlight-card {
+    border-color: rgba(16, 185, 129, 0.3);
+    background: rgba(16, 185, 129, 0.05);
+}
+
+.formula-icon {
+    font-size: 1.5rem;
+    color: var(--text-muted);
+    margin-bottom: var(--space-3);
+}
+
+.formula-card h4 {
+    font-size: 1rem;
+    margin-bottom: var(--space-2);
+}
+
+.formula-card p {
+    font-size: 0.8rem;
+    color: var(--text-secondary);
+}
+
+.math-symbol {
+    font-size: 1.5rem;
+    color: var(--text-muted);
+}
+
+.symbol-equals {
+    color: var(--color-primary);
+    font-size: 2rem;
+}
+
+.formula-total {
+    background: linear-gradient(135deg, var(--color-primary) 0%, #059669 100%);
+    padding: var(--space-4) var(--space-6);
+    border-radius: var(--radius-lg);
+    color: #fff;
+    text-align: center;
+    box-shadow: 0 10px 25px rgba(16, 185, 129, 0.4);
+}
+
+@media (max-width: 1024px) {
+    .formula-wrapper {
+        flex-wrap: wrap;
+        gap: var(--space-6);
+    }
+
+    .formula-card {
+        min-width: 40%;
+    }
+
+    .math-symbol {
+        display: none;
+        /* Hide symbols on small screens to save space */
+    }
+
+    .formula-total {
+        width: 100%;
+        margin-top: var(--space-4);
+    }
+}
+
+/* =========================================
+   Section 3: Smart Tools (Zig-Zag)
+   ========================================= */
+.smart-tools-section {
+    padding: var(--space-12) 5%;
+    background-color: var(--bg-main);
+}
+
+.tool-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--space-12);
+    margin-bottom: var(--space-16);
+}
+
+.tool-row.reverse {
+    flex-direction: row-reverse;
+}
+
+.tool-content {
+    flex: 1;
+    max-width: 500px;
+}
+
+.tool-icon {
+    width: 60px;
+    height: 60px;
+    background: rgba(59, 130, 246, 0.15);
+    color: var(--color-accent);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    margin-bottom: var(--space-4);
+}
+
+.tool-content h3 {
+    font-size: 2rem;
+    margin-bottom: var(--space-3);
+}
+
+.tool-content p {
+    color: var(--text-secondary);
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+.tool-visual {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+/* Mock Streak UI */
+.mock-streak {
+    background: var(--bg-surface);
+    border: 1px solid var(--border-light);
+    padding: var(--space-6);
+    border-radius: var(--radius-xl);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    box-shadow: var(--shadow-lg);
+}
+
+.streak-circle {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: var(--bg-main);
+    border: 2px solid var(--border-light);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-muted);
+    font-weight: 700;
+}
+
+.streak-circle.active {
+    background: var(--color-primary);
+    border-color: var(--color-primary);
+    color: #fff;
+    box-shadow: 0 0 15px rgba(16, 185, 129, 0.4);
+}
+
+.streak-line {
+    width: 40px;
+    height: 4px;
+    background: var(--border-light);
+    border-radius: 2px;
+}
+
+.streak-line.active {
+    background: var(--color-primary);
+}
+
+.streak-reward {
+    margin-left: var(--space-4);
+    font-weight: 800;
+    color: var(--color-primary);
+    font-size: 1.2rem;
+}
+
+/* Mock Quest UI */
+.mock-quest {
+    background: var(--bg-surface);
+    border: 1px solid var(--border-light);
+    padding: var(--space-6);
+    border-radius: var(--radius-xl);
+    width: 350px;
+    box-shadow: var(--shadow-lg);
+}
+
+.quest-header {
+    display: flex;
+    justify-content: space-between;
+    font-weight: 600;
+    margin-bottom: var(--space-4);
+}
+
+.quest-bar-bg {
+    width: 100%;
+    height: 12px;
+    background: var(--bg-main);
+    border-radius: 6px;
+    overflow: hidden;
+    margin-bottom: var(--space-4);
+}
+
+.quest-bar-fill {
+    height: 100%;
+    background: linear-gradient(90deg, var(--color-accent) 0%, #60A5FA 100%);
+    border-radius: 6px;
+}
+
+.quest-reward {
+    background: rgba(59, 130, 246, 0.1);
+    color: var(--color-accent);
+    padding: var(--space-2);
+    text-align: center;
+    border-radius: var(--radius-md);
+    font-weight: 700;
+}
+
+@media (max-width: 992px) {
+
+    .tool-row,
+    .tool-row.reverse {
+        flex-direction: column;
+        text-align: center;
+        gap: var(--space-8);
+    }
+
+    .tool-content {
+        margin: 0 auto;
+    }
+
+    .tool-icon {
+        margin: 0 auto var(--space-4);
+    }
+    .tool-visual{
+        width: 100%;
+    }
+}
+
+/* =========================================
+   Section 4: Payout Flexibility
+   ========================================= */
+.payout-section {
+    padding: var(--space-12) 5%;
+    background-color: var(--bg-surface);
+    border-top: 1px solid var(--border-light);
+}
+
+.payout-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-8);
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.payout-card {
+    background: var(--bg-main);
+    border: 1px solid var(--border-light);
+    border-radius: var(--radius-2xl);
+    padding: var(--space-8);
+    transition: transform 0.3s ease;
+}
+
+.premium-payout {
+    border-color: rgba(16, 185, 129, 0.4);
+    position: relative;
+    box-shadow: 0 10px 30px rgba(16, 185, 129, 0.1);
+}
+
+.premium-payout:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(16, 185, 129, 0.2);
+}
+
+.payout-badge {
+    position: absolute;
+    top: -12px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--color-primary);
+    color: #fff;
+    font-size: 0.8rem;
+    font-weight: 700;
+    padding: 4px 12px;
+    border-radius: 20px;
+    text-transform: uppercase;
+}
+
+.payout-icon {
+    font-size: 2rem;
+    color: var(--text-muted);
+    margin-bottom: var(--space-4);
+}
+
+.payout-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: var(--space-3);
+}
+
+.payout-card p {
+    color: var(--text-secondary);
+    margin-bottom: var(--space-6);
+    line-height: 1.6;
+}
+
+.payout-features {
+    list-style: none;
+    padding: 0;
+}
+
+.payout-features li {
+    display: flex;
+    align-items: center;
+    gap: var(--space-3);
+    margin-bottom: var(--space-3);
+    font-size: 0.95rem;
+}
+
+@media (max-width: 768px) {
+    .payout-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .receipt-card {
+        width: 100%;
+    }
+
+    .mock-streak {
+        flex-direction: column;
+    }
+
+    .streak-line {
+        rotate: 90deg;
+        margin: 14px;
+    }
+}

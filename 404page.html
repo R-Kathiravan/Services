@@ -423,25 +423,6 @@
 
     <script>
         document.addEventListener('DOMContentLoaded', function () {
-            const searchInput = document.querySelector('.error-search input');
-            const searchButton = document.querySelector('.error-search button');
-
-            searchButton.addEventListener('click', function () {
-                const query = searchInput.value.trim();
-                if (query) {
-                    alert('Search functionality would search for: ' + query);
-                }
-            });
-
-            searchInput.addEventListener('keypress', function (e) {
-                if (e.key === 'Enter') {
-                    const query = searchInput.value.trim();
-                    if (query) {
-                        alert('Search functionality would search for: ' + query);
-                    }
-                }
-            });
-
             const quickLinks = document.querySelectorAll('.quick-link');
             quickLinks.forEach(link => {
                 link.addEventListener('mouseenter', function () {

@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Support Center | Partners</title>
+    <link rel="stylesheet" href="shared.css">
+    <link rel="stylesheet" href="support.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@400;600;700;800;900&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body class="driver-theme">
+    <header class="driver-header">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">
+                <img src="./assets/Stackly-logo-green.webp" alt="Stackly Partners" class="logo">
+            </a>
+
+            <nav class="nav-links" id="navMenu">
+                <div class="home-nav">
+                    <a href="index.html" class="home-btn nav-link">Home</a>
+                    <span class="material-icons dropdown-icon" id="homeDropdownBtn">
+                        expand_more
+                    </span>
+                    <div class="home-select" id="homeDropdown">
+                        <a href="../index.html" class="nav-link">Home Page 1</a>
+                    </div>
+                </div> <a href="requirments.html">Requirements</a>
+                <a href="earnings.html">Earnings</a>
+                <a href="support.html" class="active">Support</a>
+                <div class="close-btn material-icons" id="closeMenu">close</div>
+                <div class="nav-actions mob-view">
+                    <a href="login.html" class="nav-login btn-driver-primary">Log In</a>
+                </div>
+            </nav>
+
+            <div class="nav-actions">
+                <a href="login.html" class="nav-login btn-driver-primary">Log In</a>
+            </div>
+
+            <div class="hamburger" id="hamburger">
+                <span class="material-icons">menu</span>
+            </div>
+        </div>
+    </header>
+
+    <main class="support-main">
+        <section class="support-hero">
+            <div class="hero-background">
+                <div class="hero-content">
+                    <h1 class="hero-title">How can we help?</h1>
+                    <p class="hero-subtitle">Search our knowledge base or browse topics below</p>
+                </div>
+                <div class="trending-searches" id="trendingSearches">
+                    <span class="trending-label">Trending:</span>
+                    <div class="trending-tags">
+                        <span class="trending-tag" data-query="payout">Payout issues</span>
+                        <span class="trending-tag" data-query="documents">Document update</span>
+                        <span class="trending-tag" data-query="ride">Ride cancellation</span>
+                        <span class="trending-tag" data-query="rating">Low rating dispute</span>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </section>
+
+        <section class="user-routing-section">
+            <div class="container">
+                <div class="routing-grid">
+                    <div class="routing-card rider-card active" data-user="rider">
+                        <div class="card-icon">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <div class="card-content">
+                            <h3>I am a Rider</h3>
+                            <p>Get help with rides, payments, and account issues</p>
+                        </div>
+                        <a href="404page.html" class="card-arrow">
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                    <div class="routing-card driver-card" data-user="driver">
+                        <div class="card-icon">
+                            <i class="fas fa-car"></i>
+                        </div>
+                        <div class="card-content">
+                            <h3>I am a Driver/Partner</h3>
+                            <p>Get help with earnings, documents, and partner support</p>
+                        </div>
+                        <a href="404page.html" class="card-arrow">
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="quick-fixes-section">
+            <div class="container">
+                <h2 class="section-title">Quick Fixes</h2>
+                <p class="section-subtitle">Most common issues resolved in seconds</p>
+
+                <div class="quick-fixes-grid" id="quickFixesGrid">
+                </div>
+            </div>
+        </section>
+
+        <section class="knowledge-base-section">
+            <div class="container">
+                <div class="kb-layout">
+                    <aside class="kb-sidebar">
+                        <h3 class="kb-sidebar-title">Browse by Topic</h3>
+                        <ul class="kb-topic-list" id="kbTopicList">
+                        </ul>
+                    </aside>
+
+                    <div class="kb-content">
+                        <h2 class="section-title">Knowledge Base</h2>
+                        <p class="section-subtitle">Explore our detailed guides and articles</p>
+
+                        <div class="kb-articles-grid" id="kbArticlesGrid">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="emergency-section">
+            <div class="container">
+                <div class="emergency-grid">
+                    <div class="emergency-card">
+                        <div class="emergency-icon">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <div class="emergency-content">
+                            <h3>Trust & Safety</h3>
+                            <p>Report accidents, safety incidents, or emergencies involving riders or drivers.</p>
+                            <a href="404page.html" class="emergency-btn">Report an Incident</a>
+                        </div>
+                    </div>
+                    <div class="contact-cta-card">
+                        <div class="cta-icon">
+                            <i class="fas fa-headset"></i>
+                        </div>
+                        <div class="cta-content">
+                            <h3>Still need help?</h3>
+                            <p>Our support team is available 24/7 to assist you with any remaining questions.</p>
+                            <a href="404page.html" class="cta-btn">Contact Support</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+
+    <footer class="driver-footer">
+        <div class="container">
+            <div class="footer-grid">
+
+                <div class="footer-col brand-col">
+                    <a href="index.html" class="footer-logo">
+                        <img src="./assets/Stackly-logo-green.webp" alt="Stackly">
+                    </a>
+                    <p class="footer-desc">Empowering drivers with the tools, support, and earnings they deserve. Move
+                        your city forward with Stackly.</p>
+                    <div class="app-store-btns">
+                        <a href="404page.html" class="store-btn"><i class="fab fa-apple"></i> App Store</a>
+                        <a href="404page.html" class="store-btn"><i class="fab fa-google-play"></i> Google Play</a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Company</h4>
+                    <a href="index.html">Home</a>
+                    <a href="requirments.html">Requirments</a>
+                    <a href="earnings.html">Earnings</a>
+                    <a href="support.html">Support</a>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Partners</h4>
+                    <a href="404page.html">Driver Requirements</a>
+                    <a href="404page.html">Vehicle Standards</a>
+                    <a href="404page.html">Earnings & Payouts</a>
+                    <a href="404page.html">Insurance Coverage</a>
+                </div>
+
+
+                <div class="footer-col">
+                    <h4>Support</h4>
+                    <a href="404page.html">Help Center</a>
+                    <a href="404page.html">Safety</a>
+                    <a href="404page.html">Community Guidelines</a>
+                    <a href="404page.html">Contact Us</a>
+                </div>
+
+            </div>
+
+            <div class="footer-bottom">
+                <div class="copyright">
+                    &copy; 2026. All rights reserved.
+                </div>
+                <div class="legal-social">
+                    <div class="legal-links">
+                        <a href="404page.html">Terms</a>
+                        <a href="404page.html">Privacy</a>
+                    </div>
+                    <div class="social-icons">
+                        <a href="404page.html"><i class="fab fa-twitter"></i></a>
+                        <a href="404page.html"><i class="fab fa-instagram"></i></a>
+                        <a href="404page.html"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        const quickFixesData = {
+            rider: [
+                { icon: 'fas fa-suitcase', title: 'I lost an item in the car', desc: 'Report lost items and contact your driver' },
+                { icon: 'fas fa-receipt', title: 'Review a past trip or fare', desc: 'View receipts and dispute charges' },
+                { icon: 'fas fa-user-shield', title: 'My driver was unprofessional', desc: 'Report driver behavior and get refunds' },
+                { icon: 'fas fa-credit-card', title: 'Payment issues', desc: 'Update payment methods and view transactions' }
+            ],
+            driver: [
+                { icon: 'fas fa-wallet', title: 'Where is my payout?', desc: 'Track your earnings and withdrawal status' },
+                { icon: 'fas fa-file-alt', title: 'Update my vehicle documents', desc: 'Upload insurance, registration, and license' },
+                { icon: 'fas fa-car-crash', title: 'A rider damaged my car', desc: 'File a damage report and claim support' },
+                { icon: 'fas fa-star', title: 'Rating disputes', desc: 'Challenge unfair ratings and boost your score' }
+            ]
+        };
+
+        const knowledgeBaseData = {
+            rider: {
+                topics: [
+                    { name: 'Account & Profile', icon: 'fas fa-user-cog', count: 12 },
+                    { name: 'Payments & Promos', icon: 'fas fa-credit-card', count: 8 },
+                    { name: 'App Troubleshooting', icon: 'fas fa-bug', count: 15 },
+                    { name: 'Safety Guidelines', icon: 'fas fa-shield-alt', count: 10 },
+                    { name: 'Ride Options', icon: 'fas fa-car', count: 6 }
+                ],
+                articles: [
+                    { title: 'How to change your pickup location', category: 'App Troubleshooting', readTime: '2 min' },
+                    { title: 'Understanding your fare breakdown', category: 'Payments & Promos', readTime: '3 min' },
+                    { title: 'Safety features while riding', category: 'Safety Guidelines', readTime: '4 min' },
+                    { title: 'How to use split fare', category: 'Payments & Promos', readTime: '2 min' },
+                    { title: 'Reporting a lost item', category: 'Account & Profile', readTime: '3 min' },
+                    { title: 'Canceling a ride properly', category: 'Ride Options', readTime: '2 min' }
+                ]
+            },
+            driver: {
+                topics: [
+                    { name: 'Getting Started', icon: 'fas fa-rocket', count: 8 },
+                    { name: 'Earnings & Payouts', icon: 'fas fa-wallet', count: 12 },
+                    { name: 'Documents & Verification', icon: 'fas fa-file-alt', count: 6 },
+                    { name: 'Ride Rules & Ratings', icon: 'fas fa-star', count: 10 },
+                    { name: 'Vehicle Maintenance', icon: 'fas fa-car', count: 5 }
+                ],
+                articles: [
+                    { title: 'Complete driver onboarding guide', category: 'Getting Started', readTime: '5 min' },
+                    { title: 'Understanding your payout schedule', category: 'Earnings & Payouts', readTime: '3 min' },
+                    { title: 'How to upload documents', category: 'Documents & Verification', readTime: '2 min' },
+                    { title: 'Tips for 5-star ratings', category: 'Ride Rules & Ratings', readTime: '4 min' },
+                    { title: 'Dealing with difficult riders', category: 'Ride Rules & Ratings', readTime: '3 min' },
+                    { title: 'Vehicle maintenance tips', category: 'Vehicle Maintenance', readTime: '4 min' }
+                ]
+            }
+        };
+
+        let currentUserType = 'driver';
+
+        function renderQuickFixes(userType) {
+            const grid = document.getElementById('quickFixesGrid');
+            const fixes = quickFixesData[userType];
+
+            grid.innerHTML = fixes.map((fix, index) => `
+                <div class="quick-fix-card" style="animation-delay: ${index * 0.1}s">
+                    <div class="fix-icon">
+                        <i class="${fix.icon}"></i>
+                    </div>
+                    <h4 class="fix-title">${fix.title}</h4>
+                    <p class="fix-desc">${fix.desc}</p>
+                    <a href='404page.html' class="fix-arrow">
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                    </div>
+            `).join('');
+        }
+
+        function renderKnowledgeBase(userType) {
+            const kb = knowledgeBaseData[userType];
+
+            const topicList = document.getElementById('kbTopicList');
+            topicList.innerHTML = kb.topics.map(topic => `
+                <li class="kb-topic-item">
+                    <a href="404page.html" class="kb-topic-link">
+                        <i class="${topic.icon}"></i>
+                        <span class="topic-name">${topic.name}</span>
+                        <span class="topic-count">${topic.count}</span>
+                    </a>
+                </li>
+            `).join('');
+
+            const articlesGrid = document.getElementById('kbArticlesGrid');
+            articlesGrid.innerHTML = kb.articles.map((article, index) => `
+                <a href='404page.html' class="kb-article-card" style="animation-delay: ${index * 0.05}s">
+                    <div class="article-category">${article.category}</div>
+                    <h4 class="article-title">${article.title}</h4>
+                    <div class="article-meta">
+                        <span><i class="fas fa-clock"></i> ${article.readTime} read</span>
+                        <span class="article-arrow"><i class="fas fa-arrow-right"></i></span>
+                    </div>
+                    </a>
+            `).join('');
+        }
+
+        function switchUserType(userType) {
+            currentUserType = userType;
+
+            document.querySelectorAll('.routing-card').forEach(card => {
+                card.classList.remove('active');
+            });
+            document.querySelector(`[data-user="${userType}"]`).classList.add('active');
+
+            renderQuickFixes(userType);
+            renderKnowledgeBase(userType);
+        }
+
+        document.querySelectorAll('.routing-card').forEach(card => {
+            card.addEventListener('click', function () {
+                const userType = this.getAttribute('data-user');
+                switchUserType(userType);
+            });
+        });
+
+        renderQuickFixes(currentUserType);
+        renderKnowledgeBase(currentUserType);
+        document.querySelectorAll('.trending-tag').forEach(tag => {
+            tag.addEventListener('click', function () {
+                const query = this.getAttribute('data-query');
+                searchInput.value = this.textContent;
+                trendingSearches.classList.remove('visible');
+            });
+        });
+
+        document.querySelectorAll('.quick-fix-card').forEach(card => {
+            card.addEventListener('click', function () {
+                this.classList.add('clicked');
+                setTimeout(() => this.classList.remove('clicked'), 300);
+            });
+        });
+    </script>
+</body>
+
+</html>
