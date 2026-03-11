@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Stackly</title>
+    <link rel="stylesheet" href="shared.css">
+    <link rel="stylesheet" href="contact.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@400;600;700;800;900&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="header-container">
+            <a href="index.html">
+                <img src="./assets/Stackly-logo-Blue.webp" alt="Logo" class="logo">
+            </a>
+            <nav class="nav-menu" id="navMenu">
+                <ul class="nav-list">
+                    <div class="home-nav">
+                        <li class="nav-item">
+                            <a href="index.html" class="home-btn nav-link">
+                                Home
+                                <span class="nav-indicator"></span>
+                            </a>
+                        </li>
+
+                        <span class="material-icons dropdown-icon" id="homeDropdownBtn">
+                            expand_more
+                        </span>
+
+                        <div class="home-select" id="homeDropdown">
+                            <a href="./Homepage2/index.html" class="nav-link">Home Page 2</a>
+                        </div>
+                    </div>
+                    <li class="nav-item">
+                        <a href="about.html" class="nav-link">
+                            <span>About</span>
+                            <span class="nav-indicator"></span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="services.html" class="nav-link">
+                            <span>Service</span>
+                            <span class="nav-indicator"></span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="contact.html" class="nav-link active">
+                            <span>Contact</span>
+                            <span class="nav-indicator"></span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            <div class="header-actions">
+                <a href="login.html" class="btn btn-text nav-login">
+                    <i class="fas fa-user"></i>
+                    <span>Login</span>
+                </a>
+                <a href="dashboard.html" class="btn btn-primary nav-dashboard">
+                    <i class="fas fa-th-large"></i>
+                    <span>Dashboard</span>
+                </a>
+            </div>
+            <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle menu">
+                <span class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </span>
+            </button>
+        </div>
+    </header>
+
+    <section class="contact-hero">
+        <div class="contact-hero-content">
+            <h1>How can we help you?</h1>
+            <p>Whether you're a rider, driver, or partner, we're here to assist you. Choose a category below or send us
+                a message.</p>
+        </div>
+    </section>
+
+    <section class="support-routing-section">
+        <div class="section-intro">
+            <h2>How can we help?</h2>
+            <p>Select the option that best describes what you need assistance with</p>
+        </div>
+
+        <div class="routing-grid">
+            <div class="routing-card">
+                <div class="routing-icon">
+                    <i class="fas fa-user"></i>
+                </div>
+                <h3>Rider Support</h3>
+                <p>Lost items, billing issues, ride disputes, and account help</p>
+                <a href="404page.html" class="routing-link">
+                    Get Help <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+
+            <div class="routing-card">
+                <div class="routing-icon">
+                    <i class="fas fa-car"></i>
+                </div>
+                <h3>Driver Support</h3>
+                <p>Account approval, payout issues, ratings, and earnings</p>
+                <a href="404page.html" class="routing-link">
+                    Get Help <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+
+            <div class="routing-card">
+                <div class="routing-icon">
+                    <i class="fas fa-building"></i>
+                </div>
+                <h3>Corporate / B2B</h3>
+                <p>Partnership opportunities, business accounts, and bulk orders</p>
+                <a href="404page.html" class="routing-link">
+                    Contact Us <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+
+            <div class="routing-card">
+                <div class="routing-icon">
+                    <i class="fas fa-newspaper"></i>
+                </div>
+                <h3>Press & Media</h3>
+                <p>Media inquiries, brand partnerships, and press kit requests</p>
+                <a href="404page.html" class="routing-link">
+                    Contact PR <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="contact-form-section">
+        <div class="contact-form-container">
+            <div class="contact-form-info">
+                <h2>Send us a message</h2>
+                <p>Can't find what you're looking for? Fill out the form below and our team will get back to you within
+                    24 hours.</p>
+
+                <div class="contact-direct">
+                    <div class="direct-contact-item">
+                        <div class="direct-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="direct-text">
+                            <h4>Email Support</h4>
+                            <p><a href="404page.html">support@thestackly.com</a></p>
+                        </div>
+                    </div>
+
+                    <div class="direct-contact-item">
+                        <div class="direct-icon">
+                            <i class="fas fa-phone-alt"></i>
+                        </div>
+                        <div class="direct-text">
+                            <h4>Phone Support</h4>
+                            <p><a href="404page.html">+91 9876543210</a></p>
+                        </div>
+                    </div>
+
+                    <div class="direct-contact-item">
+                        <div class="direct-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <div class="direct-text">
+                            <h4>Operating Hours</h4>
+                            <p>24/7 for urgent issues</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="contact-form-wrapper">
+                <form id="contactForm" novalidate>
+                    <div class="form-group">
+                        <input type="text" class="form-input" id="name" placeholder=" " required>
+                        <label class="form-label" for="name">Your Name</label>
+                        <span class="validation-check"><i class="fas fa-check-circle"></i></span>
+                        <span class="error-text" id="nameError"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <input type="email" class="form-input" id="email" placeholder=" " required>
+                        <label class="form-label" for="email">Email Address</label>
+                        <span class="validation-check"><i class="fas fa-check-circle"></i></span>
+                        <span class="error-text" id="emailError"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="select-wrapper">
+                            <select class="form-select form-input" id="userType" required>
+                                <option value="" disabled selected></option>
+                                <option value="rider">Rider</option>
+                                <option value="driver">Driver</option>
+                                <option value="business">Business / Partner</option>
+                                <option value="other">Other</option>
+                            </select>
+                            <label class="form-label" for="userType">I am a...</label>
+                            <span class="select-arrow"><i class="fas fa-chevron-down"></i></span>
+                        </div>
+                        <span class="error-text" id="typeError"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <textarea class="form-input form-textarea" id="message" placeholder=" " required></textarea>
+                        <label class="form-label" for="message">Your Message</label>
+                        <span class="validation-check"><i class="fas fa-check-circle"></i></span>
+                        <span class="error-text" id="messageError"></span>
+                    </div>
+
+                    <button type="submit" class="form-submit" id="submitBtn">
+                        <span class="btn-text">Send Message</span>
+                        <i class="fas fa-paper-plane"></i>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <section class="global-offices-section">
+        <div class="section-intro">
+            <h2>Our Global Presence</h2>
+            <p>Visit our offices or reach out to our regional teams</p>
+        </div>
+
+        <div class="offices-grid">
+            <div class="office-card delay-100">
+                <span class="office-badge">Headquarters</span>
+                <h3 class="office-city">Stackly Phase1</h3>
+                <p class="office-address">Chinna Thirupathi<br>Salem<br>Tamil Nady</p>
+                <div class="office-contact">
+                    <div class="office-contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <a href="404page.html">info@thestackly.com</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="office-card delay-200">
+                <span class="office-badge">Stackly Phase 2</span>
+                <h3 class="office-city">Ommalur</h3>
+                <p class="office-address"><br>Ommalur<br>Tamil Nadu</p>
+                <div class="office-contact">
+                    <div class="office-contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <a href="404page.html">info@thestackly.com</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="office-card delay-300">
+                <span class="office-badge">Regional Office</span>
+                <h3 class="office-city">Bengaluru</h3>
+                <p class="office-address">Electronics City<br>Bengaluru<br>Karnataka</p>
+                <div class="office-contact">
+                    <div class="office-contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <a href="404page.html">info@thestackly.com</a>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="faq-section">
+        <div class="section-intro">
+            <h2>Quick Help</h2>
+            <p>Find answers to the most common questions</p>
+        </div>
+
+        <div class="faq-container">
+            <div class="faq-list">
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>I left an item in the car. What should I do?</span>
+                        <span class="faq-icon"><i class="fas fa-plus"></i></span>
+                    </button>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            <p>Don't worry! Here's what you can do:</p>
+                            <p style="margin-top: 8px;">1. Open your Stackly app and go to "Your Trips"</p>
+                            <p>2. Select the trip where you lost your item</p>
+                            <p>3. Tap "Lost Item" and select "Contact Driver"</p>
+                            <p>4. Our team will help coordinate with your driver to retrieve your item</p>
+                            <p style="margin-top: 8px;">Note: Please try to contact us within 30 days of your trip.
+                                Drivers may charge a small fee for returning items.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>When do drivers get paid?</span>
+                        <span class="faq-icon"><i class="fas fa-plus"></i></span>
+                    </button>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            <p>Drivers receive weekly payouts every Monday for the previous week's earnings. If Monday
+                                falls on a holiday, payouts are processed on the next business day.</p>
+                            <p style="margin-top: 8px;">You can also enable "Instant Cash Out" to withdraw your earnings
+                                instantly to your bank account (available in select cities). There may be a small fee
+                                for instant withdrawals.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>How do I cancel a ride?</span>
+                        <span class="faq-icon"><i class="fas fa-plus"></i></span>
+                    </button>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            <p>To cancel a ride:</p>
+                            <p style="margin-top: 8px;">1. Open the Stackly app</p>
+                            <p>2. Tap on your upcoming trip</p>
+                            <p>3. Tap "Cancel Trip"</p>
+                            <p style="margin-top: 8px;">Note: A cancellation fee may apply if you cancel after the
+                                driver has arrived or after the free cancellation window (2 minutes) has passed.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>How do I become a driver?</span>
+                        <span class="faq-icon"><i class="fas fa-plus"></i></span>
+                    </button>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            <p>Join our driver community in just a few steps:</p>
+                            <p style="margin-top: 8px;">1. Download the "Stackly Driver" app</p>
+                            <p>2. Create your account and submit required documents</p>
+                            <p>3. Complete our background check process</p>
+                            <p>4. Attend a brief orientation session</p>
+                            <p style="margin-top: 8px;">Requirements: Valid driver's license, vehicle inspection, clean
+                                background check, and meet minimum age requirements (21 in most cities).</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>How does fare estimation work?</span>
+                        <span class="faq-icon"><i class="fas fa-plus"></i></span>
+                    </button>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            <p>Our fare estimates are calculated based on:</p>
+                            <p style="margin-top: 8px;">• Base fare (pickup fee)</p>
+                            <p>• Time and distance of the trip</p>
+                            <p>• Current demand in your area (surge pricing)</p>
+                            <p>• Applicable tolls and fees</p>
+                            <p style="margin-top: 8px;">The final fare may vary slightly based on actual conditions
+                                during your trip. You'll always see the estimated fare before confirming your ride.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-column">
+                    <div class="footer-logo">
+                        <img src="./assets/Stackly-logo-Blue.webp" alt="Stackly" class="footer-logo-img">
+                    </div>
+                    <p class="footer-desc">The smartest way to get around. Request a ride, jump in, and go.</p>
+                    <div class="footer-social">
+                        <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h4 class="footer-heading">Company</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="services.html">Service</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4 class="footer-heading">Support</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">Help Center</a></li>
+                        <li><a href="#">Safety</a></li>
+                        <li><a href="#">Community Guidelines</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4 class="footer-heading">Legal</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Cookie Policy</a></li>
+                        <li><a href="#">Accessibility</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4 class="footer-heading">Download App</h4>
+                    <div class="footer-app-buttons">
+                        <a href="#" class="footer-store-btn">
+                            <i class="fab fa-apple"></i>
+                            <div class="store-info">
+                                <span class="store-small">Download on the</span>
+                                <span class="store-large">App Store</span>
+                            </div>
+                        </a>
+                        <a href="#" class="footer-store-btn">
+                            <i class="fab fa-google-play"></i>
+                            <div class="store-info">
+                                <span class="store-small">Get it on</span>
+                                <span class="store-large">Google Play</span>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="footer-copyright">
+                    <p>&copy; 2026 Stackly. All rights reserved.</p>
+                </div>
+                <div class="footer-payment">
+                    <span class="payment-label">We accept:</span>
+                    <div class="payment-icons">
+                        <i class="fab fa-cc-visa"></i>
+                        <i class="fab fa-cc-mastercard"></i>
+                        <i class="fab fa-cc-amex"></i>
+                        <i class="fab fa-cc-paypal"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const contactForm = document.getElementById('contactForm');
+            const nameInput = document.getElementById('name');
+            const emailInput = document.getElementById('email');
+            const typeSelect = document.getElementById('userType');
+            const messageInput = document.getElementById('message');
+            const submitBtn = document.getElementById('submitBtn');
+
+            const patterns = {
+                name: /^[a-zA-Z\s]{2,50}$/,
+                email: /^[^\s@]+@[^\s@]+\.[^\s@]+$/
+            };
+
+            const showError = (input, errorId, message) => {
+                input.classList.remove('valid');
+                input.classList.add('invalid');
+                const errorElement = document.getElementById(errorId);
+                errorElement.textContent = message;
+                errorElement.classList.add('show');
+                return false;
+            };
+
+            const showSuccess = (input, errorId) => {
+                input.classList.remove('invalid');
+                input.classList.add('valid');
+                const errorElement = document.getElementById(errorId);
+                errorElement.classList.remove('show');
+                return true;
+            };
+
+            const validateName = () => {
+                const val = nameInput.value.trim();
+                if (val === '') return showError(nameInput, 'nameError', 'Name is required.');
+                if (!patterns.name.test(val)) return showError(nameInput, 'nameError', 'Please enter a valid name (letters only).');
+                return showSuccess(nameInput, 'nameError');
+            };
+
+            const validateEmail = () => {
+                const val = emailInput.value.trim();
+                if (val === '') return showError(emailInput, 'emailError', 'Email is required.');
+                if (!patterns.email.test(val)) return showError(emailInput, 'emailError', 'Please enter a valid email address.');
+                return showSuccess(emailInput, 'emailError');
+            };
+
+            const validateType = () => {
+                if (typeSelect.value === '') return showError(typeSelect, 'typeError', 'Please select a user type.');
+                return showSuccess(typeSelect, 'typeError');
+            };
+
+            const validateMessage = () => {
+                const val = messageInput.value.trim();
+                if (val === '') return showError(messageInput, 'messageError', 'Message is required.');
+                if (val.length < 10) return showError(messageInput, 'messageError', 'Message must be at least 10 characters.');
+                return showSuccess(messageInput, 'messageError');
+            };
+
+            nameInput.addEventListener('input', validateName);
+            emailInput.addEventListener('input', validateEmail);
+            typeSelect.addEventListener('change', validateType);
+            messageInput.addEventListener('input', validateMessage);
+
+            contactForm.addEventListener('submit', (e) => {
+                e.preventDefault();
+
+                const isNameValid = validateName();
+                const isEmailValid = validateEmail();
+                const isTypeValid = validateType();
+                const isMessageValid = validateMessage();
+                if (isNameValid && isEmailValid && isTypeValid && isMessageValid) {
+
+                    submitBtn.style.pointerEvents = 'none';
+                    submitBtn.style.opacity = '0.8';
+                    submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> <span>Sending...</span>';
+                    setTimeout(() => {
+                        window.location.href = '404page.html';
+                    }, 1000);
+                }
+            });
+            const faqItems = document.querySelectorAll('.faq-item');
+
+            faqItems.forEach(item => {
+                const question = item.querySelector('.faq-question');
+                const answer = item.querySelector('.faq-answer');
+                const answerContent = item.querySelector('.faq-answer-content');
+
+                question.addEventListener('click', function () {
+                    const isActive = item.classList.contains('active');
+
+                    faqItems.forEach(otherItem => {
+                        if (otherItem !== item) {
+                            otherItem.classList.remove('active');
+                            otherItem.querySelector('.faq-answer').style.maxHeight = null;
+                        }
+                    });
+
+                    if (isActive) {
+                        item.classList.remove('active');
+                        answer.style.maxHeight = null;
+                    } else {
+                        item.classList.add('active');
+                        answer.style.maxHeight = answerContent.scrollHeight + 'px';
+                    }
+                });
+            });
+
+            const officeCards = document.querySelectorAll('.office-card');
+
+            const observerOptions = {
+                root: null,
+                rootMargin: '0px',
+                threshold: 0.1
+            };
+
+            const officeObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('revealed');
+                        officeObserver.unobserve(entry.target);
+                    }
+                });
+            }, observerOptions);
+
+            officeCards.forEach(card => {
+                officeObserver.observe(card);
+            });
+
+            const header = document.querySelector('.header');
+            window.addEventListener('scroll', function () {
+                const currentScroll = window.pageYOffset;
+                if (currentScroll > 50) {
+                    header.style.height = '70px';
+                    header.style.background = 'rgba(255, 255, 255, 0.95)';
+                } else {
+                    header.style.height = '80px';
+                    header.style.background = 'rgba(255, 255, 255, 0.85)';
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 - Page Not Found | Stackly</title>
+    <link rel="stylesheet" href="shared.css">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@400;600;700;800;900&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        :root {
+            --error-primary: #0f172a;
+            --error-accent: #2563eb;
+            --error-success: #10b981;
+            --error-warning: #f59e0b;
+            --error-danger: #ef4444;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', system-ui, sans-serif;
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #0f172a 100%);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            overflow-x: hidden;
+        }
+
+        .error-page {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 2rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .error-decoration {
+            position: absolute;
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        .error-decoration.circle-1 {
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(37, 99, 235, 0.15) 0%, transparent 70%);
+            top: -200px;
+            right: -200px;
+            animation: float 8s ease-in-out infinite;
+        }
+
+        .error-decoration.circle-2 {
+            width: 400px;
+            height: 400px;
+            background: radial-gradient(circle, rgba(16, 185, 129, 0.1) 0%, transparent 70%);
+            bottom: -100px;
+            left: -100px;
+            animation: float 6s ease-in-out infinite reverse;
+        }
+
+        .error-decoration.circle-3 {
+            width: 200px;
+            height: 200px;
+            background: radial-gradient(circle, rgba(245, 158, 11, 0.1) 0%, transparent 70%);
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            animation: pulse 4s ease-in-out infinite;
+        }
+
+        @keyframes float {
+
+            0%,
+            100% {
+                transform: translateY(0) rotate(0deg);
+            }
+
+            50% {
+                transform: translateY(-30px) rotate(5deg);
+            }
+        }
+
+        @keyframes pulse {
+
+            0%,
+            100% {
+                transform: translate(-50%, -50%) scale(1);
+                opacity: 0.5;
+            }
+
+            50% {
+                transform: translate(-50%, -50%) scale(1.2);
+                opacity: 1;
+            }
+        }
+
+        .error-content {
+            text-align: center;
+            z-index: 1;
+            max-width: 700px;
+        }
+
+        .error-code {
+            font-family: 'Outfit', sans-serif;
+            font-size: 12rem;
+            font-weight: 900;
+            line-height: 1;
+            background: linear-gradient(135deg, #2563eb 0%, #60a5fa 50%, #10b981 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 1rem;
+            animation: slideUp 0.8s ease-out forwards;
+            opacity: 0;
+            transform: translateY(30px);
+        }
+
+        @keyframes slideUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .error-title {
+            font-family: 'Outfit', sans-serif;
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: white;
+            margin-bottom: 1rem;
+            animation: slideUp 0.8s ease-out 0.2s forwards;
+            opacity: 0;
+            transform: translateY(30px);
+        }
+
+        .error-description {
+            font-size: 1.125rem;
+            color: #94a3b8;
+            line-height: 1.7;
+            margin-bottom: 2.5rem;
+            animation: slideUp 0.8s ease-out 0.4s forwards;
+            opacity: 0;
+            transform: translateY(30px);
+        }
+
+        .error-search {
+            position: relative;
+            max-width: 450px;
+            margin: 0 auto 2.5rem;
+            animation: slideUp 0.8s ease-out 0.6s forwards;
+            opacity: 0;
+            transform: translateY(30px);
+        }
+
+        .error-search input {
+            width: 100%;
+            padding: 1rem 1.5rem;
+            padding-right: 3.5rem;
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 50px;
+            font-size: 1rem;
+            color: white;
+            outline: none;
+            transition: all 0.3s ease;
+        }
+
+        .error-search input::placeholder {
+            color: #64748b;
+        }
+
+        .error-search input:focus {
+            background: rgba(255, 255, 255, 0.15);
+            border-color: #2563eb;
+            box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.2);
+        }
+
+        .error-search button {
+            position: absolute;
+            right: 8px;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 44px;
+            height: 44px;
+            background: #2563eb;
+            border: none;
+            border-radius: 50%;
+            color: white;
+            font-size: 1.125rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .error-search button:hover {
+            background: #1d4ed8;
+            transform: translateY(-50%) scale(1.05);
+        }
+
+        .quick-links {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            flex-wrap: wrap;
+            margin-bottom: 2rem;
+            animation: slideUp 0.8s ease-out 0.8s forwards;
+            opacity: 0;
+            transform: translateY(30px);
+        }
+
+        .quick-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.875rem 1.5rem;
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 50px;
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.9375rem;
+            transition: all 0.3s ease;
+        }
+
+        .quick-link:hover {
+            background: #2563eb;
+            border-color: #2563eb;
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px -5px rgba(37, 99, 235, 0.4);
+        }
+
+        .quick-link i {
+            font-size: 1rem;
+        }
+
+        .help-section {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 16px;
+            padding: 1.5rem 2rem;
+            animation: slideUp 1s ease-out 1s forwards;
+            opacity: 0;
+            transform: translateY(30px);
+        }
+
+        .help-section p {
+            color: #94a3b8;
+            font-size: 0.9375rem;
+            margin-bottom: 1rem;
+        }
+
+        .help-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .help-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.75rem 1.25rem;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 0.875rem;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .help-btn.primary {
+            background: #2563eb;
+            color: white;
+        }
+
+        .help-btn.primary:hover {
+            background: #1d4ed8;
+            transform: translateY(-2px);
+        }
+
+        .help-btn.secondary {
+            background: transparent;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            color: white;
+        }
+
+        .help-btn.secondary:hover {
+            background: rgba(255, 255, 255, 0.1);
+            border-color: white;
+        }
+
+        .floating-car {
+            position: absolute;
+            font-size: 4rem;
+            animation: carFloat 6s ease-in-out infinite;
+            z-index: 0;
+            opacity: 0.3;
+        }
+
+        .floating-car.car-1 {
+            top: 20%;
+            left: 10%;
+            animation-delay: 0s;
+        }
+
+        .floating-car.car-2 {
+            top: 30%;
+            right: 15%;
+            animation-delay: 2s;
+        }
+
+        .floating-car.car-3 {
+            bottom: 25%;
+            left: 20%;
+            animation-delay: 4s;
+        }
+
+        @keyframes carFloat {
+
+            0%,
+            100% {
+                transform: translateY(0) rotate(-5deg);
+            }
+
+            50% {
+                transform: translateY(-20px) rotate(5deg);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .error-code {
+                font-size: 8rem;
+            }
+
+            .error-title {
+                font-size: 1.75rem;
+            }
+
+            .error-description {
+                font-size: 1rem;
+            }
+
+            .quick-links {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .quick-link {
+                width: 100%;
+                max-width: 280px;
+                justify-content: center;
+            }
+
+            .floating-car {
+                display: none;
+            }
+
+            .help-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .help-btn {
+                width: 100%;
+                max-width: 250px;
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="error-page">
+        <div class="error-decoration circle-1"></div>
+        <div class="error-decoration circle-2"></div>
+        <div class="error-decoration circle-3"></div>
+
+        <div class="floating-car car-1">🚗</div>
+        <div class="floating-car car-2">🚙</div>
+        <div class="floating-car car-3">🛺</div>
+
+        <div class="error-content">
+            <div class="error-code">404</div>
+            <h1 class="error-title">Oops! This page took a wrong turn</h1>
+            <p class="error-description">
+                Looks like this route doesn't exist. The page you're looking for might have been moved,
+                deleted, or never existed in the first place. Let's get you back on the road!
+            </p>
+
+            <div class="quick-links">
+                <a href="index.html" class="quick-link">
+                    <i class="fas fa-home"></i>
+                    Go Home
+                </a>
+                <a href="services.html" class="quick-link">
+                    <i class="fas fa-car"></i>
+                    Our Services
+                </a>
+                <a href="about.html" class="quick-link">
+                    <i class="fas fa-users"></i>
+                    About Us
+                </a>
+                <a href="contact.html" class="quick-link">
+                    <i class="fas fa-headset"></i>
+                    Contact Support
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const searchInput = document.querySelector('.error-search input');
+            const searchButton = document.querySelector('.error-search button');
+
+            searchButton.addEventListener('click', function () {
+                const query = searchInput.value.trim();
+                if (query) {
+                    alert('Search functionality would search for: ' + query);
+                }
+            });
+
+            searchInput.addEventListener('keypress', function (e) {
+                if (e.key === 'Enter') {
+                    const query = searchInput.value.trim();
+                    if (query) {
+                        alert('Search functionality would search for: ' + query);
+                    }
+                }
+            });
+
+            const quickLinks = document.querySelectorAll('.quick-link');
+            quickLinks.forEach(link => {
+                link.addEventListener('mouseenter', function () {
+                    this.style.transform = 'translateY(-3px)';
+                });
+                link.addEventListener('mouseleave', function () {
+                    this.style.transform = 'translateY(0)';
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>

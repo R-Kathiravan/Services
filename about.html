@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Stackly</title>
+    <link rel="stylesheet" href="shared.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="about.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@400;600;700;800;900&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+</head>
+
+<body>
+    <header class="header">
+        <div class="header-container">
+            <a href="index.html">
+                <img src="./assets/Stackly-logo-Blue.webp" alt="Logo" class="logo">
+            </a>
+            <nav class="nav-menu" id="navMenu">
+                <ul class="nav-list">
+                    <div class="home-nav">
+                        <li class="nav-item">
+                            <a href="index.html" class="home-btn nav-link">
+                                Home
+                                <span class="nav-indicator"></span>
+                            </a>
+                        </li>
+
+                        <span class="material-icons dropdown-icon" id="homeDropdownBtn">
+                            expand_more
+                        </span>
+
+                        <div class="home-select" id="homeDropdown">
+                            <a href="./Homepage2/index.html" class="nav-link">Home Page 2</a>
+                        </div>
+                    </div>
+                    <li class="nav-item">
+                        <a href="about.html" class="nav-link active">
+                            <span>About</span>
+                            <span class="nav-indicator"></span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="services.html" class="nav-link">
+                            <span>Service</span>
+                            <span class="nav-indicator"></span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="contact.html" class="nav-link">
+                            <span>Contact</span>
+                            <span class="nav-indicator"></span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            <div class="header-actions">
+                <a href="login.html" class="btn btn-text nav-login">
+                    <i class="fas fa-user"></i>
+                    <span>Login</span>
+                </a>
+                <a href="dashboard.html" class="btn btn-primary nav-dashboard">
+                    <i class="fas fa-th-large"></i>
+                    <span>Dashboard</span>
+                </a>
+            </div>
+            <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle menu">
+                <span class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </span>
+            </button>
+        </div>
+    </header>
+
+    <section class="mission-hero">
+        <div class="parallax-bg">
+            <img src="./assets/about-hero.webp" alt="City at night" class="parallax-img">
+        </div>
+        <div class="parallax-overlay"></div>
+        <div class="mission-content">
+            <span class="mission-badge animate-fade-in">Our Story</span>
+            <h1 class="mission-title animate-slide-up" style="--delay: 0.1s">
+                Changing how<br>
+                <span class="text-gradient-light">the city moves.</span>
+            </h1>
+            <p class="mission-subtitle animate-slide-up" style="--delay: 0.2s">
+                We're on a mission to make transportation accessible, sustainable, and safe for everyone —
+                one ride at a time.
+            </p>
+        </div>
+    </section>
+
+
+    <section class="impact-section">
+        <div class="container">
+            <div class="section-header text-center">
+                <span class="section-badge">Our Impact</span>
+                <h2 class="section-title">Numbers that speak<br>louder than words</h2>
+            </div>
+
+            <div class="impact-grid">
+                <div class="impact-card">
+                    <div class="impact-icon">
+                        <i class="fas fa-car"></i>
+                    </div>
+                    <div class="impact-number" data-target="5000000">0</div>
+                    <div class="impact-label">Rides Completed</div>
+                </div>
+                <div class="impact-card">
+                    <div class="impact-icon">
+                        <i class="fas fa-city"></i>
+                    </div>
+                    <div class="impact-number" data-target="50">0</div>
+                    <div class="impact-label">Cities Worldwide</div>
+                </div>
+                <div class="impact-card">
+                    <div class="impact-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <div class="impact-number" data-target="100000">0</div>
+                    <div class="impact-label">Active Drivers</div>
+                </div>
+                <div class="impact-card">
+                    <div class="impact-icon">
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <div class="impact-number" data-target="49" data-decimal="true">0</div>
+                    <div class="impact-label">Average Rating</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="timeline-section">
+        <div class="container">
+            <div class="section-header text-center">
+                <span class="section-badge">Our Journey</span>
+                <h2 class="section-title">From a spark to<br>a movement</h2>
+            </div>
+
+            <div class="timeline">
+                <div class="timeline-line">
+                    <div class="timeline-progress"></div>
+                </div>
+                <div class="timeline-item" data-year="2023">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-year">2023</span>
+                        <h3 class="timeline-title">The Beginning</h3>
+                        <p class="timeline-desc">Stackly was founded with a simple vision: make city transportation
+                            accessible, reliable, and safe for everyone.</p>
+                    </div>
+                </div>
+                <div class="timeline-item" data-year="2024">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-year">2024</span>
+                        <h3 class="timeline-title">First 1 Million Rides</h3>
+                        <p class="timeline-desc">We celebrated our first million rides and expanded to 15 new
+                            cities across the country.</p>
+                    </div>
+                </div>
+                <div class="timeline-item" data-year="2024">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-year">2024</span>
+                        <h3 class="timeline-title">Stackly Business Launch</h3>
+                        <p class="timeline-desc">Introduced enterprise solutions for corporate clients,
+                            revolutionizing business travel management.</p>
+                    </div>
+                </div>
+                <div class="timeline-item" data-year="2025">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-year">2025</span>
+                        <h3 class="timeline-title">Global Expansion</h3>
+                        <p class="timeline-desc">Expanded to 50+ cities worldwide and reached 5 million
+                            happy riders.</p>
+                    </div>
+                </div>
+                <div class="timeline-item" data-year="2025">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-year">2025</span>
+                        <h3 class="timeline-title">Sustainability Initiative</h3>
+                        <p class="timeline-desc">Launched our green rides program with electric and
+                            hybrid vehicle options.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="values-section">
+        <div class="container">
+            <div class="section-header text-center">
+                <span class="section-badge">What We Believe</span>
+                <h2 class="section-title">Our core values<br>drive everything</h2>
+            </div>
+
+            <div class="values-grid">
+                <div class="value-card value-large">
+                    <div class="value-front">
+                        <div class="value-icon">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <h3 class="value-title">Safety First</h3>
+                    </div>
+                    <div class="value-back">
+                        <h3>Safety First</h3>
+                        <p>Every decision we make prioritizes the safety of our riders and drivers. From rigorous
+                            background checks to real-time trip monitoring, we don't compromise on security.</p>
+                    </div>
+                </div>
+                <div class="value-card">
+                    <div class="value-front">
+                        <div class="value-icon">
+                            <i class="fas fa-hands-helping"></i>
+                        </div>
+                        <h3 class="value-title">Driver Empowerment</h3>
+                    </div>
+                    <div class="value-back">
+                        <h3>Driver Empowerment</h3>
+                        <p>We believe in creating opportunities. Our platform gives drivers the flexibility, tools,
+                            and support they need to succeed on their own terms.</p>
+                    </div>
+                </div>
+                <div class="value-card">
+                    <div class="value-front">
+                        <div class="value-icon">
+                            <i class="fas fa-leaf"></i>
+                        </div>
+                        <h3 class="value-title">Sustainable Transit</h3>
+                    </div>
+                    <div class="value-back">
+                        <h3>Sustainable Transit</h3>
+                        <p>We're committed to reducing carbon emissions by promoting shared rides and expanding
+                            our electric vehicle fleet.</p>
+                    </div>
+                </div>
+                <div class="value-card">
+                    <div class="value-front">
+                        <div class="value-icon">
+                            <i class="fas fa-lightbulb"></i>
+                        </div>
+                        <h3 class="value-title">Innovation Always</h3>
+                    </div>
+                    <div class="value-back">
+                        <h3>Innovation Always</h3>
+                        <p>Technology is our engine. We continuously innovate to create smoother, faster,
+                            and more reliable transportation solutions.</p>
+                    </div>
+                </div>
+                <div class="value-card value-wide">
+                    <div class="value-front">
+                        <div class="value-icon">
+                            <i class="fas fa-heart"></i>
+                        </div>
+                        <h3 class="value-title">Community-Centric</h3>
+                    </div>
+                    <div class="value-back">
+                        <h3>Community-Centric</h3>
+                        <p>We're more than an app — we're part of the communities we serve. We invest in
+                            local partnerships, create jobs, and support neighborhood growth.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="team-section">
+        <div class="container">
+            <div class="section-header text-center">
+                <span class="section-badge">Meet The Leaders</span>
+                <h2 class="section-title">The minds behind<br>the movement</h2>
+            </div>
+
+            <div class="team-grid">
+                <div class="team-card">
+                    <div class="team-image">
+                        <img src="./assets/team1.webp" alt="Sarah Johnson">
+                    </div>
+                    <div class="team-info">
+                        <h3 class="team-name">Sarah Johnson</h3>
+                        <span class="team-role">CEO & Co-Founder</span>
+                        <div class="team-social">
+                            <a href="404page.html"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="404page.html"><i class="fab fa-twitter"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="team-card">
+                    <div class="team-image">
+                        <img src="./assets/team3.webp" alt="Michael Chen">
+                    </div>
+                    <div class="team-info">
+                        <h3 class="team-name">Michael Chen</h3>
+                        <span class="team-role">CTO & Co-Founder</span>
+                        <div class="team-social">
+                            <a href="404page.html"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="404page.html"><i class="fab fa-twitter"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="team-card">
+                    <div class="team-image">
+                        <img src="./assets/team2.webp" alt="Emily Rodriguez">
+                    </div>
+                    <div class="team-info">
+                        <h3 class="team-name">Emily Rodriguez</h3>
+                        <span class="team-role">COO</span>
+                        <div class="team-social">
+                            <a href="404page.html"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="404page.html"><i class="fab fa-twitter"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="team-card">
+                    <div class="team-image">
+                        <img src="./assets/review5.webp" alt="David Park">
+                    </div>
+                    <div class="team-info">
+                        <h3 class="team-name">David Park</h3>
+                        <span class="team-role">VP of Engineering</span>
+                        <div class="team-social">
+                            <a href="404page.html"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="404page.html"><i class="fab fa-twitter"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="team-card">
+                    <div class="team-image">
+                        <img src="./assets/review2.webp" alt="Jessica Williams">
+                    </div>
+                    <div class="team-info">
+                        <h3 class="team-name">Jessica Williams</h3>
+                        <span class="team-role">VP of Marketing</span>
+                        <div class="team-social">
+                            <a href="404page.html"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="404page.html"><i class="fab fa-twitter"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="team-card">
+                    <div class="team-image">
+                        <img src="./assets/review3.webp" alt="Robert Taylor">
+                    </div>
+                    <div class="team-info">
+                        <h3 class="team-name">Robert Taylor</h3>
+                        <span class="team-role">Head of Operations</span>
+                        <div class="team-social">
+                            <a href="404page.html"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="404page.html"><i class="fab fa-twitter"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-column">
+                    <div class="footer-logo">
+                        <img src="./assets/Stackly-logo-Blue.webp" alt="Stackly" class="footer-logo-img">
+                    </div>
+                    <p class="footer-desc">The smartest way to get around. Request a ride, jump in, and go.</p>
+                    <div class="footer-social">
+                        <a href="404page.html" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                        <a href="404page.html" class="social-link"><i class="fab fa-twitter"></i></a>
+                        <a href="404page.html" class="social-link"><i class="fab fa-instagram"></i></a>
+                        <a href="404page.html" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h4 class="footer-heading">Company</h4>
+                    <ul class="footer-links">
+                        <li><a href="404page.html">About Us</a></li>
+                        <li><a href="404page.html">Careers</a></li>
+                        <li><a href="404page.html">Press</a></li>
+                        <li><a href="404page.html">Blog</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h4 class="footer-heading">Support</h4>
+                    <ul class="footer-links">
+                        <li><a href="404page.html"> Help Center</a></li>
+                        <li><a href="404page.html">Safety</a></li>
+                        <li><a href="404page.html">Community Guidelines</a></li>
+                        <li><a href="404page.html">Contact Us</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h4 class="footer-heading">Legal</h4>
+                    <ul class="footer-links">
+                        <li><a href="404page.html">Terms of Service</a></li>
+                        <li><a href="404page.html">Privacy Policy</a></li>
+                        <li><a href="404page.html">Cookie Policy</a></li>
+                        <li><a href="404page.html">Accessibility</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h4 class="footer-heading">Download App</h4>
+                    <div class="footer-app-buttons">
+                        <a href="404page.html" class="footer-store-btn">
+                            <i class="fab fa-apple"></i>
+                            <div class="store-info">
+                                <span class="store-small">Download on the</span>
+                                <span class="store-large">App Store</span>
+                            </div>
+                        </a>
+                        <a href="404page.html" class="footer-store-btn">
+                            <i class="fab fa-google-play"></i>
+                            <div class="store-info">
+                                <span class="store-small">Get it on</span>
+                                <span class="store-large">Google Play</span>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="footer-copyright">
+                    <p>&copy; 2024 Stackly. All rights reserved.</p>
+                </div>
+                <div class="footer-payment">
+                    <span class="payment-label">We accept:</span>
+                    <div class="payment-icons">
+                        <i class="fab fa-cc-visa"></i>
+                        <i class="fab fa-cc-mastercard"></i>
+                        <i class="fab fa-cc-amex"></i>
+                        <i class="fab fa-cc-paypal"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        window.addEventListener('scroll', function () {
+            const parallaxBg = document.querySelector('.parallax-bg');
+            const scrollPosition = window.pageYOffset;
+            if (parallaxBg) {
+                parallaxBg.style.transform = 'translateY(' + (scrollPosition * 0.5) + 'px)';
+            }
+        });
+
+        const observerOptions = {
+            threshold: 0.1
+        };
+
+        const counterObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const counters = entry.target.querySelectorAll('.impact-number');
+                    counters.forEach(counter => {
+                        const target = parseInt(counter.getAttribute('data-target'));
+                        const isDecimal = counter.getAttribute('data-decimal') === 'true';
+                        const duration = 2000;
+                        const increment = target / (duration / 16);
+
+                        let current = 0;
+                        const updateCounter = () => {
+                            current += increment;
+                            if (current < target) {
+                                if (isDecimal) {
+                                    counter.textContent = (current / 10).toFixed(1);
+                                } else {
+                                    counter.textContent = Math.floor(current).toLocaleString();
+                                }
+                                requestAnimationFrame(updateCounter);
+                            } else {
+                                if (isDecimal) {
+                                    counter.textContent = (target / 10).toFixed(1);
+                                } else {
+                                    counter.textContent = target.toLocaleString() + '+';
+                                }
+                            }
+                        };
+                        updateCounter();
+                    });
+                    counterObserver.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        const impactSection = document.querySelector('.impact-section');
+        if (impactSection) {
+            counterObserver.observe(impactSection);
+        }
+
+        const timelineObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const timelineItems = entry.target.querySelectorAll('.timeline-item');
+                    const timelineProgress = entry.target.querySelector('.timeline-progress');
+
+                    timelineItems.forEach((item, index) => {
+                        setTimeout(() => {
+                            item.classList.add('visible');
+                        }, index * 200);
+                    });
+
+                    if (timelineProgress) {
+                        timelineProgress.style.height = '100%';
+                    }
+                }
+            });
+        }, { threshold: 0.2 });
+
+        const timeline = document.querySelector('.timeline');
+        if (timeline) {
+            timelineObserver.observe(timeline);
+        }
+
+        const magneticBtn = document.querySelector('.magnetic-btn');
+        if (magneticBtn) {
+            magneticBtn.addEventListener('mousemove', (e) => {
+                const rect = magneticBtn.getBoundingClientRect();
+                const x = e.clientX - rect.left - rect.width / 2;
+                const y = e.clientY - rect.top - rect.height / 2;
+
+                magneticBtn.style.transform = 'translate(' + (x * 0.3) + 'px, ' + (y * 0.3) + 'px)';
+            });
+
+            magneticBtn.addEventListener('mouseleave', () => {
+                magneticBtn.style.transform = 'translate(0, 0)';
+            });
+        }
+    </script>
+</body>
+
+</html>

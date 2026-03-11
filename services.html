@@ -1,0 +1,1077 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services - Stackly</title>
+    <link rel="stylesheet" href="shared.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="services.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@400;600;700;800;900&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<header class="header">
+    <div class="header-container">
+        <a href="index.html">
+            <img src="./assets/Stackly-logo-Blue.webp" alt="Logo" class="logo">
+        </a>
+        <nav class="nav-menu" id="navMenu">
+            <ul class="nav-list">
+                <div class="home-nav active">
+                    <li class="nav-item">
+                        <a href="index.html" class="home-btn nav-link">
+                            Home
+                            <span class="nav-indicator"></span>
+                        </a>
+                    </li>
+
+                    <span class="material-icons dropdown-icon" id="homeDropdownBtn">
+                        expand_more
+                    </span>
+
+                    <div class="home-select" id="homeDropdown">
+                        <a href="./Homepage2/index.html" class="nav-link">Home Page 2</a>
+                    </div>
+                </div>
+                <li class="nav-item">
+                    <a href="about.html" class="nav-link">
+                        <span>About</span>
+                        <span class="nav-indicator"></span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="services.html" class="nav-link active">
+                        <span>Service</span>
+                        <span class="nav-indicator"></span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="contact.html" class="nav-link">
+                        <span>Contact</span>
+                        <span class="nav-indicator"></span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        <div class="header-actions">
+            <a href="login.html" class="btn btn-text nav-login">
+                <i class="fas fa-user"></i>
+                <span>Login</span>
+            </a>
+            <a href="dashboard.html" class="btn btn-primary nav-dashboard">
+                <i class="fas fa-th-large"></i>
+                <span>Dashboard</span>
+            </a>
+        </div>
+        <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle menu">
+            <span class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </span>
+        </button>
+    </div>
+</header>
+
+
+<section class="services-hero">
+    <div class="hero-bg-pattern"></div>
+    <div class="container">
+        <div class="services-hero-content">
+            <span class="services-badge">Our Services</span>
+            <h1 class="services-hero-title">Premium Transportation<br><span class="text-gradient">Solutions</span>
+            </h1>
+            <p class="services-hero-subtitle">From daily commutes to luxury travel, discover the perfect ride for
+                every journey. Experience convenience, safety, and comfort with Stackly.</p>
+            <div class="services-hero-stats">
+                <div class="h-stat">
+                    <span class="h-stat-value">50K+</span>
+                    <span class="h-stat-label">Active Drivers</span>
+                </div>
+                <div class="h-stat">
+                    <span class="h-stat-value">1M+</span>
+                    <span class="h-stat-label">Happy Rides</span>
+                </div>
+                <div class="h-stat">
+                    <span class="h-stat-value">25+</span>
+                    <span class="h-stat-label">Cities Served</span>
+                </div>
+            </div>
+        </div>
+        <div class="services-hero-visual">
+            <div class="floating-car-cards">
+                <div class="fc-card fc-1">
+                    <i class="fas fa-car"></i>
+                    <span>Economy</span>
+                </div>
+                <div class="fc-card fc-2">
+                    <i class="fas fa-crown"></i>
+                    <span>Premium</span>
+                </div>
+                <div class="fc-card fc-3">
+                    <i class="fas fa-truck-monster"></i>
+                    <span>XL</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section class="fleet-catalog-section" id="fleet-catalog">
+    <div class="container">
+        <div class="section-header text-center">
+            <span class="section-badge">Fleet Catalog</span>
+            <h2 class="section-title">Choose Your Perfect Ride</h2>
+            <p class="section-subtitle">From budget-friendly to luxury, we have a vehicle for every need and
+                occasion.</p>
+        </div>
+
+        <div class="fleet-catalog-wrapper">
+
+            <nav class="fleet-sticky-menu">
+                <ul class="fleet-menu-list">
+                    <li class="fleet-menu-item active" data-target="economy">
+                        <span class="fleet-menu-icon"><i class="fas fa-car-side"></i></span>
+                        <div class="fleet-menu-text">
+                            <span class="fleet-menu-title">Economy</span>
+                            <span class="fleet-menu-price">From $5</span>
+                        </div>
+                    </li>
+                    <li class="fleet-menu-item" data-target="premium">
+                        <span class="fleet-menu-icon"><i class="fas fa-crown"></i></span>
+                        <div class="fleet-menu-text">
+                            <span class="fleet-menu-title">Premium</span>
+                            <span class="fleet-menu-price">From $15</span>
+                        </div>
+                    </li>
+                    <li class="fleet-menu-item" data-target="xl">
+                        <span class="fleet-menu-icon"><i class="fas fa-truck-monster"></i></span>
+                        <div class="fleet-menu-text">
+                            <span class="fleet-menu-title">XL / SUV</span>
+                            <span class="fleet-menu-price">From $25</span>
+                        </div>
+                    </li>
+                    <li class="fleet-menu-item" data-target="rentals">
+                        <span class="fleet-menu-icon"><i class="fas fa-calendar-alt"></i></span>
+                        <div class="fleet-menu-text">
+                            <span class="fleet-menu-title">Rentals</span>
+                            <span class="fleet-menu-price">From $30/day</span>
+                        </div>
+                    </li>
+                    <li class="fleet-menu-item" data-target="outstation">
+                        <span class="fleet-menu-icon"><i class="fas fa-route"></i></span>
+                        <div class="fleet-menu-text">
+                            <span class="fleet-menu-title">Outstation</span>
+                            <span class="fleet-menu-price">From $0.8/km</span>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+            <div class="fleet-content-scroll">
+                <article class="fleet-detail-card" id="economy">
+                    <div class="fleet-detail-header">
+                        <div class="fleet-detail-badge">Most Popular</div>
+                        <h3 class="fleet-detail-title">Economy Ride</h3>
+                        <p class="fleet-detail-subtitle">Affordable comfort for everyday travel</p>
+                    </div>
+                    <div class="fleet-detail-grid">
+                        <div class="fleet-car-showcase">
+                            <div class="car-image-container">
+                                <img src="./assets/car1.webp" alt="Economy Car" class="fleet-car-image">
+                                <div class="car-overlay"></div>
+                            </div>
+                            <div class="car-features-list">
+                                <div class="car-feature"><i class="fas fa-user"></i> Up to 4 passengers</div>
+                                <div class="car-feature"><i class="fas fa-suitcase"></i> 2 luggage bags</div>
+                                <div class="car-feature"><i class="fas fa-leaf"></i> AC included</div>
+                            </div>
+                        </div>
+                        <div class="fleet-pricing-card">
+                            <h4>Pricing Details</h4>
+                            <div class="price-row">
+                                <span>Base Fare</span>
+                                <span class="price-value">$5.00</span>
+                            </div>
+                            <div class="price-row">
+                                <span>Per Kilometer</span>
+                                <span class="price-value">$1.20</span>
+                            </div>
+                            <div class="price-row">
+                                <span>Per Minute</span>
+                                <span class="price-value">$0.25</span>
+                            </div>
+                            <div class="price-row">
+                                <span>Minimum Fare</span>
+                                <span class="price-value">$8.00</span>
+                            </div>
+                            <div class="price-eta">
+                                <i class="fas fa-clock"></i>
+                                <span>Avg. pickup time: 3-5 min</span>
+                            </div>
+                            <a href="404page.html" class="btn btn-primary btn-full">Book Economy</a>
+                        </div>
+                    </div>
+                    <div class="fleet-use-cases">
+                        <span class="use-case-tag"><i class="fas fa-briefcase"></i> Daily Commute</span>
+                        <span class="use-case-tag"><i class="fas fa-plane-departure"></i> Airport Transfer</span>
+                        <span class="use-case-tag"><i class="fas fa-shopping-bag"></i> Errands</span>
+                    </div>
+                </article>
+
+
+                <article class="fleet-detail-card" id="premium">
+                    <div class="fleet-detail-header">
+                        <div class="fleet-detail-badge premium">Luxury</div>
+                        <h3 class="fleet-detail-title">Premium Ride</h3>
+                        <p class="fleet-detail-subtitle">Elevated comfort with top-rated drivers</p>
+                    </div>
+                    <div class="fleet-detail-grid">
+                        <div class="fleet-car-showcase">
+                            <div class="car-image-container">
+                                <img src="./assets/car2.webp" alt="Premium Car" class="fleet-car-image">
+                                <div class="car-overlay"></div>
+                            </div>
+                            <div class="car-features-list">
+                                <div class="car-feature"><i class="fas fa-user"></i> Up to 4 passengers</div>
+                                <div class="car-feature"><i class="fas fa-suitcase"></i> 3 luggage bags</div>
+                                <div class="car-feature"><i class="fas fa-snowflake"></i> Premium AC</div>
+                            </div>
+                        </div>
+                        <div class="fleet-pricing-card">
+                            <h4>Pricing Details</h4>
+                            <div class="price-row">
+                                <span>Base Fare</span>
+                                <span class="price-value">$15.00</span>
+                            </div>
+                            <div class="price-row">
+                                <span>Per Kilometer</span>
+                                <span class="price-value">$2.00</span>
+                            </div>
+                            <div class="price-row">
+                                <span>Per Minute</span>
+                                <span class="price-value">$0.40</span>
+                            </div>
+                            <div class="price-row">
+                                <span>Minimum Fare</span>
+                                <span class="price-value">$20.00</span>
+                            </div>
+                            <div class="price-eta">
+                                <i class="fas fa-clock"></i>
+                                <span>Avg. pickup time: 5-8 min</span>
+                            </div>
+                            <a href="404page.html" class="btn btn-primary btn-full">Book Premium</a>
+                        </div>
+                    </div>
+                    <div class="fleet-use-cases">
+                        <span class="use-case-tag"><i class="fas fa-business-time"></i> Business Travel</span>
+                        <span class="use-case-tag"><i class="fas fa-glass-cheers"></i> Special Occasions</span>
+                        <span class="use-case-tag"><i class="fas fa-user-tie"></i> VIP Transport</span>
+                    </div>
+                </article>
+
+
+                <article class="fleet-detail-card" id="xl">
+                    <div class="fleet-detail-header">
+                        <div class="fleet-detail-badge xl">Spacious</div>
+                        <h3 class="fleet-detail-title">XL / SUV</h3>
+                        <p class="fleet-detail-subtitle">Room for everyone and everything</p>
+                    </div>
+                    <div class="fleet-detail-grid">
+                        <div class="fleet-car-showcase">
+                            <div class="car-image-container">
+                                <img src="./assets/car3.webp" alt="XL Car" class="fleet-car-image">
+                                <div class="car-overlay"></div>
+                            </div>
+                            <div class="car-features-list">
+                                <div class="car-feature"><i class="fas fa-users"></i> Up to 7 passengers</div>
+                                <div class="car-feature"><i class="fas fa-suitcase-rolling"></i> 6 luggage bags
+                                </div>
+                                <div class="car-feature"><i class="fas fa-snowflake"></i> Premium AC</div>
+                            </div>
+                        </div>
+                        <div class="fleet-pricing-card">
+                            <h4>Pricing Details</h4>
+                            <div class="price-row">
+                                <span>Base Fare</span>
+                                <span class="price-value">$25.00</span>
+                            </div>
+                            <div class="price-row">
+                                <span>Per Kilometer</span>
+                                <span class="price-value">$2.50</span>
+                            </div>
+                            <div class="price-row">
+                                <span>Per Minute</span>
+                                <span class="price-value">$0.50</span>
+                            </div>
+                            <div class="price-row">
+                                <span>Minimum Fare</span>
+                                <span class="price-value">$30.00</span>
+                            </div>
+                            <div class="price-eta">
+                                <i class="fas fa-clock"></i>
+                                <span>Avg. pickup time: 8-12 min</span>
+                            </div>
+                            <a href="404page.html" class="btn btn-primary btn-full">Book XL</a>
+                        </div>
+                    </div>
+                    <div class="fleet-use-cases">
+                        <span class="use-case-tag"><i class="fas fa-users"></i> Group Travel</span>
+                        <span class="use-case-tag"><i class="fas fa-boxes"></i> Large Luggage</span>
+                        <span class="use-case-tag"><i class="fas fa-baby"></i> Child Seats Available</span>
+                    </div>
+                </article>
+
+
+                <article class="fleet-detail-card" id="rentals">
+                    <div class="fleet-detail-header">
+                        <div class="fleet-detail-badge rentals">Flexible</div>
+                        <h3 class="fleet-detail-title">Car Rentals</h3>
+                        <p class="fleet-detail-subtitle">Freedom to explore at your own pace</p>
+                    </div>
+                    <div class="fleet-detail-grid">
+                        <div class="fleet-car-showcase">
+                            <div class="car-image-container">
+                                <img src="./assets/car4.webp" alt="Rental Car" class="fleet-car-image">
+                                <div class="car-overlay"></div>
+                            </div>
+                            <div class="car-features-list">
+                                <div class="car-feature"><i class="fas fa-clock"></i> Hourly/Daily options</div>
+                                <div class="car-feature"><i class="fas fa-gas-pump"></i> Fuel included</div>
+                                <div class="car-feature"><i class="fas fa-shield-alt"></i> Full insurance</div>
+                            </div>
+                        </div>
+                        <div class="fleet-pricing-card">
+                            <h4>Rental Packages</h4>
+                            <div class="price-row">
+                                <span>4 Hours</span>
+                                <span class="price-value">$45.00</span>
+                            </div>
+                            <div class="price-row">
+                                <span>8 Hours</span>
+                                <span class="price-value">$75.00</span>
+                            </div>
+                            <div class="price-row">
+                                <span>Full Day (24 hrs)</span>
+                                <span class="price-value">$120.00</span>
+                            </div>
+                            <div class="price-row">
+                                <span>Extra Km</span>
+                                <span class="price-value">$0.80/km</span>
+                            </div>
+                            <div class="price-eta">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Unlimited mileage included</span>
+                            </div>
+                            <a href="404page.html" class="btn btn-primary btn-full">Rent a Car</a>
+                        </div>
+                    </div>
+                    <div class="fleet-use-cases">
+                        <span class="use-case-tag"><i class="fas fa-mountain"></i> Day Trips</span>
+                        <span class="use-case-tag"><i class="fas fa-camera"></i> Sightseeing</span>
+                        <span class="use-case-tag"><i class="fas fa-running"></i> Outdoor Adventures</span>
+                    </div>
+                </article>
+
+
+                <article class="fleet-detail-card" id="outstation">
+                    <div class="fleet-detail-header">
+                        <div class="fleet-detail-badge outstation">Inter-City</div>
+                        <h3 class="fleet-detail-title">Outstation</h3>
+                        <p class="fleet-detail-subtitle">Comfortable intercity travel at best rates</p>
+                    </div>
+                    <div class="fleet-detail-grid">
+                        <div class="fleet-car-showcase">
+                            <div class="car-image-container">
+                                <img src="/assets/car5.webp" alt="Outstation Car" class="fleet-car-image">
+                                <div class="car-overlay"></div>
+                            </div>
+                            <div class="car-features-list">
+                                <div class="car-feature"><i class="fas fa-road"></i> One-way or Round-trip</div>
+                                <div class="car-feature"><i class="fas fa-hotel"></i> Driver accommodation</div>
+                                <div class="car-feature"><i class="fas fa-utensils"></i> Rest stops included</div>
+                            </div>
+                        </div>
+                        <div class="fleet-pricing-card">
+                            <h4>Pricing Details</h4>
+                            <div class="price-row">
+                                <span>Base Rate</span>
+                                <span class="price-value">$0.80/km</span>
+                            </div>
+                            <div class="price-row">
+                                <span>Driver Bata (Daily)</span>
+                                <span class="price-value">$20.00</span>
+                            </div>
+                            <div class="price-row">
+                                <span>Night Charge</span>
+                                <span class="price-value">+10%</span>
+                            </div>
+                            <div class="price-row">
+                                <span>Toll/Parking</span>
+                                <span class="price-value">Extra</span>
+                            </div>
+                            <div class="price-eta">
+                                <i class="fas fa-star"></i>
+                                <span>4.9★ rating for outstation</span>
+                            </div>
+                            <a href="404page.html" class="btn btn-primary btn-full">Book Outstation</a>
+                        </div>
+                    </div>
+                    <div class="fleet-use-cases">
+                        <span class="use-case-tag"><i class="fas fa-home"></i> Home Return</span>
+                        <span class="use-case-tag"><i class="fas fa-university"></i> Weekend Getaway</span>
+                        <span class="use-case-tag"><i class="fas fa-hospital"></i> Medical Travel</span>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section class="b2b-services-section">
+    <div class="container">
+        <div class="section-header text-center">
+            <span class="section-badge">Beyond Rides</span>
+            <h2 class="section-title">Specialized & B2B Services</h2>
+            <p class="section-subtitle">Comprehensive transportation solutions for businesses and unique needs.</p>
+        </div>
+
+        <div class="b2b-bento-grid">
+
+            <div class="b2b-bento-card b2b-large">
+                <div class="b2b-card-icon">
+                    <i class="fas fa-building"></i>
+                </div>
+                <div class="b2b-card-content">
+                    <h3 class="b2b-card-title">Corporate Accounts</h3>
+                    <p class="b2b-card-desc">Streamline your company's transportation with centralized billing,
+                        dedicated account managers, and detailed expense reporting. Perfect for businesses of all
+                        sizes.</p>
+                    <ul class="b2b-features">
+                        <li><i class="fas fa-check"></i> Centralized billing</li>
+                        <li><i class="fas fa-check"></i> Employee management dashboard</li>
+                        <li><i class="fas fa-check"></i> Custom spending limits</li>
+                    </ul>
+                    <a href="404page.html" class="b2b-learn-more">Learn More <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div class="b2b-card-decoration">
+                    <div class="b2b-deco-circle"></div>
+                </div>
+            </div>
+
+
+            <div class="b2b-bento-card b2b-medium">
+                <div class="b2b-card-icon">
+                    <i class="fas fa-box-open"></i>
+                </div>
+                <div class="b2b-card-content">
+                    <h3 class="b2b-card-title">Package Delivery</h3>
+                    <p class="b2b-card-desc">Hyper-local courier service for documents, packages, and goods.
+                        Real-time tracking and same-day delivery.</p>
+                    <div class="b2b-stats-mini">
+                        <div class="b2b-stat-mini">
+                            <span class="bsm-value">2hrs</span>
+                            <span class="bsm-label">Delivery</span>
+                        </div>
+                        <div class="b2b-stat-mini">
+                            <span class="bsm-value">99%</span>
+                            <span class="bsm-label">On-time</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="b2b-bento-card b2b-small">
+                <div class="b2b-card-icon">
+                    <i class="fas fa-glass-cheers"></i>
+                </div>
+                <div class="b2b-card-content">
+                    <h3 class="b2b-card-title">Event Transport</h3>
+                    <p class="b2b-card-desc">Book multiple vehicles for weddings, conferences, and parties.</p>
+                </div>
+            </div>
+
+
+            <div class="b2b-bento-card b2b-tall">
+                <div class="b2b-card-icon">
+                    <i class="fas fa-plane-departure"></i>
+                </div>
+                <div class="b2b-card-content">
+                    <h3 class="b2b-card-title">Airport Transfer</h3>
+                    <p class="b2b-card-desc">Reliable airport pickups and drop-offs with flight tracking. We monitor
+                        your flight and adjust pickup time automatically.</p>
+                    <div class="b2b-feature-list">
+                        <div class="b2b-feature-item">
+                            <i class="fas fa-plane-slash"></i>
+                            <span>Flight monitoring</span>
+                        </div>
+                        <div class="b2b-feature-item">
+                            <i class="fas fa-clock"></i>
+                            <span>1hr free wait</span>
+                        </div>
+                        <div class="b2b-feature-item">
+                            <i class="fas fa-suitcase"></i>
+                            <span>Help with luggage</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="b2b-bento-card b2b-wide">
+                <div class="b2b-card-icon">
+                    <i class="fas fa-graduation-cap"></i>
+                </div>
+                <div class="b2b-card-content">
+                    <h3 class="b2b-card-title">Student Transportation</h3>
+                    <p class="b2b-card-desc">Safe and reliable transport for students. Parents can track rides in
+                        real-time and receive notifications when children arrive safely.</p>
+                    <div class="b2b-icons-row">
+                        <div class="b2b-icon-mini"><i class="fas fa-map-marker-alt"></i> Live tracking</div>
+                        <div class="b2b-icon-mini"><i class="fas fa-bell"></i> Alerts</div>
+                        <div class="b2b-icon-mini"><i class="fas fa-shield-alt"></i> Verified drivers</div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="b2b-bento-card b2b-small">
+                <div class="b2b-card-icon">
+                    <i class="fas fa-ambulance"></i>
+                </div>
+                <div class="b2b-card-content">
+                    <h3 class="b2b-card-title">Medical Transport</h3>
+                    <p class="b2b-card-desc">Non-emergency medical transportation with trained drivers.</p>
+                </div>
+            </div>
+
+
+            <div class="b2b-bento-card b2b-medium">
+                <div class="b2b-card-icon">
+                    <i class="fas fa-rings-wedding"></i>
+                </div>
+                <div class="b2b-card-content">
+                    <h3 class="b2b-card-title">Wedding Services</h3>
+                    <p class="b2b-card-desc">Make your special day extra special with our premium wedding fleet.
+                        Decorated cars, professional drivers, and flexible packages.</p>
+                    <div class="b2b-stats-mini">
+                        <div class="b2b-stat-mini">
+                            <span class="bsm-value">50+</span>
+                            <span class="bsm-label">Cars</span>
+                        </div>
+                        <div class="b2b-stat-mini">
+                            <span class="bsm-value">5★</span>
+                            <span class="bsm-label">Service</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section class="app-experience-section">
+    <div class="container">
+        <div class="section-header text-center">
+            <span class="section-badge">App Experience</span>
+            <h2 class="section-title">Power at Your Fingertips</h2>
+            <p class="section-subtitle">Discover all the features that make your ride seamless from booking to
+                arrival.</p>
+        </div>
+
+        <div class="app-experience-wrapper">
+
+            <div class="app-features-left">
+                <div class="app-feature-block" data-feature="schedule">
+                    <div class="afb-icon">
+                        <i class="fas fa-calendar-check"></i>
+                    </div>
+                    <div class="afb-content">
+                        <h3>Schedule in Advance</h3>
+                        <p>Plan your trips up to 30 days ahead. Book rides for early morning flights or late-night
+                            events without worry.</p>
+                    </div>
+                </div>
+                <div class="app-feature-block" data-feature="split">
+                    <div class="afb-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <div class="afb-content">
+                        <h3>Split the Fare</h3>
+                        <p>Share ride costs with friends effortlessly. Split evenly or customize amounts for each
+                            passenger.</p>
+                    </div>
+                </div>
+                <div class="app-feature-block" data-feature="multidrop">
+                    <div class="afb-icon">
+                        <i class="fas fa-route"></i>
+                    </div>
+                    <div class="afb-content">
+                        <h3>Multiple Drop-offs</h3>
+                        <p>Add multiple stops along your route. Perfect for running errands or dropping off friends.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <section class="scroll-track" id="appScrollTrack">
+
+                <div class="sticky-content">
+
+                    <div class="app-phone-container">
+                        <div class="phone-screen-large" id="phoneScreen">
+                            <img src="./assets/services3.webp" class="screen-img active" alt="Schedule">
+                            <img src="./assets/services2.webp" class="screen-img" alt="Split">
+                            <img src="./assets/services1.webp" class="screen-img" alt="Multi">
+                            <img src="./assets/services2.webp" class="screen-img" alt="Access">
+                        </div>
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <div class="app-features-right">
+                <div class="app-feature-block" data-feature="accessibility">
+                    <div class="afb-icon">
+                        <i class="fas fa-universal-access"></i>
+                    </div>
+                    <div class="afb-content">
+                        <h3>Wheelchair Accessibility</h3>
+                        <p>Find accessible vehicles equipped with wheelchairs. Every ride is inclusive and
+                            comfortable.</p>
+                    </div>
+                </div>
+                <div class="app-feature-block" data-feature="safety">
+                    <div class="afb-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <div class="afb-content">
+                        <h3>Real-Time Safety</h3>
+                        <p>Share your trip with loved ones. Emergency button and 24/7 support at your fingertips.
+                        </p>
+                    </div>
+                </div>
+                <div class="app-feature-block" data-feature="rewards">
+                    <div class="afb-icon">
+                        <i class="fas fa-gift"></i>
+                    </div>
+                    <div class="afb-content">
+                        <h3>Stackly Rewards</h3>
+                        <p>Earn points on every ride. Redeem for free rides, upgrades, and exclusive offers.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section class="guarantees-section">
+    <div class="container">
+        <div class="section-header text-center">
+            <span class="section-badge">Why Choose Us</span>
+            <h2 class="section-title">Our Service Guarantees</h2>
+            <p class="section-subtitle">We're committed to providing you with the best ride experience every time.
+            </p>
+        </div>
+
+        <div class="guarantees-grid">
+
+            <div class="guarantee-card">
+                <div class="guarantee-icon">
+                    <svg class="guarantee-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <path class="svg-draw" d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+                        <path class="svg-draw" d="M9 12l2 2 4-4" />
+                    </svg>
+                </div>
+                <h3 class="guarantee-title">Transparent Pricing</h3>
+                <p class="guarantee-desc">No hidden fees or surprise surge pricing. Know your fare before you ride.
+                </p>
+                <div class="guarantee-stats">
+                    <span class="guarantee-stat-value">100%</span>
+                    <span class="guarantee-stat-label">Upfront Pricing</span>
+                </div>
+            </div>
+
+
+            <div class="guarantee-card">
+                <div class="guarantee-icon">
+                    <svg class="guarantee-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <circle class="svg-draw" cx="12" cy="12" r="10" />
+                        <polyline class="svg-draw" points="12 6 12 12 16 14" />
+                    </svg>
+                </div>
+                <h3 class="guarantee-title">On-Time Guarantee</h3>
+                <p class="guarantee-desc">We compensate you for late pickups. If we're more than 10 minutes late,
+                    you get $5 credit.</p>
+                <div class="guarantee-stats">
+                    <span class="guarantee-stat-value">$5</span>
+                    <span class="guarantee-stat-label">Late Compensation</span>
+                </div>
+            </div>
+
+
+            <div class="guarantee-card">
+                <div class="guarantee-icon">
+                    <svg class="guarantee-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <path class="svg-draw"
+                            d="M12 22s8-4 8-11.8A8 8 0 0 0 12 2a8 8 0 0 0-8 8.2c0 7.3 8 11.8 8 11.8z" />
+                        <circle class="svg-draw" cx="12" cy="10" r="3" />
+                    </svg>
+                </div>
+                <h3 class="guarantee-title">Safety First</h3>
+                <p class="guarantee-desc">Every ride includes comprehensive insurance coverage and verified
+                    background-checked drivers.</p>
+                <div class="guarantee-stats">
+                    <span class="guarantee-stat-value">24/7</span>
+                    <span class="guarantee-stat-label">Safety Support</span>
+                </div>
+            </div>
+
+
+            <div class="guarantee-card">
+                <div class="guarantee-icon">
+                    <svg class="guarantee-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <path class="svg-draw"
+                            d="M14 9V5a3 3 0 0 0-3-3l-4 9v11h11.28a2 2 0 0 0 2-1.7l1.38-9a2 2 0 0 0-2-2.3zM7 22H4a2 2 0 0 1-2-2v-7a2 2 0 0 1 2-2h3" />
+                    </svg>
+                </div>
+                <h3 class="guarantee-title">Satisfaction Promise</h3>
+                <p class="guarantee-desc">Not satisfied with your ride? Contact us within 24 hours for a full review
+                    and refund if warranted.</p>
+                <div class="guarantee-stats">
+                    <span class="guarantee-stat-value">100%</span>
+                    <span class="guarantee-stat-label">Refund Policy</span>
+                </div>
+            </div>
+
+
+            <div class="guarantee-card">
+                <div class="guarantee-icon">
+                    <svg class="guarantee-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <path class="svg-draw" d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+                        <circle class="svg-draw" cx="9" cy="7" r="4" />
+                        <path class="svg-draw" d="M23 21v-2a4 4 0 0 0-3-3.87" />
+                        <path class="svg-draw" d="M16 3.13a4 4 0 0 1 0 7.75" />
+                    </svg>
+                </div>
+                <h3 class="guarantee-title">Verified Drivers</h3>
+                <p class="guarantee-desc">Every driver undergoes rigorous background checks, vehicle inspection, and
+                    training.</p>
+                <div class="guarantee-stats">
+                    <span class="guarantee-stat-value">5-Step</span>
+                    <span class="guarantee-stat-label">Screening</span>
+                </div>
+            </div>
+
+
+            <div class="guarantee-card">
+                <div class="guarantee-icon">
+                    <svg class="guarantee-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <rect class="svg-draw" x="1" y="4" width="22" height="16" rx="2" ry="2" />
+                        <line class="svg-draw" x1="1" y1="10" x2="23" y2="10" />
+                    </svg>
+                </div>
+                <h3 class="guarantee-title">Secure Payments</h3>
+                <p class="guarantee-desc">Your payment information is encrypted and secure. Multiple payment options
+                    available.</p>
+                <div class="guarantee-stats">
+                    <span class="guarantee-stat-value">256-bit</span>
+                    <span class="guarantee-stat-label">Encryption</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section class="operations-section">
+    <div class="container">
+        <div class="section-header text-center">
+            <span class="section-badge">Where We Operate</span>
+            <h2 class="section-title">Area of Operations</h2>
+            <p class="section-subtitle">Find Stackly in cities across the country. We're constantly expanding to
+                serve you better.</p>
+        </div>
+
+
+        <div class="marquee-container">
+            <div class="marquee-content">
+                <div class="marquee-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>New York</span>
+                </div>
+                <div class="marquee-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>Los Angeles</span>
+                </div>
+                <div class="marquee-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>Chicago</span>
+                </div>
+                <div class="marquee-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>Houston</span>
+                </div>
+                <div class="marquee-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>Phoenix</span>
+                </div>
+                <div class="marquee-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>Philadelphia</span>
+                </div>
+                <div class="marquee-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>San Antonio</span>
+                </div>
+                <div class="marquee-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>San Diego</span>
+                </div>
+                <div class="marquee-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>Dallas</span>
+                </div>
+                <div class="marquee-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>San Jose</span>
+                </div>
+                <div class="marquee-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>Austin</span>
+                </div>
+                <div class="marquee-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>Jacksonville</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<footer class="footer">
+    <div class="container">
+        <div class="footer-grid">
+            <div class="footer-column">
+                <div class="footer-logo">
+                    <img src="./assets/Stackly-logo-Blue.webp" alt="Stackly" class="footer-logo-img">
+                </div>
+                <p class="footer-desc">The smartest way to get around. Request a ride, jump in, and go.</p>
+                <div class="footer-social">
+                    <a href="404page.html" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                    <a href="404page.html" class="social-link"><i class="fab fa-twitter"></i></a>
+                    <a href="404page.html" class="social-link"><i class="fab fa-instagram"></i></a>
+                    <a href="404page.html" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+            <div class="footer-column">
+                <h4 class="footer-heading">Company</h4>
+                <ul class="footer-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="services.html">Service</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h4 class="footer-heading">Support</h4>
+                <ul class="footer-links">
+                    <li><a href="404page.html">Help Center</a></li>
+                    <li><a href="404page.html">Safety</a></li>
+                    <li><a href="404page.html">Community Guidelines</a></li>
+                    <li><a href="404page.html">Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h4 class="footer-heading">Legal</h4>
+                <ul class="footer-links">
+                    <li><a href="404page.html">Terms of Service</a></li>
+                    <li><a href="404page.html">Privacy Policy</a></li>
+                    <li><a href="404page.html">Cookie Policy</a></li>
+                    <li><a href="404page.html">Accessibility</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h4 class="footer-heading">Download App</h4>
+                <div class="footer-app-buttons">
+                    <a href="404page.html" class="footer-store-btn">
+                        <i class="fab fa-apple"></i>
+                        <div class="store-info">
+                            <span class="store-small">Download on the</span>
+                            <span class="store-large">App Store</span>
+                        </div>
+                    </a>
+                    <a href="404page.html" class="footer-store-btn">
+                        <i class="fab fa-google-play"></i>
+                        <div class="store-info">
+                            <span class="store-small">Get it on</span>
+                            <span class="store-large">Google Play</span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="footer-copyright">
+                <p>&copy; 2026 Stackly. All rights reserved.</p>
+            </div>
+            <div class="footer-payment">
+                <span class="payment-label">We accept:</span>
+                <div class="payment-icons">
+                    <i class="fab fa-cc-visa"></i>
+                    <i class="fab fa-cc-mastercard"></i>
+                    <i class="fab fa-cc-amex"></i>
+                    <i class="fab fa-cc-paypal"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+<script src="script.js"></script>
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+
+        const track = document.getElementById('appScrollTrack');
+        const images = document.querySelectorAll('.screen-img');
+
+        if (!track || images.length === 0) return;
+
+        const handleScroll = () => {
+            const rect = track.getBoundingClientRect();
+
+            const scrollableDistance = rect.height - window.innerHeight;
+            let scrollProgress = -rect.top / scrollableDistance;
+            scrollProgress = Math.max(0, Math.min(scrollProgress, 1));
+            let activeIndex = Math.floor(scrollProgress * images.length);
+            if (activeIndex >= images.length) {
+                activeIndex = images.length - 1;
+            }
+            images.forEach((img, index) => {
+                if (index === activeIndex) {
+                    img.classList.add('active');
+                } else {
+                    img.classList.remove('active');
+                }
+            });
+        };
+
+        window.addEventListener("scroll", handleScroll);
+        handleScroll();
+
+        const guaranteeCards = document.querySelectorAll('.guarantee-card');
+
+        if (guaranteeCards.length > 0) {
+            const guaranteeObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('animate');
+                        guaranteeObserver.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.3 });
+
+            guaranteeCards.forEach(card => {
+                guaranteeObserver.observe(card);
+            });
+        }
+
+        const b2bCards = document.querySelectorAll('.b2b-bento-card');
+
+        b2bCards.forEach(card => {
+            card.addEventListener('mouseenter', () => {
+                b2bCards.forEach(c => c.classList.remove('expanded'));
+                card.classList.add('expanded');
+            });
+
+            card.addEventListener('mouseleave', () => {
+                card.classList.remove('expanded');
+            });
+        });
+    });
+    const appFeatureBlocks = document.querySelectorAll('.app-feature-block');
+    const appScreens = document.querySelectorAll('.app-screen');
+
+    if (appFeatureBlocks.length > 0) {
+        const phoneObserverOptions = {
+            root: null,
+            rootMargin: '-30% 0px -30% 0px',
+            threshold: 0
+        };
+
+        const phoneObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const featureName = entry.target.getAttribute('data-feature');
+
+                    appScreens.forEach(screen => {
+                        screen.classList.remove('active');
+                    });
+
+                    const activeScreen = document.querySelector(`.app-screen.screen-${featureName}`);
+                    if (activeScreen) {
+                        activeScreen.classList.add('active');
+                    }
+                }
+            });
+        }, phoneObserverOptions);
+
+        appFeatureBlocks.forEach(block => {
+            phoneObserver.observe(block);
+        });
+    }
+    const fleetMenuItems = document.querySelectorAll('.fleet-menu-item');
+    const fleetDetailCards = document.querySelectorAll('.fleet-detail-card');
+
+    if (fleetMenuItems.length > 0 && fleetDetailCards.length > 0) {
+        const observerOptions = {
+            root: null,
+            rootMargin: '-20% 0px -70% 0px',
+            threshold: 0
+        };
+
+        const fleetObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const targetId = entry.target.id;
+                    fleetMenuItems.forEach(item => {
+                        item.classList.remove('active');
+                    });
+
+                    const activeItem = document.querySelector(`.fleet-menu-item[data-target="${targetId}"]`);
+                    if (activeItem) {
+                        activeItem.classList.add('active');
+                    }
+                }
+            });
+        }, observerOptions);
+
+        fleetDetailCards.forEach(card => {
+            fleetObserver.observe(card);
+        });
+        fleetMenuItems.forEach(item => {
+            item.addEventListener('click', (e) => {
+                e.preventDefault();
+                const targetId = item.getAttribute('data-target');
+                const targetCard = document.getElementById(targetId);
+                if (targetCard) {
+                    targetCard.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            });
+        });
+    }
+
+
+</script>
+</body>
+
+</html>

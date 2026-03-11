@@ -1,0 +1,759 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Account - Stackly</title>
+    <link rel="stylesheet" href="shared.css">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@400;600;700;800;900&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        body {
+            padding-top: 0;
+        }
+
+        .auth-page {
+            min-height: 100vh;
+            display: flex;
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .auth-page::before {
+            content: '';
+            position: absolute;
+            top: -20%;
+            left: -10%;
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(37, 99, 235, 0.15) 0%, transparent 70%);
+            pointer-events: none;
+        }
+
+        .auth-page::after {
+            content: '';
+            position: absolute;
+            bottom: -20%;
+            right: -10%;
+            width: 500px;
+            height: 500px;
+            background: radial-gradient(circle, rgba(16, 185, 129, 0.1) 0%, transparent 70%);
+            pointer-events: none;
+        }
+
+
+        .auth-branding {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: var(--space-12);
+            padding-top: 120px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .auth-logo {
+            position: absolute;
+            top: var(--space-8);
+            left: var(--space-12);
+        }
+
+        .auth-logo img {
+            width: 140px;
+        }
+
+        .branding-content {
+            max-width: 500px;
+        }
+
+        .branding-title {
+            font-size: 3rem;
+            font-weight: 800;
+            color: white;
+            margin-bottom: var(--space-4);
+            line-height: 1.1;
+        }
+
+        .branding-subtitle {
+            font-size: 1.25rem;
+            color: #94a3b8;
+            line-height: 1.7;
+            margin-bottom: var(--space-8);
+        }
+
+        .branding-features {
+            display: flex;
+            flex-direction: column;
+            gap: var(--space-4);
+        }
+
+        .branding-feature {
+            display: flex;
+            align-items: center;
+            gap: var(--space-3);
+            color: white;
+            font-size: 1rem;
+        }
+
+        .branding-feature i {
+            width: 32px;
+            height: 32px;
+            background: rgba(37, 99, 235, 0.2);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #60a5fa;
+            font-size: 0.875rem;
+        }
+
+
+        .auth-form-section {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: var(--space-8);
+            position: relative;
+            z-index: 2;
+        }
+
+        .auth-card {
+            background: var(--text-primary);
+            border-radius: 30px;
+            padding: 30px;
+            width: 100%;
+            max-width: 480px;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+        }
+
+        .auth-header {
+            text-align: center;
+            margin-bottom: var(--space-8);
+        }
+
+
+
+
+
+        .auth-card::-webkit-scrollbar {
+            width: 6px;
+        }
+
+        .auth-card::-webkit-scrollbar-track {
+            background: transparent;
+        }
+
+        .auth-card::-webkit-scrollbar-thumb {
+            background: var(--border-light);
+            border-radius: 10px;
+        }
+
+        .auth-header {
+            text-align: center;
+            margin-bottom: var(--space-6);
+        }
+
+        .auth-header h1 {
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: var(--space-2);
+            color: var(--color-accent);
+        }
+
+        .auth-header p {
+            color: var(--text-secondary);
+            font-size: 0.9375rem;
+        }
+
+        .auth-header p a {
+            color: var(--color-accent);
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.2s ease;
+        }
+
+        .auth-header p a:hover {
+            color: #1d4ed8;
+        }
+
+
+        .social-login {
+            display: flex;
+            gap: var(--space-3);
+            margin-bottom: var(--space-6);
+        }
+
+        .social-btn {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: var(--space-2);
+            padding: var(--space-3) var(--space-4);
+            background: var(--bg-main);
+            border: 1px solid var(--border-light);
+            border-radius: var(--radius-md);
+            font-size: 0.9375rem;
+            font-weight: 500;
+            color: var(--text-primary);
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .social-btn:hover {
+            background: var(--bg-surface-hover);
+            border-color: var(--text-muted);
+            transform: translateY(-2px);
+        }
+
+        .social-btn i {
+            font-size: 1.125rem;
+        }
+
+
+        .auth-divider {
+            display: flex;
+            align-items: center;
+            gap: var(--space-4);
+            margin-bottom: var(--space-6);
+        }
+
+        .auth-divider span {
+            font-size: 0.8125rem;
+            color: var(--text-muted);
+            font-weight: 500;
+        }
+
+        .auth-divider::before,
+        .auth-divider::after {
+            content: '';
+            flex: 1;
+            height: 1px;
+            background: var(--border-light);
+        }
+
+
+        .auth-form .form-group {
+            margin-bottom: var(--space-4);
+
+        }
+
+        .auth-form label {
+            display: block;
+            font-size: 0.875rem;
+            font-weight: 600;
+            color: var(--color-accent);
+            margin-bottom: var(--space-2);
+        }
+
+        .auth-form .input-wrapper {
+            position: relative;
+        }
+
+        .auth-form .form-input {
+            width: 100%;
+            padding: var(--space-3) var(--space-4);
+            padding-left: 44px;
+            padding-right: 45px;
+            font-size: 1rem;
+            color: var(--text-primary);
+            background: var(--bg-main);
+            border: 2px solid var(--border-light);
+            border-radius: var(--radius-md);
+            transition: all 0.3s ease;
+        }
+
+        .auth-form .form-input:focus {
+            border-color: var(--color-accent);
+            background: var(--bg-surface);
+        }
+
+        .auth-form .form-input.error {
+            border-color: var(--color-danger);
+        }
+
+        .auth-form .form-input.success {
+            border-color: var(--color-success);
+        }
+
+        .auth-form .input-icon {
+            position: absolute;
+            left: var(--space-4);
+            top: 50%;
+            transform: translateY(-50%);
+            color: var(--text-muted);
+            font-size: 1rem;
+            transition: color 0.3s ease;
+        }
+
+        .auth-form .form-input:focus~.input-icon {
+            color: var(--color-accent);
+        }
+
+        .auth-form .form-input.error~.input-icon {
+            color: var(--color-danger);
+        }
+
+        .auth-form .form-input.success~.input-icon {
+            color: var(--color-success);
+        }
+
+
+        .password-toggle {
+            position: absolute;
+            right: var(--space-4);
+            top: 50%;
+            transform: translateY(-50%);
+            background: none;
+            border: none;
+            color: var(--text-muted);
+            cursor: pointer;
+            padding: 0;
+            font-size: 1rem;
+            transition: color 0.2s ease;
+            z-index: 5;
+        }
+
+        .password-toggle:hover {
+            color: var(--text-primary);
+        }
+
+
+        .error-message {
+            display: none;
+            font-size: 0.8125rem;
+            color: var(--color-danger);
+            margin-top: var(--space-2);
+            align-items: center;
+            gap: var(--space-1);
+        }
+
+        .error-message.show {
+            display: flex;
+        }
+
+
+        .validation-icon {
+            position: absolute;
+            right: var(--space-4);
+            top: 50%;
+            transform: translateY(-50%) scale(0);
+            color: var(--color-success);
+            font-size: 1rem;
+            transition: transform 0.3s ease;
+            z-index: 4;
+        }
+
+        .validation-icon.show {
+            transform: translateY(-50%) scale(1);
+        }
+
+        #passwordCheck {
+            right: calc(var(--space-4) + 28px);
+        }
+
+
+        .terms-checkbox-wrapper {
+            display: flex;
+            align-items: flex-start;
+            gap: var(--space-2);
+            margin-bottom: var(--space-6);
+            margin-top: var(--space-2);
+        }
+
+        .terms-checkbox-wrapper input[type="checkbox"] {
+            margin-top: 3px;
+            width: 16px;
+            height: 16px;
+            accent-color: var(--color-accent);
+            cursor: pointer;
+        }
+
+        .terms-text {
+            font-size: 0.875rem;
+            color: var(--text-secondary);
+            line-height: 1.5;
+        }
+
+        .terms-text a {
+            color: var(--color-accent);
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .terms-text a:hover {
+            text-decoration: underline;
+        }
+
+        .terms-error {
+            color: var(--color-danger);
+            font-size: 0.8125rem;
+            display: none;
+            margin-top: 4px;
+        }
+
+        .terms-error.show {
+            display: block;
+        }
+
+        .auth-submit {
+            width: 100%;
+            padding: var(--space-4);
+            background: var(--color-accent);
+            color: white;
+            font-size: 1rem;
+            font-weight: 600;
+            border: none;
+            border-radius: var(--radius-md);
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: var(--space-2);
+        }
+
+        .auth-submit:hover {
+            background: #1d4ed8;
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px -10px rgba(37, 99, 235, 0.5);
+        }
+
+        .btn-text {
+            color: white;
+        }
+
+        .auth-submit:active {
+            transform: translateY(0);
+        }
+
+        .auth-submit.loading {
+            pointer-events: none;
+            opacity: 0.8;
+        }
+
+        .auth-submit .spinner {
+            display: none;
+            width: 20px;
+            height: 20px;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            border-top-color: white;
+            border-radius: 50%;
+            animation: spin 0.8s linear infinite;
+        }
+
+        .auth-submit.loading .spinner {
+            display: block;
+        }
+
+        .auth-submit.loading .btn-text {
+            display: none;
+        }
+
+        @keyframes spin {
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+
+        @media (max-width: 1024px) {
+            .auth-branding {
+                display: none;
+            }
+
+            .auth-form-section {
+                flex: 1;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .auth-card {
+                padding: var(--space-6);
+            }
+
+            .social-login {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="auth-page">
+        <div class="auth-branding">
+            <div class="auth-logo">
+                <a href="index.html">
+                    <img src="./assets/Stackly-logo-Blue.webp" alt="Stackly">
+                </a>
+            </div>
+            <div class="branding-content">
+                <h1 class="branding-title">Start your journey with Stackly</h1>
+                <p class="branding-subtitle">Create an account to book rides instantly, track your history, and ride
+                    with comfort.</p>
+
+                <div class="branding-features">
+                    <div class="branding-feature">
+                        <i class="fas fa-car"></i>
+                        <span>Book rides in seconds</span>
+                    </div>
+                    <div class="branding-feature">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>Live GPS tracking for peace of mind</span>
+                    </div>
+                    <div class="branding-feature">
+                        <i class="fas fa-tag"></i>
+                        <span>Upfront pricing with no hidden fees</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="auth-form-section">
+            <div class="auth-card">
+                <div class="auth-header">
+                    <h1>Create Account</h1>
+                    <p>Already have an account? <a href="login.html">Sign In</a></p>
+                </div>
+
+                <div class="social-login">
+                    <a href="404page.html" type="button" class="social-btn">
+                        <i class="fab fa-google"></i>
+                        Google
+                    </a>
+                    <a href="404page.html" type="button" class="social-btn">
+                        <i class="fab fa-apple"></i>
+                        Apple
+                    </a>
+                </div>
+
+                <div class="auth-divider">
+                    <span>or register with email</span>
+                </div>
+
+                <form class="auth-form" id="registerForm" novalidate>
+
+                    <div class="form-group">
+                        <label for="fullName">Full Name</label>
+                        <div class="input-wrapper">
+                            <input type="text" class="form-input" id="fullName" placeholder="John Doe" required>
+                            <i class="input-icon fas fa-user"></i>
+                            <span class="validation-icon" id="nameCheck"><i class="fas fa-check-circle"></i></span>
+                        </div>
+                        <div class="error-message" id="nameError">
+                            <i class="fas fa-exclamation-circle"></i>
+                            <span>Please enter your full name</span>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <div class="input-wrapper">
+                            <input type="email" class="form-input" id="email" placeholder="john@example.com" required>
+                            <i class="input-icon fas fa-envelope"></i>
+                            <span class="validation-icon" id="emailCheck"><i class="fas fa-check-circle"></i></span>
+                        </div>
+                        <div class="error-message" id="emailError">
+                            <i class="fas fa-exclamation-circle"></i>
+                            <span>Please enter a valid email address</span>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="password">Create Password</label>
+                        <div class="input-wrapper">
+                            <input type="password" class="form-input" id="password" placeholder="Min. 8 characters"
+                                required minlength="8">
+                            <i class="input-icon fas fa-lock"></i>
+                            <button type="button" class="password-toggle" id="passwordToggle">
+                                <i class="fas fa-eye"></i>
+                            </button>
+                            <span class="validation-icon" id="passwordCheck"><i class="fas fa-check-circle"></i></span>
+                        </div>
+                        <div class="error-message" id="passwordError">
+                            <i class="fas fa-exclamation-circle"></i>
+                            <span>Password must be at least 8 characters</span>
+                        </div>
+                    </div>
+
+                    <div class="terms-checkbox-wrapper">
+                        <input type="checkbox" id="termsAgreement" required>
+                        <div class="terms-content">
+                            <div class="terms-text">
+                                I agree to Stackly's <a href="404page.html">Terms of Service</a> and <a
+                                    href="404page.html">Privacy
+                                    Policy</a>.
+                            </div>
+                            <div class="terms-error" id="termsError">You must agree to the terms to continue.</div>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="auth-submit" id="registerBtn">
+                        <span class="btn-text">Create Account</span>
+                        <span class="spinner"></span>
+                    </button>
+                </form>
+
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const registerForm = document.getElementById('registerForm');
+            const nameInput = document.getElementById('fullName');
+            const emailInput = document.getElementById('email');
+            const passwordInput = document.getElementById('password');
+            const termsCheckbox = document.getElementById('termsAgreement');
+
+            const passwordToggle = document.getElementById('passwordToggle');
+            const registerBtn = document.getElementById('registerBtn');
+
+            const nameError = document.getElementById('nameError');
+            const emailError = document.getElementById('emailError');
+            const passwordError = document.getElementById('passwordError');
+            const termsError = document.getElementById('termsError');
+
+            const nameCheck = document.getElementById('nameCheck');
+            const emailCheck = document.getElementById('emailCheck');
+            const passwordCheck = document.getElementById('passwordCheck');
+
+            const isValidEmail = (email) => {
+                const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                return re.test(email);
+            };
+
+            const isValidName = (name) => {
+                return name.length >= 2;
+            };
+
+            nameInput.addEventListener('input', function () {
+                const value = this.value.trim();
+                if (value === '') {
+                    this.classList.remove('error', 'success');
+                    nameError.classList.remove('show');
+                    nameCheck.classList.remove('show');
+                } else if (isValidName(value)) {
+                    this.classList.remove('error');
+                    this.classList.add('success');
+                    nameError.classList.remove('show');
+                    nameCheck.classList.add('show');
+                } else {
+                    this.classList.remove('success');
+                    this.classList.add('error');
+                    nameError.classList.add('show');
+                    nameCheck.classList.remove('show');
+                }
+            });
+
+            emailInput.addEventListener('input', function () {
+                const value = this.value.trim();
+                if (value === '') {
+                    this.classList.remove('error', 'success');
+                    emailError.classList.remove('show');
+                    emailCheck.classList.remove('show');
+                } else if (isValidEmail(value)) {
+                    this.classList.remove('error');
+                    this.classList.add('success');
+                    emailError.classList.remove('show');
+                    emailCheck.classList.add('show');
+                } else {
+                    this.classList.remove('success');
+                    this.classList.add('error');
+                    emailError.classList.add('show');
+                    emailCheck.classList.remove('show');
+                }
+            });
+
+            passwordInput.addEventListener('input', function () {
+                const value = this.value;
+                if (value === '') {
+                    this.classList.remove('error', 'success');
+                    passwordError.classList.remove('show');
+                    passwordCheck.classList.remove('show');
+                } else if (value.length >= 8) {
+                    this.classList.remove('error');
+                    this.classList.add('success');
+                    passwordError.classList.remove('show');
+                    passwordCheck.classList.add('show');
+                } else {
+                    this.classList.remove('success');
+                    this.classList.add('error');
+                    passwordError.classList.add('show');
+                    passwordCheck.classList.remove('show');
+                }
+            });
+
+            termsCheckbox.addEventListener('change', function () {
+                if (this.checked) {
+                    termsError.classList.remove('show');
+                }
+            });
+
+            passwordToggle.addEventListener('click', function () {
+                const type = passwordInput.getAttribute('type') === 'password' ? 'text' : 'password';
+                passwordInput.setAttribute('type', type);
+                this.querySelector('i').classList.toggle('fa-eye');
+                this.querySelector('i').classList.toggle('fa-eye-slash');
+            });
+
+            registerForm.addEventListener('submit', function (e) {
+                e.preventDefault();
+
+                let isValid = true;
+
+                const nameValue = nameInput.value.trim();
+                if (!isValidName(nameValue)) {
+                    nameInput.classList.add('error');
+                    nameError.classList.add('show');
+                    nameCheck.classList.remove('show');
+                    isValid = false;
+                }
+                const emailValue = emailInput.value.trim();
+                if (!isValidEmail(emailValue)) {
+                    emailInput.classList.add('error');
+                    emailError.classList.add('show');
+                    emailCheck.classList.remove('show');
+                    isValid = false;
+                }
+
+                const passwordValue = passwordInput.value;
+                if (passwordValue.length < 8) {
+                    passwordInput.classList.add('error');
+                    passwordError.classList.add('show');
+                    passwordCheck.classList.remove('show');
+                    isValid = false;
+                }
+
+                if (!termsCheckbox.checked) {
+                    termsError.classList.add('show');
+                    isValid = false;
+                }
+
+                if (isValid) {
+                    registerBtn.classList.add('loading');
+                    setTimeout(() => {
+                        registerBtn.classList.remove('loading');
+
+                        registerBtn.innerHTML = '<i class="fas fa-check"></i> Account Created!';
+                        registerBtn.style.background = 'var(--color-success)';
+
+                        setTimeout(() => {
+                            window.location.href = '404pge.html';
+                        }, 1000);
+                    }, 2000);
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>

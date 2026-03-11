@@ -1,0 +1,1128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - Services </title>
+    <link rel="stylesheet" href="shared.css">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@400;600;700;800;900&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+</head>
+
+<body>
+    <header class="header">
+        <div class="header-container">
+            <a href="index.html">
+                <img src="./assets/Stackly-logo-Blue.webp" alt="Logo" class="logo">
+            </a>
+            <nav class="nav-menu" id="navMenu">
+                <ul class="nav-list">
+                    <div class="home-nav  active">
+                        <li class="nav-item">
+                            <a href="index.html" class="home-btn nav-link active">
+                                Home
+                                <span class="nav-indicator"></span>
+                            </a>
+                        </li>
+                        <span class="material-icons dropdown-icon" id="homeDropdownBtn">
+                            expand_more
+                        </span>
+                        <div class="home-select" id="homeDropdown">
+                            <a href="./Homepage2/index.html" class="nav-link">Home Page 2</a>
+                        </div>
+                    </div>
+                    <li class="nav-item">
+                        <a href="about.html" class="nav-link">
+                            <span>About</span>
+                            <span class="nav-indicator"></span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="services.html" class="nav-link">
+                            <span>Service</span>
+                            <span class="nav-indicator"></span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="contact.html" class="nav-link">
+                            <span>Contact</span>
+                            <span class="nav-indicator"></span>
+                        </a>
+                    </li>
+                    <div class="header-actions mob-view">
+                        <a href="login.html" class="btn btn-text nav-login">
+                            <i class="fas fa-user"></i>
+                            <span>Login</span>
+                        </a>
+                        <a href="dashboard.html" class="btn btn-primary nav-dashboard">
+                            <i class="fas fa-th-large"></i>
+                            <span>Dashboard</span>
+                        </a>
+                    </div>
+                </ul>
+            </nav>
+            <div class="header-actions">
+                <a href="login.html" class="btn btn-text nav-login">
+                    <i class="fas fa-user"></i>
+                    <span>Login</span>
+                </a>
+                <a href="dashboard.html" class="btn btn-primary nav-dashboard">
+                    <i class="fas fa-th-large"></i>
+                    <span>Dashboard</span>
+                </a>
+            </div>
+            <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle menu">
+                <span class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </span>
+            </button>
+        </div>
+    </header>
+
+    <section class="hero-section">
+        <div class="hero-container">
+            <div class="hero-content">
+                <span class="badge animate-slide-up" style="--delay: 0.1s">New: Driver Rewards Program 🎉</span>
+
+                <h1 class="hero-title animate-slide-up" style="--delay: 0.2s">
+                    Request a ride, <br>
+                    <span class="text-gradient">jump in, and go.</span>
+                </h1>
+
+                <p class="hero-subtitle animate-slide-up" style="--delay: 0.3s">
+                    The smartest way to get around. Tap a button and get picked up by a top-rated driver in minutes.
+                    Always fast, always secure.
+                </p>
+
+                <div class="hero-actions animate-slide-up" style="--delay: 0.4s">
+                    <a href="404page.html" class="btn btn-primary btn-large">Request a Ride</a>
+                    <a href="404page.html" class="btn btn-secondary btn-large">Become a Driver</a>
+                </div>
+
+                <div class="trust-signals animate-fade-in">
+                    <p>Trusted by 5M+ riders worldwide</p>
+
+                </div>
+            </div>
+
+            <div class="hero-visual">
+                <div class="image-wrapper scroll-animate">
+                    <img src="./assets/hero1.webp" alt="Ride sharing car on road" class="hero-image">
+                    <div class="image-overlay"></div>
+                </div>
+                <div class="floating-card card-1 scroll-animate-delay-1">
+                    <div class="card-icon">
+                        <i class="fas fa-check-circle"></i>
+                    </div>
+                    <div class="card-text">
+                        <span class="card-title">Driver Arrived</span>
+                        <span class="card-subtitle">2 min away</span>
+                    </div>
+                </div>
+                <div class="floating-card card-2 scroll-animate-delay-2">
+                    <div class="card-icon warning">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <div class="card-text">
+                        <span class="card-title">3.2 km away</span>
+                        <span class="card-subtitle">Est. 8 min</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="how-it-works-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Get a ride in minutes</h2>
+                <p class="section-subtitle">A seamless experience from request to drop-off.</p>
+            </div>
+
+            <div class="steps-grid">
+                <div class="step-card">
+                    <div class="step-number">01</div>
+                    <h3 class="step-title">Book your ride</h3>
+                    <p class="step-desc">Enter your destination and choose the ride that fits your needs and budget.</p>
+                </div>
+
+                <div class="step-card">
+                    <div class="step-number">02</div>
+                    <h3 class="step-title">Meet your driver</h3>
+                    <p class="step-desc">Track your driver in real-time on the map and meet them at the pickup point.
+                    </p>
+                </div>
+
+                <div class="step-card">
+                    <div class="step-number">03</div>
+                    <h3 class="step-title">Enjoy the journey</h3>
+                    <p class="step-desc">Sit back and relax. Payment is processed seamlessly through the app.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="fleet-multi-section reveal-up">
+        <div class="container">
+            <div class="section-header text-center">
+                <h2 class="section-title">Ride your way</h2>
+                <p class="section-subtitle">Select a category to view all available options.</p>
+            </div>
+
+            <div class="fleet-tabs">
+                <button class="fleet-tab active" data-target="economy">Economy</button>
+                <button class="fleet-tab" data-target="premium">Premium</button>
+                <button class="fleet-tab" data-target="xl">Oversized & XL</button>
+            </div>
+
+            <div class="fleet-grid" id="fleet-grid">
+            </div>
+        </div>
+    </section>
+    <section class="safety-section reveal-up">
+        <div class="container">
+            <div class="safety-grid">
+
+                <div class="safety-visual reveal-left delay-100">
+                    <div class="shield-container">
+                        <svg class="safety-shield" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="1.5">
+                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                        </svg>
+                        <div class="floating-badge badge-1">GPS Tracking Active</div>
+                        <div class="floating-badge badge-2">Verified Drivers</div>
+                    </div>
+                </div>
+
+                <div class="safety-content reveal-right delay-200">
+                    <h2 class="section-title">Your safety is our priority</h2>
+                    <p class="section-subtitle">
+                        From the moment you request a ride to the second you arrive, our platform is designed to keep
+                        you safe and connected.
+                    </p>
+
+                    <ul class="safety-feature-list">
+                        <li class="safety-item">
+                            <div class="safety-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                                    <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                                </svg>
+                            </div>
+                            <div class="safety-text">
+                                <h4>Background-Checked Drivers</h4>
+                                <p>Every driver goes through a rigorous multi-step screening process before their first
+                                    trip.</p>
+                            </div>
+                        </li>
+
+                        <li class="safety-item">
+                            <div class="safety-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <circle cx="12" cy="12" r="10"></circle>
+                                    <polyline points="12 6 12 12 16 14"></polyline>
+                                </svg>
+                            </div>
+                            <div class="safety-text">
+                                <h4>24/7 Real-Time Support</h4>
+                                <p>Our dedicated safety team is available around the clock directly through the app.</p>
+                            </div>
+                        </li>
+
+                        <li class="safety-item">
+                            <div class="safety-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <path d="M12 22s-8-4.5-8-11.8A8 8 0 0 1 12 2a8 8 0 0 1 8 8.2c0 7.3-8 11.8-8 11.8z">
+                                    </path>
+                                    <circle cx="12" cy="10" r="3"></circle>
+                                </svg>
+                            </div>
+                            <div class="safety-text">
+                                <h4>Share Your Trip</h4>
+                                <p>Share your live location and route with loved ones so they know exactly when you'll
+                                    arrive.</p>
+                            </div>
+                        </li>
+                    </ul>
+
+                    <a href="404page.html" class="btn btn-text">Read our Community Guidelines &rarr;</a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="features-section reveal-up">
+        <div class="container">
+            <div class="section-header text-center">
+                <span class="section-badge">Why Choose Stackly</span>
+                <h2 class="section-title">Smart features for<br>smarter rides</h2>
+                <p class="section-subtitle">Experience the future of transportation with features designed to make every
+                    journey seamless.</p>
+            </div>
+
+            <div class="bento-grid">
+
+                <div class="bento-card bento-large">
+                    <div class="bento-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <div class="bento-content">
+                        <h3 class="bento-title">Split Fare</h3>
+                        <p class="bento-desc">Share ride costs with friends effortlessly. Split bills evenly or
+                            customize amounts for each passenger directly through the app.</p>
+                        <div class="bento-stats">
+                            <div class="stat-item">
+                                <span class="stat-value">Up to</span>
+                                <span class="stat-label">4 friends</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-value">50%</span>
+                                <span class="stat-label">save per ride</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bento-decoration">
+                        <div class="deco-circle"></div>
+                        <div class="deco-circle-2"></div>
+                    </div>
+                </div>
+
+
+                <div class="bento-card bento-medium">
+                    <div class="bento-icon">
+                        <i class="fas fa-calendar-check"></i>
+                    </div>
+                    <div class="bento-content">
+                        <h3 class="bento-title">Schedule in Advance</h3>
+                        <p class="bento-desc">Plan your trips days ahead. Book rides up to 30 days in advance and never
+                            worry about transportation again.</p>
+                    </div>
+                    <div class="bento-visual">
+                        <div class="calendar-preview">
+                            <div class="cal-day">MON</div>
+                            <div class="cal-date">15</div>
+                            <div class="cal-time">9:00 AM</div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="bento-card bento-small">
+                    <div class="bento-icon">
+                        <i class="fas fa-credit-card"></i>
+                    </div>
+                    <div class="bento-content">
+                        <h3 class="bento-title">Cashless Payments</h3>
+                        <p class="bento-desc">Touch-free payments. Link your card and pay instantly without reaching for
+                            your wallet.</p>
+                    </div>
+                    <div class="card-icons">
+                        <i class="fab fa-cc-visa"></i>
+                        <i class="fab fa-cc-mastercard"></i>
+                        <i class="fab fa-cc-amex"></i>
+                    </div>
+                </div>
+
+
+                <div class="bento-card bento-tall">
+                    <div class="bento-icon">
+                        <i class="fas fa-map-marked-alt"></i>
+                    </div>
+                    <div class="bento-content">
+                        <h3 class="bento-title">Real-Time Tracking</h3>
+                        <p class="bento-desc">Know exactly where your driver is. Watch your ride approach in real-time
+                            on the map.</p>
+                    </div>
+                    <div class="tracking-animation">
+                        <div class="map-dot dot-1"></div>
+                        <div class="map-dot dot-2"></div>
+                        <div class="map-route"></div>
+                    </div>
+                </div>
+
+
+                <div class="bento-card bento-wide">
+                    <div class="bento-icon">
+                        <i class="fas fa-headset"></i>
+                    </div>
+                    <div class="bento-content">
+                        <h3 class="bento-title">24/7 Premium Support</h3>
+                        <p class="bento-desc">Round-the-clock assistance whenever you need it. Our support team is
+                            always just a tap away.</p>
+                    </div>
+                    <div class="support-features">
+                        <div class="support-item">
+                            <i class="fas fa-phone-alt"></i>
+                            <span>Call support</span>
+                        </div>
+                        <div class="support-item">
+                            <i class="fas fa-comment-dots"></i>
+                            <span>Live chat</span>
+                        </div>
+                        <div class="support-item">
+                            <i class="fas fa-envelope"></i>
+                            <span>Email</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="business-section reveal-up">
+        <div class="container">
+            <div class="business-banner">
+                <div class="business-content">
+                    <span class="business-badge">
+                        <i class="fas fa-briefcase"></i>
+                        For Business
+                    </span>
+                    <h2 class="business-title">Simplify corporate transportation</h2>
+                    <p class="business-desc">Streamline your company's travel management with Stackly Business. Handle
+                        expense reports effortlessly and give your employees reliable rides for their daily commutes,
+                        business trips, and client meetings.</p>
+
+                    <div class="business-features">
+                        <div class="business-feature">
+                            <div class="bf-icon">
+                                <i class="fas fa-file-invoice-dollar"></i>
+                            </div>
+                            <div class="bf-text">
+                                <h4>Auto Expense Reports</h4>
+                                <p>Automatically generate and categorize expense reports for every ride.</p>
+                            </div>
+                        </div>
+                        <div class="business-feature">
+                            <div class="bf-icon">
+                                <i class="fas fa-user-tie"></i>
+                            </div>
+                            <div class="bf-text">
+                                <h4>Employee Management</h4>
+                                <p>Manage team rides, set spending limits, and monitor usage in real-time.</p>
+                            </div>
+                        </div>
+                        <div class="business-feature">
+                            <div class="bf-icon">
+                                <i class="fas fa-shield-alt"></i>
+                            </div>
+                            <div class="bf-text">
+                                <h4>Secure Business Accounts</h4>
+                                <p>Dedicated account managers and priority support for corporate clients.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="business-actions">
+                        <a href="404page.html" class="btn btn-primary btn-large">
+                            <i class="fas fa-building"></i>
+                            Get Started Free
+                        </a>
+                        <a href="404page.html" class="btn btn-secondary btn-large">
+                            Schedule Demo
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="business-visual">
+                    <div class="dashboard-preview">
+                        <div class="dash-header">
+                            <div class="dash-logo">
+                                <i class="fas fa-chart-line"></i>
+                            </div>
+                            <div class="dash-title">Business Dashboard</div>
+                        </div>
+                        <div class="dash-stats">
+                            <div class="dash-stat">
+                                <span class="ds-label">Total Rides</span>
+                                <span class="ds-value">1,247</span>
+                            </div>
+                            <div class="dash-stat">
+                                <span class="ds-label">This Month</span>
+                                <span class="ds-value">$12,450</span>
+                            </div>
+                            <div class="dash-stat">
+                                <span class="ds-label">Employees</span>
+                                <span class="ds-value">48</span>
+                            </div>
+                        </div>
+                        <div class="dash-chart">
+                            <div class="chart-bar" style="--height: 60%"></div>
+                            <div class="chart-bar" style="--height: 80%"></div>
+                            <div class="chart-bar" style="--height: 45%"></div>
+                            <div class="chart-bar" style="--height: 90%"></div>
+                            <div class="chart-bar" style="--height: 70%"></div>
+                            <div class="chart-bar" style="--height: 85%"></div>
+                            <div class="chart-bar" style="--height: 95%"></div>
+                        </div>
+                        <div class="dash-footer">
+                            <div class="df-item">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Reports ready</span>
+                            </div>
+                            <div class="df-item">
+                                <i class="fas fa-clock"></i>
+                                <span>Last sync: 2 min ago</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="floating-badge-1">
+                        <i class="fas fa-check"></i>
+                        <span>Verified</span>
+                    </div>
+                    <div class="floating-badge-2">
+                        <i class="fas fa-percentage"></i>
+                        <span>15% off</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="testimonials-section reveal-up">
+        <div class="container">
+            <div class="section-header text-center">
+                <span class="section-badge">Testimonials</span>
+                <h2 class="section-title">Loved by millions<br>of riders and drivers</h2>
+                <p class="section-subtitle">See what our community has to say about their experience with Stackly.</p>
+            </div>
+
+            <div class="testimonials-stats">
+                <div class="stat-card">
+                    <div class="stat-rating">
+                        <span class="rating-value">4.9</span>
+                        <div class="rating-stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <span class="stat-name">App Store Rating</span>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-rating">
+                        <span class="rating-value">4.8</span>
+                        <div class="rating-stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <span class="stat-name">Play Store Rating</span>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-rating">
+                        <span class="rating-value">5M+</span>
+                    </div>
+                    <span class="stat-name">Total Downloads</span>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-rating">
+                        <span class="rating-value">50K+</span>
+                    </div>
+                    <span class="stat-name">Active Drivers</span>
+                </div>
+            </div>
+
+            <div class="testimonials-grid">
+
+                <div class="testimonial-card">
+                    <div class="testimonial-header">
+                        <div class="testimonial-avatar">
+                            <img src="./assets/review1.webp" alt="Sarah M.">
+                        </div>
+                        <div class="testimonial-info">
+                            <h4 class="testimonial-name">Sarah Mitchell</h4>
+                            <span class="testimonial-role">Regular Rider</span>
+                        </div>
+                        <div class="testimonial-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <p class="testimonial-text">"Stackly has completely transformed my daily commute. The drivers are
+                        always professional and the app is incredibly easy to use. I've saved so much time and money
+                        compared to my old transportation methods!"</p>
+                    <div class="testimonial-footer">
+                        <span class="testimonial-date">2 days ago</span>
+                        <span class="testimonial rides"><i class="fas fa-car"></i> 156 rides</span>
+                    </div>
+                </div>
+
+
+                <div class="testimonial-card featured">
+                    <div class="featured-badge">
+                        <i class="fas fa-award"></i>
+                        Top Driver 2024
+                    </div>
+                    <div class="testimonial-header">
+                        <div class="testimonial-avatar">
+                            <img src="./assets/review5.webp" alt="James R.">
+                        </div>
+                        <div class="testimonial-info">
+                            <h4 class="testimonial-name">James Rodriguez</h4>
+                            <span class="testimonial-role">Partner Driver</span>
+                        </div>
+                        <div class="testimonial-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <p class="testimonial-text">"Being a Stackly driver has been amazing. The flexible hours let me work
+                        around my school schedule, and the earnings are consistent. The support team is always there
+                        when I need them. Best ride-sharing platform I've worked for!"</p>
+                    <div class="testimonial-footer">
+                        <span class="testimonial-date">1 week ago</span>
+                        <span class="testimonial rides"><i class="fas fa-car"></i> 2,340 rides</span>
+                    </div>
+                </div>
+
+
+                <div class="testimonial-card">
+                    <div class="testimonial-header">
+                        <div class="testimonial-avatar">
+                            <img src="./assets/review2.webp" alt="Emily K.">
+                        </div>
+                        <div class="testimonial-info">
+                            <h4 class="testimonial-name">Emily Kim</h4>
+                            <span class="testimonial-role">Business Traveler</span>
+                        </div>
+                        <div class="testimonial-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                    </div>
+                    <p class="testimonial-text">"As someone who travels frequently for work, Stackly Business has been a
+                        lifesaver. The expense reports generate automatically and my team loves the reliability. Highly
+                        recommend for any company looking to simplify corporate travel."</p>
+                    <div class="testimonial-footer">
+                        <span class="testimonial-date">3 days ago</span>
+                        <span class="testimonial rides"><i class="fas fa-car"></i> 89 rides</span>
+                    </div>
+                </div>
+
+
+                <div class="testimonial-card">
+                    <div class="testimonial-header">
+                        <div class="testimonial-avatar">
+                            <img src="./assets/review4.webp" alt="Marcus T.">
+                        </div>
+                        <div class="testimonial-info">
+                            <h4 class="testimonial-name">Marcus Thompson</h4>
+                            <span class="testimonial-role">Weekend Rider</span>
+                        </div>
+                        <div class="testimonial-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <p class="testimonial-text">"The split fare feature is genius! My friends and I use it every weekend
+                        to go out and we love how easy it is to divide the cost. Plus the safety features give me peace
+                        of mind when heading home late."</p>
+                    <div class="testimonial-footer">
+                        <span class="testimonial-date">5 days ago</span>
+                        <span class="testimonial rides"><i class="fas fa-car"></i> 234 rides</span>
+                    </div>
+                </div>
+
+
+                <div class="testimonial-card">
+                    <div class="testimonial-header">
+                        <div class="testimonial-avatar">
+                            <img src="./assets/team1.webp" alt="Priya S.">
+                        </div>
+                        <div class="testimonial-info">
+                            <h4 class="testimonial-name">Priya Sharma</h4>
+                            <span class="testimonial-role">Partner Driver</span>
+                        </div>
+                        <div class="testimonial-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <p class="testimonial-text">"I started driving with Stackly part-time and now it's my full-time job.
+                        The weekly payouts are always on time and I love that I can see my earnings in real-time. The
+                        customer base is wonderful too!"</p>
+                    <div class="testimonial-footer">
+                        <span class="testimonial-date">Yesterday</span>
+                        <span class="testimonial rides"><i class="fas fa-car"></i> 1,876 rides</span>
+                    </div>
+                </div>
+
+
+                <div class="testimonial-card">
+                    <div class="testimonial-header">
+                        <div class="testimonial-avatar">
+                            <img src="./assets/team3.webp" alt="David L.">
+                        </div>
+                        <div class="testimonial-info">
+                            <h4 class="testimonial-name">David Lee</h4>
+                            <span class="testimonial-role">Daily Commuter</span>
+                        </div>
+                        <div class="testimonial-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <p class="testimonial-text">"Scheduled rides are a game changer for my early morning flights. I
+                        never have to worry about finding a ride last minute. The drivers are always early and the cars
+                        are clean. Best app out there!"</p>
+                    <div class="testimonial-footer">
+                        <span class="testimonial-date">1 day ago</span>
+                        <span class="testimonial rides"><i class="fas fa-car"></i> 412 rides</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="testimonials-cta">
+                <p>Ready to join our community?</p>
+                <div class="cta-buttons">
+                    <a href="404page.html" class="btn btn-primary btn-large">Download App</a>
+                    <a href="404page.html" class="btn btn-secondary btn-large">Become a Driver</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="app-promo-section reveal-up">
+        <div class="container">
+            <div class="app-promo-banner">
+                <div class="app-promo-content">
+                    <span class="app-promo-badge">
+                        <i class="fab fa-app-store"></i>
+                        Download Now
+                    </span>
+                    <h2 class="app-promo-title">Get the Stackly app</h2>
+                    <p class="app-promo-desc">Book rides, track your driver, and pay seamlessly — all from your phone.
+                        Download now and get $5 off your first ride!</p>
+
+                    <div class="app-features-list">
+                        <div class="app-feature-item">
+                            <i class="fas fa-bolt"></i>
+                            <span>Instant booking</span>
+                        </div>
+                        <div class="app-feature-item">
+                            <i class="fas fa-bell"></i>
+                            <span>Real-time alerts</span>
+                        </div>
+                        <div class="app-feature-item">
+                            <i class="fas fa-shield-alt"></i>
+                            <span>Secure payments</span>
+                        </div>
+                        <div class="app-feature-item">
+                            <i class="fas fa-star"></i>
+                            <span>Exclusive offers</span>
+                        </div>
+                    </div>
+
+                    <div class="app-store-buttons">
+                        <a href="404page.html" class="store-btn">
+                            <i class="fab fa-apple"></i>
+                            <div class="store-btn-text">
+                                <span class="store-btn-small">Download on the</span>
+                                <span class="store-btn-large">App Store</span>
+                            </div>
+                        </a>
+                        <a href="404page.html" class="store-btn">
+                            <i class="fab fa-google-play"></i>
+                            <div class="store-btn-text">
+                                <span class="store-btn-small">Get it on</span>
+                                <span class="store-btn-large">Google Play</span>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="app-promo-visual">
+                    <div class="phone-mockup">
+                        <div class="phone-frame">
+                            <div class="phone-notch"></div>
+                            <div class="phone-screen">
+                                <div class="app-screen-header">
+                                    <img src="./assets/Stackly-logo-Blue.webp" alt="Stackly" class="app-logo">
+                                </div>
+                                <div class="app-screen-content">
+                                    <div class="map-placeholder">
+                                        <i class="fas fa-map-marked-alt"></i>
+                                    </div>
+                                    <div class="ride-card">
+                                        <div class="ride-info">
+                                            <span class="ride-label">Now</span>
+                                            <span class="ride-dest">Home</span>
+                                        </div>
+                                        <div class="ride-price">$12.50</div>
+                                    </div>
+                                    <div class="driver-card">
+                                        <div class="driver-avatar">
+                                            <img src="./assets/team3.webp" alt="Driver">
+                                        </div>
+                                        <div class="driver-details">
+                                            <span class="driver-name">Michael S.</span>
+                                            <div class="driver-rating">
+                                                <i class="fas fa-star"></i>
+                                                4.9
+                                            </div>
+                                        </div>
+                                        <div class="car-info">
+                                            <span class="car-model">Toyota Camry</span>
+                                            <span class="car-plate">ABC 1234</span>
+                                        </div>
+                                    </div>
+                                    <a href="404page.html" class="action-btn">
+                                        <i class="fas fa-phone"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="promo-floating-card card-left">
+                        <i class="fas fa-tag"></i>
+                        <span>$5 OFF</span>
+                    </div>
+                    <div class="promo-floating-card card-right">
+                        <i class="fas fa-gift"></i>
+                        <span>New User</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="final-cta-section reveal-up">
+        <div class="container">
+            <div class="final-cta-banner">
+                <div class="cta-decoration decor-1"></div>
+                <div class="cta-decoration decor-2"></div>
+                <div class="cta-decoration decor-3"></div>
+
+                <div class="final-cta-content">
+                    <h2 class="final-cta-title">Ready to ride?</h2>
+                    <p class="final-cta-desc">Join millions of happy riders and drivers who trust Stackly for their
+                        daily commute, weekend adventures, and everything in between.</p>
+
+                    <div class="final-cta-buttons">
+                        <a href="404page.html" class="btn btn-primary btn-large">
+                            <i class="fas fa-rocket"></i>
+                            Get Started Now
+                        </a>
+                        <a href="404page.html" class="btn btn-secondary btn-large">
+                            Learn More
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+
+                    <div class="trust-badges">
+                        <div class="trust-badge">
+                            <i class="fas fa-shield-alt"></i>
+                            <span>Secure & Safe</span>
+                        </div>
+                        <div class="trust-badge">
+                            <i class="fas fa-headset"></i>
+                            <span>24/7 Support</span>
+                        </div>
+                        <div class="trust-badge">
+                            <i class="fas fa-thumbs-up"></i>
+                            <span>4.9 Rating</span>
+                        </div>
+                    </div>
+                </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-column">
+                    <div class="footer-logo">
+                        <img src="./assets/Stackly-logo-Blue.webp" alt="Stackly" class="footer-logo-img">
+                    </div>
+                    <p class="footer-desc">The smartest way to get around. Request a ride, jump in, and go.</p>
+                    <div class="footer-social">
+                        <a href="404page.html" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                        <a href="404page.html" class="social-link"><i class="fab fa-twitter"></i></a>
+                        <a href="404page.html" class="social-link"><i class="fab fa-instagram"></i></a>
+                        <a href="404page.html" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h4 class="footer-heading">Company</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="services.html">Service</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4 class="footer-heading">Support</h4>
+                    <ul class="footer-links">
+                        <li><a href="404page.html">Help Center</a></li>
+                        <li><a href="404page.html">Safety</a></li>
+                        <li><a href="404page.html">Community Guidelines</a></li>
+                        <li><a href="404page.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4 class="footer-heading">Legal</h4>
+                    <ul class="footer-links">
+                        <li><a href="404page.html">Terms of Service</a></li>
+                        <li><a href="404page.html">Privacy Policy</a></li>
+                        <li><a href="404page.html">Cookie Policy</a></li>
+                        <li><a href="404page.html">Accessibility</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4 class="footer-heading">Download App</h4>
+                    <div class="footer-app-buttons">
+                        <a href="404page.html" class="footer-store-btn">
+                            <i class="fab fa-apple"></i>
+                            <div class="store-info">
+                                <span class="store-small">Download on the</span>
+                                <span class="store-large">App Store</span>
+                            </div>
+                        </a>
+                        <a href="404page.html" class="footer-store-btn">
+                            <i class="fab fa-google-play"></i>
+                            <div class="store-info">
+                                <span class="store-small">Get it on</span>
+                                <span class="store-large">Google Play</span>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="footer-copyright">
+                    <p>&copy; 2026 Stackly. All rights reserved.</p>
+                </div>
+                <div class="footer-payment">
+                    <span class="payment-label">We accept:</span>
+                    <div class="payment-icons">
+                        <i class="fab fa-cc-visa"></i>
+                        <i class="fab fa-cc-mastercard"></i>
+                        <i class="fab fa-cc-amex"></i>
+                        <i class="fab fa-cc-paypal"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const heroSection = document.querySelector('.hero-section');
+            setTimeout(() => {
+                heroSection.classList.add('is-loaded');
+            }, 100);
+
+            const imageWrapper = document.querySelector('.image-wrapper');
+            const floatingCards = document.querySelectorAll('.floating-card');
+
+            function handleScrollAnimation() {
+                const scrollY = window.scrollY;
+                const heroSectionTop = heroSection.offsetTop;
+                const heroSectionHeight = heroSection.offsetHeight;
+
+                if (scrollY > heroSectionTop - window.innerHeight && scrollY < heroSectionTop + heroSectionHeight) {
+                    const relativeScroll = scrollY - heroSectionTop;
+
+                    if (imageWrapper) {
+                        const translateY = relativeScroll * 0.15;
+                        const rotate = relativeScroll * 0.02;
+                        imageWrapper.style.transform = `translateY(${translateY}px) rotate(${rotate}deg)`;
+                        imageWrapper.style.opacity = 1 - (relativeScroll * 0.0005);
+                    }
+
+                    floatingCards.forEach((card, index) => {
+                        const speed = 0.1 + (index * 0.05);
+                        const translateY = relativeScroll * speed;
+                        const translateX = Math.sin(relativeScroll * 0.003) * 20;
+                        card.style.transform = `translateY(${translateY}px) translateX(${translateX}px)`;
+                    });
+                }
+            }
+
+            let ticking = false;
+            window.addEventListener('scroll', function () {
+                if (!ticking) {
+                    window.requestAnimationFrame(function () {
+                        handleScrollAnimation();
+                        ticking = false;
+                    });
+                    ticking = true;
+                }
+            });
+
+            handleScrollAnimation();
+
+            const scrollTriggers = document.querySelectorAll('.scroll-trigger');
+            const fleetSection = document.querySelector('.fleet-section');
+
+            function handleFleetScrollAnimation() {
+                if (!fleetSection) return;
+
+                const sectionTop = fleetSection.getBoundingClientRect().top;
+                const windowHeight = window.innerHeight;
+
+                const sectionHeader = fleetSection.querySelector('.section-header');
+                if (sectionHeader && sectionTop < windowHeight - 100) {
+                    sectionHeader.classList.add('visible');
+                }
+
+                scrollTriggers.forEach((card, index) => {
+                    const cardTop = card.getBoundingClientRect().top;
+                    if (cardTop < windowHeight - 100) {
+                        const delay = card.style.getPropertyValue('--delay') || (index * 0.1);
+                        setTimeout(() => {
+                            card.classList.add('visible');
+                        }, delay * 1000);
+                    }
+                });
+            }
+
+            window.addEventListener('scroll', function () {
+                if (!ticking) {
+                    window.requestAnimationFrame(function () {
+                        handleFleetScrollAnimation();
+                        ticking = false;
+                    });
+                    ticking = true;
+                }
+            });
+            handleFleetScrollAnimation();
+        });
+
+        document.addEventListener("DOMContentLoaded", () => {
+
+            const userIcon = `<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>`;
+
+            const fleetData = {
+                economy: [
+                    {
+                        title: "Hatchback Go", price: "₹240", eta: "2 min", capacity: "4", image: "🚗",
+                        desc: "Affordable, compact rides. Perfect for quick errands and daily commutes."
+                    },
+                    {
+                        title: "Sedan X", price: "₹310", eta: "4 min", capacity: "4", image: "🚕",
+                        desc: "Everyday rides with a bit more legroom and trunk space."
+                    },
+                    {
+                        title: "Auto", price: "₹120", eta: "1 min", capacity: "3", image: "🛺",
+                        desc: "Beat the traffic. Fast, breezy, and highly affordable local travel."
+                    }
+                ],
+                premium: [
+                    {
+                        title: "Comfort", price: "₹450", eta: "5 min", capacity: "4", image: "🚙",
+                        desc: "Newer cars with top-rated drivers. Ideal for business meetings."
+                    },
+                    {
+                        title: "Premier Exec", price: "₹680", eta: "8 min", capacity: "4", image: "🚘",
+                        desc: "High-end sedans with premium amenities and priority support."
+                    }
+                ],
+                xl: [
+                    {
+                        title: "SUV XL", price: "₹590", eta: "7 min", capacity: "6", image: "🚐",
+                        desc: "Spacious rides for groups up to 6 people or extra airport luggage."
+                    },
+                    {
+                        title: "Rental (8 Hrs)", price: "₹2100", eta: "15 min", capacity: "4", image: "🚙",
+                        desc: "Keep a car and driver for up to 8 hours and 80 kms. Multiple stops allowed."
+                    }
+                ]
+            };
+
+            const tabs = document.querySelectorAll('.fleet-tab');
+            const gridContainer = document.getElementById('fleet-grid');
+
+            const renderCards = (category) => {
+                gridContainer.innerHTML = '';
+
+                const vehicles = fleetData[category];
+                vehicles.forEach((vehicle, index) => {
+
+                    const card = document.createElement('div');
+                    card.className = 'vehicle-card card-enter';
+
+                    card.style.animationDelay = `${index * 0.1}s`;
+
+                    card.innerHTML = `
+        <div class="vehicle-header">
+          <div class="vehicle-visual">${vehicle.image}</div>
+          <div class="vehicle-pricing">
+            <div class="vehicle-price">${vehicle.price}</div>
+            <div class="vehicle-eta">
+              <span class="pulse-dot"></span> ${vehicle.eta}
+            </div>
+          </div>
+        </div>
+        
+        <div class="vehicle-title-row">
+          <h3 class="vehicle-title">${vehicle.title}</h3>
+          <div class="vehicle-specs">
+            <span class="spec-badge">${userIcon} ${vehicle.capacity}</span>
+          </div>
+        </div>
+        
+        <p class="vehicle-desc">${vehicle.desc}</p>
+        
+        <a href='404page.html' class="btn btn-primary btn-block">Book ${vehicle.title}</a>
+      `;
+
+                    gridContainer.appendChild(card);
+                });
+            };
+
+            tabs.forEach(tab => {
+                tab.addEventListener('click', () => {
+                    if (tab.classList.contains('active')) return;
+
+                    tabs.forEach(t => t.classList.remove('active'));
+                    tab.classList.add('active');
+
+                    renderCards(tab.getAttribute('data-target'));
+                });
+            });
+
+            renderCards('economy');
+        });
+
+    </script>
+</body>
