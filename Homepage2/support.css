@@ -1301,5 +1301,5 @@
 
 .faq-item.active .faq-answer {
     max-height: 200px;
-    padding: var(--space-3) var(--space-6);
+    /* padding: var(--space-3) var(--space-6); */
 }
