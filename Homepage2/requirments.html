@@ -12,6 +12,7 @@
         href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@400;600;700;800;900&display=swap"
         rel="stylesheet" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
 </head>
 
@@ -60,11 +61,14 @@
 
     <div class="container req-layout-wrapper">
 
-        <aside class="req-sidebar">
+        <aside class="req-sidebar" data-aos="fade-up">
             <nav class="req-nav" id="reqNav">
                 <a href="#personal" class="req-nav-link active">1. Personal Requirements</a>
                 <a href="#tiers" class="req-nav-link">2. Ride Tiers & Upgrades</a>
                 <a href="#documents" class="req-nav-link">3. Required Documents</a>
+                <a href="#faq" class="req-nav-link">4. FAQ</a>
+                <a href="#upgrade" class="req-nav-link">5. Upgrade Path</a>
+                <a href="#stats" class="req-nav-link">6. Stats</a>
             </nav>
 
             <div class="sidebar-cta">
@@ -216,6 +220,138 @@
 
                 </div>
             </section>
+            <section id="faq" class="req-section reveal-up">
+                <div class="section-heading">
+                    <h2>4. Frequently Asked Questions</h2>
+                    <p>Common questions from new partners. Didn't find your answer?</p>
+                </div>
+                <div class="faq-list">
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h4>Can I use someone else's car?</h4>
+                            <span class="faq-toggle">+</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Yes! The vehicle doesn't need to be in your name, but you must have written permission
+                                from the owner and all required documents (RC, insurance).</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h4>What's the approval timeline?</h4>
+                            <span class="faq-toggle">+</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>95% of complete applications approved within 24 hours. Upload clear photos and we'll get
+                                you on the road fast.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h4>Do I need commercial license?</h4>
+                            <span class="faq-toggle">+</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>No private light motor vehicle license is fine. Commercial endorsement required only for
+                                heavy vehicles.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h4>Are there model year limits?</h4>
+                            <span class="faq-toggle">+</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Economy: 2015+, Premium: 2020+, XL: No limit if maintained well. Always condition > age.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h4>How often vehicle inspections?</h4>
+                            <span class="faq-toggle">+</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Monthly self-checklist + random spot inspections. Major 50-point every 6 months free of
+                                charge.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h4>Can I switch ride tiers?</h4>
+                            <span class="faq-toggle">+</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Yes! Upgrade anytime with vehicle change + rating requirement. Downgrades instant.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h4>Pet policy for vehicles?</h4>
+                            <span class="faq-toggle">+</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>No permanent pet damage. Seat covers recommended. Clean between rides required.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h4>What's rejected most often?</h4>
+                            <span class="faq-toggle">+</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>1. Blurry document photos (30%), 2. Expired insurance (25%), 3. Dirty vehicles (20%).</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="upgrade" class="req-section reveal-up">
+                <div class="section-heading">
+                    <h2>5. Your Upgrade Path</h2>
+                    <p>Start Economy → Unlock Premium → Dominate with XL. Higher tiers = higher earnings.</p>
+                </div>
+                <div class="process-timeline">
+                    <div class="timeline-step">
+                        <span class="step-number">1</span>
+                        <h4>Economy Tier</h4>
+                        <p>Start earning immediately. Build 4.7+ rating over 100 trips.</p>
+                    </div>
+                    <div class="timeline-step">
+                        <span class="step-number">2</span>
+                        <h4>Premium Access</h4>
+                        <p>Upgrade vehicle + rating → 40% more per trip. Gold status perks.</p>
+                    </div>
+                    <div class="timeline-step">
+                        <span class="step-number">3</span>
+                        <h4>XL Master</h4>
+                        <p>Largest vehicles, airport priority, 60% earnings boost. Top 5% partners.</p>
+                    </div>
+                </div>
+            </section>
+            <section id="stats" class="stats-section reveal-up req-section">
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-number" data-target="95">95</div>
+                        <div class="stat-label">Approval Rate</div>
+                        <div class="stat-unit">% of complete apps</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number" data-target="24">24h</div>
+                        <div class="stat-label">Avg Review Time</div>
+                        <div class="stat-unit">From submission</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number" data-target="5">5</div>
+                        <div class="stat-label">Docs Needed</div>
+                        <div class="stat-unit">License + 4 more</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number" data-target="5000">5K+</div>
+                        <div class="stat-label">Active Partners</div>
+                        <div class="stat-unit">This month</div>
+                    </div>
+                </div>
+            </section>
 
         </main>
     </div>
@@ -281,30 +417,31 @@
         </div>
     </footer>
     <script src="script.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 800,
+            easing: 'ease-out-cubic',
+            once: true,
+            offset: 50,
+        });
+    </script>
     <script>
         document.addEventListener('DOMContentLoaded', () => {
-
-            // Select all sections and nav links
             const sections = document.querySelectorAll('.req-section');
             const navLinks = document.querySelectorAll('.req-nav-link');
 
-            // Options for the Intersection Observer
             const observerOptions = {
                 root: null,
-                rootMargin: '-20% 0px -60% 0px', // Triggers when section is roughly in the top half of the screen
+                rootMargin: '-20% 0px -60% 0px',
                 threshold: 0
             };
 
             const observerCallback = (entries) => {
                 entries.forEach(entry => {
                     if (entry.isIntersecting) {
-                        // Get the ID of the intersecting section (e.g., "personal", "vehicle")
                         const activeId = entry.target.getAttribute('id');
-
-                        // Remove 'active' class from all links
                         navLinks.forEach(link => link.classList.remove('active'));
-
-                        // Find the link that matches the active ID and add 'active' class
                         const activeLink = document.querySelector(`.req-nav-link[href="#${activeId}"]`);
                         if (activeLink) {
                             activeLink.classList.add('active');
@@ -315,8 +452,38 @@
 
             const observer = new IntersectionObserver(observerCallback, observerOptions);
 
-            // Tell the observer to watch all sections
             sections.forEach(section => observer.observe(section));
+        });
+        document.addEventListener("DOMContentLoaded", function () {
+
+            const faqItems = document.querySelectorAll(".faq-item");
+
+            faqItems.forEach(item => {
+
+                const question = item.querySelector(".faq-question");
+                const answer = item.querySelector(".faq-answer");
+                const toggle = item.querySelector(".faq-toggle");
+
+                question.addEventListener("click", () => {
+
+                    const isOpen = item.classList.contains("active");
+
+                    faqItems.forEach(faq => {
+                        faq.classList.remove("active");
+                        faq.querySelector(".faq-answer").style.maxHeight = null;
+                        faq.querySelector(".faq-toggle").textContent = "+";
+                    });
+
+                    if (!isOpen) {
+                        item.classList.add("active");
+                        answer.style.maxHeight = answer.scrollHeight + "px";
+                        toggle.textContent = "-";
+                    }
+
+                });
+
+            });
+
         });
     </script>
 </body>

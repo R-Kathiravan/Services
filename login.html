@@ -641,6 +641,56 @@
                 align-items: flex-start;
             }
         }
+/* 
+        .role-selector {
+            display: flex;
+            gap: var(--space-3);
+            margin-bottom: var(--space-2);
+        }
+
+        .role-option {
+            flex: 1;
+            cursor: pointer;
+        }
+
+        .role-option input[type="radio"] {
+            display: none;
+        }
+
+        .role-content {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: var(--space-2);
+            padding: var(--space-3);
+            background-color: var(--bg-main);
+            border: 2px solid var(--border-light);
+            border-radius: var(--radius-md);
+            color: var(--text-muted);
+            font-weight: 600;
+            font-size: 0.95rem;
+            transition: all 0.3s ease;
+        }
+
+        .role-option:hover .role-content {
+            background-color: var(--bg-surface-hover);
+            border-color: var(--text-secondary);
+        }
+
+        .role-option input[type="radio"]:checked+.role-content {
+            border-color: var(--color-accent);
+            background-color: rgba(16, 100, 185, 0.1);
+            color: var(--color-accent);
+            box-shadow: 0 4px 12px rgba(16, 185, 129, 0.15);
+        }
+
+        .role-content i {
+            transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+
+        .role-option input[type="radio"]:checked+.role-content i {
+            transform: scale(1.2);
+        } */
     </style>
 </head>
 
@@ -697,6 +747,26 @@
                 </div>
 
                 <form class="auth-form" id="loginForm" novalidate>
+                    <!-- <div class="form-group">
+                        <label class="form-label">Continue as a...</label>
+                        <div class="role-selector">
+                            <label class="role-option">
+                                <input type="radio" name="userRole" value="passenger" checked>
+                                <div class="role-content">
+                                    <i class="fas fa-user"></i>
+                                    <span>Passenger</span>
+                                </div>
+                            </label>
+
+                            <label class="role-option">
+                                <input type="radio" name="userRole" value="driver">
+                                <div class="role-content">
+                                    <i class="fas fa-car"></i>
+                                    <span>Driver</span>
+                                </div>
+                            </label>
+                        </div>
+                    </div> -->
                     <div class="form-group">
                         <label for="email">Email Address</label>
                         <div class="input-wrapper">
@@ -804,7 +874,6 @@
             const passwordError = document.getElementById('passwordError');
             const emailCheck = document.getElementById('emailCheck');
             const passwordCheck = document.getElementById('passwordCheck');
-
             const isValidEmail = (email) => {
                 const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
                 return re.test(email);
@@ -900,19 +969,23 @@
                 }
 
                 if (isValid) {
+                    // const selectedRole = document.querySelector('input[name="userRole"]:checked').value;
                     loginBtn.classList.add('loading');
-
+                    // if (selectedRole === 'driver') {
                     setTimeout(() => {
                         loginBtn.classList.remove('loading');
 
-                        loginBtn.innerHTML = '<i class="fas fa-check"></i> Success!';
-                        loginBtn.style.background = 'var(--color-success)';
+                        // loginBtn.innerHTML = '<i class="fas fa-check"></i> Success!';
+                        // loginBtn.style.background = 'var(--color-success)';
 
                         setTimeout(() => {
                             window.location.href = '404page.html';
-                        }, 1000);
+                        }, 500);
                     }, 2000);
                 }
+                // else{
+                //     window.location.href='passenger-dashboard.html'
+                // }
             });
 
             const forgotPasswordLink = document.getElementById('forgotPasswordLink');

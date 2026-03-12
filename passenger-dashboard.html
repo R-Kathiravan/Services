@@ -751,6 +751,297 @@
                 justify-content: flex-start;
             }
         }
+
+        /* =========================================
+   Passenger Dashboard Specific Styles
+   ========================================= */
+        .wallet-pill {
+            display: flex;
+            align-items: center;
+            gap: var(--space-2);
+            background-color: rgba(16, 185, 129, 0.1);
+            color: var(--color-success);
+            padding: var(--space-2) var(--space-4);
+            border-radius: 20px;
+            font-weight: 700;
+            font-size: 0.95rem;
+        }
+
+        .passenger-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: var(--space-6);
+        }
+
+        /* Left Column: Booking & Map */
+        .booking-col {
+            display: flex;
+            flex-direction: column;
+            gap: var(--space-6);
+        }
+
+        .booking-card {
+            padding: var(--space-4);
+            background-color: var(--bg-surface);
+        }
+
+        .booking-input-group {
+            display: flex;
+            align-items: center;
+            background-color: var(--bg-main);
+            border: 2px solid var(--border-light);
+            border-radius: var(--radius-lg);
+            padding: var(--space-2) var(--space-4);
+            transition: border-color 0.3s ease;
+        }
+
+        .booking-input-group:focus-within {
+            border-color: var(--color-accent);
+        }
+
+        .booking-input-group .input-icon {
+            color: var(--text-muted);
+            font-size: 1.2rem;
+            margin-right: var(--space-3);
+        }
+
+        .booking-input {
+            flex: 1;
+            background: transparent;
+            border: none;
+            outline: none;
+            color: var(--text-primary);
+            font-size: 1.25rem;
+            font-weight: 600;
+            padding: var(--space-3) 0;
+        }
+
+        .booking-input::placeholder {
+            color: var(--text-muted);
+        }
+
+        .input-action {
+            background-color: rgba(255, 255, 255, 0.05);
+            padding: var(--space-2) var(--space-4);
+            border-radius: 20px;
+            font-weight: 600;
+            font-size: 0.85rem;
+            cursor: pointer;
+        }
+
+        /* Saved Places */
+        .saved-places-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: var(--space-4);
+        }
+
+        .place-card {
+            display: flex;
+            align-items: center;
+            gap: var(--space-3);
+            background-color: var(--bg-surface);
+            border: 1px solid var(--border-light);
+            border-radius: var(--radius-lg);
+            padding: var(--space-3);
+            text-decoration: none;
+            transition: transform 0.2s ease, border-color 0.2s ease;
+        }
+
+        .place-card:hover {
+            transform: translateY(-2px);
+            border-color: var(--color-accent);
+        }
+
+        .place-icon {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+        }
+
+        .place-icon.home {
+            background-color: rgba(59, 130, 246, 0.1);
+            color: var(--color-accent);
+        }
+
+        .place-icon.work {
+            background-color: rgba(245, 158, 11, 0.1);
+            color: var(--color-warning);
+        }
+
+        .add-new .place-icon {
+            background-color: var(--bg-main);
+            color: var(--text-muted);
+            border: 1px dashed var(--border-light);
+        }
+
+        .place-info h4 {
+            color: var(--text-primary);
+            font-size: 0.95rem;
+            margin-bottom: 2px;
+        }
+
+        .place-info p {
+            color: var(--text-secondary);
+            font-size: 0.75rem;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            max-width: 120px;
+        }
+
+        /* The Map */
+        .map-card {
+            height: 400px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #1a2332;
+        }
+
+        .map-placeholder {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: var(--space-3);
+            color: var(--text-muted);
+            font-size: 1.2rem;
+        }
+
+        .map-placeholder i {
+            font-size: 3rem;
+        }
+
+        /* Right Column: Status */
+        .sidebar-col {
+            display: flex;
+            flex-direction: column;
+            gap: var(--space-6);
+        }
+
+        .active-ride-card {
+            border-color: var(--color-primary);
+            box-shadow: 0 0 20px rgba(16, 185, 129, 0.1);
+        }
+
+        .eta-badge {
+            background-color: var(--color-primary);
+            color: #fff;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-weight: 700;
+            font-size: 0.85rem;
+        }
+
+        .driver-profile-mini {
+            display: flex;
+            align-items: center;
+            gap: var(--space-3);
+            padding: var(--space-4) var(--space-6);
+            border-bottom: 1px solid var(--border-light);
+        }
+
+        .driver-avatar img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        .driver-info {
+            flex: 1;
+        }
+
+        .driver-info h4 {
+            font-size: 1.1rem;
+            margin-bottom: 2px;
+        }
+
+        .driver-info span {
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+        }
+
+        .driver-info i {
+            color: #FBBF24;
+        }
+
+        .plate-number {
+            background-color: var(--bg-main);
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-family: monospace;
+            font-weight: 700;
+            font-size: 0.9rem;
+            letter-spacing: 1px;
+        }
+
+        .active-actions {
+            display: flex;
+            padding: var(--space-4) var(--space-6);
+            gap: var(--space-3);
+        }
+
+        .action-btn {
+            flex: 1;
+            padding: var(--space-3);
+            border-radius: var(--radius-md);
+            border: none;
+            background-color: var(--bg-main);
+            color: var(--text-primary);
+            font-size: 1.1rem;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+
+        .action-btn:hover {
+            background-color: var(--bg-surface-hover);
+        }
+
+        .action-btn.danger {
+            color: var(--color-danger);
+        }
+
+        .action-btn.danger:hover {
+            background-color: rgba(239, 68, 68, 0.1);
+        }
+
+        /* Rebook Button */
+        .rebook-btn {
+            background-color: rgba(255, 255, 255, 0.05);
+            color: var(--text-primary);
+            border: none;
+            padding: 6px 12px;
+            border-radius: 12px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .rebook-btn:hover {
+            background-color: var(--color-accent);
+            color: #fff;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 1024px) {
+            .passenger-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .saved-places-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .map-card {
+                height: 300px;
+            }
+        }
     </style>
 </head>
 
@@ -769,7 +1060,7 @@
                     <div class="nav-section-title">Main</div>
                     <a href="dashboard.html" class="sidebar-link active">
                         <i class="fas fa-th-large"></i>
-                        Dashboard
+                        Passenger Dashboard
                     </a>
                     <a href="404page.html" class="sidebar-link">
                         <i class="fas fa-car"></i>
@@ -833,13 +1124,12 @@
 
 
         <main class="dashboard-main">
-
             <header class="dashboard-header">
                 <div class="header-left">
                     <button class="menu-toggle" id="menuToggle">
                         <i class="fas fa-bars"></i>
                     </button>
-                    <h1 class="page-title">Dashboard</h1>
+                    <h1 class="page-title">Good Evening, John</h1>
                 </div>
 
                 <div class="header-right">
@@ -847,211 +1137,108 @@
                         <i class="fas fa-bell"></i>
                         <span class="notification-dot"></span>
                     </a>
-                    <a href="404page.html" class="header-icon-btn">
-                        <i class="fas fa-comment-dots"></i>
-                    </a>
-                    <a href="404page.html" class="quick-action-btn">
-                        <i class="fas fa-plus"></i>
-                        <span>Request Ride</span>
-                    </a>
+                    <div class="wallet-pill">
+                        <i class="fas fa-wallet"></i>
+                        <span>$24.50</span>
+                    </div>
                 </div>
             </header>
 
-
             <div class="dashboard-content">
+                <div class="passenger-grid">
 
-                <div class="stats-grid">
-                    <div class="stat-card">
-                        <div class="stat-header">
-                            <div class="stat-icon primary">
-                                <i class="fas fa-car"></i>
-                            </div>
-                            <div class="stat-trend up">
-                                <i class="fas fa-arrow-up"></i>
-                                12%
-                            </div>
-                        </div>
-                        <div class="stat-value">47</div>
-                        <div class="stat-label">Total Rides</div>
-                    </div>
+                    <div class="booking-col">
 
-                    <div class="stat-card">
-                        <div class="stat-header">
-                            <div class="stat-icon success">
-                                <i class="fas fa-check-circle"></i>
-                            </div>
-                            <div class="stat-trend up">
-                                <i class="fas fa-arrow-up"></i>
-                                8%
-                            </div>
-                        </div>
-                        <div class="stat-value">43</div>
-                        <div class="stat-label">Completed Rides</div>
-                    </div>
-
-                    <div class="stat-card">
-                        <div class="stat-header">
-                            <div class="stat-icon warning">
-                                <i class="fas fa-clock"></i>
-                            </div>
-                            <div class="stat-trend down">
-                                <i class="fas fa-arrow-down"></i>
-                                3%
-                            </div>
-                        </div>
-                        <div class="stat-value">2</div>
-                        <div class="stat-label">Scheduled</div>
-                    </div>
-
-                    <div class="stat-card">
-                        <div class="stat-header">
-                            <div class="stat-icon danger">
-                                <i class="fas fa-times-circle"></i>
-                            </div>
-                            <div class="stat-trend down">
-                                <i class="fas fa-arrow-down"></i>
-                                15%
-                            </div>
-                        </div>
-                        <div class="stat-value">2</div>
-                        <div class="stat-label">Cancelled</div>
-                    </div>
-                </div>
-
-
-                <div class="dashboard-grid">
-
-                    <div class="content-card">
-                        <div class="card-header">
-                            <h3 class="card-title">Recent Rides</h3>
-                            <a href="404page.html" class="card-action">View All</a>
-                        </div>
-                        <div class="rides-list">
-                            <div class="ride-item">
-                                <div class="ride-icon completed">
-                                    <i class="fas fa-check"></i>
-                                </div>
-                                <div class="ride-details">
-                                    <div class="ride-route">Home → Office</div>
-                                    <div class="ride-meta">Today, 9:30 AM • 45 min</div>
-                                </div>
-                                <div class="ride-price">
-                                    <div class="ride-amount">$12.50</div>
-                                    <div class="ride-status completed">Completed</div>
-                                </div>
-                            </div>
-
-                            <div class="ride-item">
-                                <div class="ride-icon completed">
-                                    <i class="fas fa-check"></i>
-                                </div>
-                                <div class="ride-details">
-                                    <div class="ride-route">Office → Mall</div>
-                                    <div class="ride-meta">Yesterday, 6:15 PM • 30 min</div>
-                                </div>
-                                <div class="ride-price">
-                                    <div class="ride-amount">$8.75</div>
-                                    <div class="ride-status completed">Completed</div>
-                                </div>
-                            </div>
-
-                            <div class="ride-item">
-                                <div class="ride-icon scheduled">
-                                    <i class="fas fa-calendar"></i>
-                                </div>
-                                <div class="ride-details">
-                                    <div class="ride-route">Home → Airport</div>
-                                    <div class="ride-meta">Tomorrow, 5:00 AM • 1h 20min</div>
-                                </div>
-                                <div class="ride-price">
-                                    <div class="ride-amount">$45.00</div>
-                                    <div class="ride-status scheduled">Scheduled</div>
-                                </div>
-                            </div>
-
-                            <div class="ride-item">
-                                <div class="ride-icon cancelled">
-                                    <i class="fas fa-times"></i>
-                                </div>
-                                <div class="ride-details">
-                                    <div class="ride-route">Home → Gym</div>
-                                    <div class="ride-meta">Jan 15, 7:00 AM</div>
-                                </div>
-                                <div class="ride-price">
-                                    <div class="ride-amount">$6.50</div>
-                                    <div class="ride-status cancelled">Cancelled</div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-
-                    <div class="sidebar-content">
-
-                        <div class="content-card">
-                            <div class="card-header">
-                                <h3 class="card-title">Quick Actions</h3>
-                            </div>
-                            <div class="quick-actions-grid">
-                                <a href="404page.html" class="quick-action-card">
-                                    <i class="fas fa-car"></i>
-                                    <span>Book Ride</span>
-                                </a>
-                                <a href="404page.html" class="quick-action-card">
-                                    <i class="fas fa-calendar-plus"></i>
-                                    <span>Schedule</span>
-                                </a>
-                                <a href="404page.html" class="quick-action-card">
-                                    <i class="fas fa-map-marker-plus"></i>
-                                    <span>Add Place</span>
-                                </a>
-                                <a href="404page.html" class="quick-action-card">
-                                    <i class="fas fa-receipt"></i>
-                                    <span>Receipts</span>
-                                </a>
+                        <div class="content-card booking-card">
+                            <div class="booking-input-group">
+                                <div class="input-icon"><i class="fas fa-search"></i></div>
+                                <input type="text" class="booking-input" placeholder="Where to?">
+                                <div class="input-action"><i class="fas fa-clock"></i> Now</div>
                             </div>
                         </div>
 
-
-                        <div class="content-card">
-                            <div class="card-header">
-                                <h3 class="card-title">Upcoming</h3>
-                                <a href="404page.html" class="card-action">View All</a>
-                            </div>
-                            <div class="scheduled-rides">
-                                <div class="scheduled-item">
-                                    <div class="scheduled-date">
-                                        <div class="day">18</div>
-                                        <div class="month">Jan</div>
-                                    </div>
-                                    <div class="scheduled-info">
-                                        <div class="route">Home → Airport</div>
-                                        <div class="time">5:00 AM • Toyota Camry</div>
-                                    </div>
+                        <div class="saved-places-grid">
+                            <a href="#" class="place-card">
+                                <div class="place-icon home"><i class="fas fa-home"></i></div>
+                                <div class="place-info">
+                                    <h4>Home</h4>
+                                    <p>123 Main Street</p>
                                 </div>
-                                <div class="scheduled-item">
-                                    <div class="scheduled-date">
-                                        <div class="day">20</div>
-                                        <div class="month">Jan</div>
-                                    </div>
-                                    <div class="scheduled-info">
-                                        <div class="route">Office → Meeting</div>
-                                        <div class="time">2:30 PM • Honda City</div>
-                                    </div>
+                            </a>
+                            <a href="#" class="place-card">
+                                <div class="place-icon work"><i class="fas fa-briefcase"></i></div>
+                                <div class="place-info">
+                                    <h4>Work</h4>
+                                    <p>Tech Park, Block B</p>
                                 </div>
-                            </div>
-                        </div>
-
-
-                        <div class="promo-card">
-                            <div class="promo-badge">Limited Offer</div>
-                            <h3 class="promo-title">Get $10 Off Your Next 3 Rides!</h3>
-                            <p class="promo-desc">Share Stackly with friends and earn credits on every ride they take.
-                            </p>
-                            <a href="404page.html" class="promo-btn">
-                                Invite Friends <i class="fas fa-arrow-right"></i>
+                            </a>
+                            <a href="#" class="place-card add-new">
+                                <div class="place-icon"><i class="fas fa-plus"></i></div>
+                                <div class="place-info">
+                                    <h4>Add Place</h4>
+                                    <p>Save a new location</p>
+                                </div>
                             </a>
                         </div>
+
+                        <div class="content-card map-card">
+                            <div class="map-placeholder">
+                                <i class="fas fa-map-marked-alt text-gradient-blue"></i>
+                                <span>Interactive Map View</span>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="sidebar-col">
+
+                        <div class="content-card active-ride-card">
+                            <div class="card-header">
+                                <h3 class="card-title">Driver En Route</h3>
+                                <span class="eta-badge">4 Min</span>
+                            </div>
+                            <div class="driver-profile-mini">
+                                <div class="driver-avatar"><img
+                                        src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop"
+                                        alt="Driver"></div>
+                                <div class="driver-info">
+                                    <h4>Michael S.</h4>
+                                    <span><i class="fas fa-star"></i> 4.9 • Toyota Camry</span>
+                                </div>
+                                <div class="plate-number">ABC-1234</div>
+                            </div>
+                            <div class="active-actions">
+                                <button class="action-btn"><i class="fas fa-phone"></i></button>
+                                <button class="action-btn"><i class="fas fa-comment"></i></button>
+                                <button class="action-btn danger"><i class="fas fa-times"></i></button>
+                            </div>
+                        </div>
+
+                        <div class="content-card">
+                            <div class="card-header">
+                                <h3 class="card-title">Recent Trips</h3>
+                                <a href="#" class="card-action">History</a>
+                            </div>
+                            <div class="rides-list">
+                                <div class="ride-item">
+                                    <div class="ride-icon completed"><i class="fas fa-check"></i></div>
+                                    <div class="ride-details">
+                                        <div class="ride-route">Airport Drop-off</div>
+                                        <div class="ride-meta">Yesterday • $45.00</div>
+                                    </div>
+                                    <button class="rebook-btn">Rebook</button>
+                                </div>
+                                <div class="ride-item">
+                                    <div class="ride-icon completed"><i class="fas fa-check"></i></div>
+                                    <div class="ride-details">
+                                        <div class="ride-route">Downtown Dinner</div>
+                                        <div class="ride-meta">Oct 12 • $14.20</div>
+                                    </div>
+                                    <button class="rebook-btn">Rebook</button>
+                                </div>
+                            </div>
+                        </div>
+
                     </div>
                 </div>
             </div>

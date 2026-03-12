@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Support Center | Partners</title>
+    <title>Support | Partners</title>
     <link rel="stylesheet" href="shared.css">
     <link rel="stylesheet" href="support.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -12,6 +12,7 @@
         href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@400;600;700;800;900&display=swap"
         rel="stylesheet" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 
 <body class="driver-theme">
@@ -53,7 +54,7 @@
         <section class="support-hero">
             <div class="hero-background">
                 <div class="hero-content">
-                    <h1 class="hero-title">How can we help?</h1>
+                    <h1 class="hero-title" data-aos="fade-down" data-aos-delay="500">How can we help?</h1>
                     <p class="hero-subtitle">Search our knowledge base or browse topics below</p>
                 </div>
                 <div class="trending-searches" id="trendingSearches">
@@ -69,10 +70,86 @@
             </div>
         </section>
 
+
+        <section class="video-academy-section reveal-up">
+            <div class="container">
+                <div class="section-header text-center mb-8">
+                    <h2 class="section-title">Stackly Academy</h2>
+                    <p class="section-subtitle">Watch quick tutorials to master the app and maximize your earnings.</p>
+                </div>
+
+                <div class="academy-grid">
+                    <a href="404page.html" class="video-card" data-aos="fade-down" data-aos-delay="300">
+                        <div class="video-thumbnail" style="background-image: url('./assets/contact1.webp');">
+                            <div class="play-overlay">
+                                <i class="fas fa-play"></i>
+                            </div>
+                            <span class="video-duration">1:45</span>
+                        </div>
+                        <div class="video-info">
+                            <h4>How to setup Instant Payouts</h4>
+                            <p>Learn how to link your bank account and withdraw funds instantly.</p>
+                        </div>
+                    </a>
+
+                    <a href="404page.html" class="video-card" data-aos="fade-up" data-aos-delay="400">
+                        <div class="video-thumbnail" style="background-image: url('./assets/hero2.webp');">
+                            <div class="play-overlay">
+                                <i class="fas fa-play"></i>
+                            </div>
+                            <span class="video-duration">2:10</span>
+                        </div>
+                        <div class="video-info">
+                            <h4>Understanding Surge Pricing</h4>
+                            <p>Read the heatmap effectively to position yourself in high-demand zones.</p>
+                        </div>
+                    </a>
+
+                    <a href="404page.html" class="video-card" data-aos="fade-down" data-aos-delay="500">
+                        <div class="video-thumbnail" style="background-image: url('./assets/hero1.webp');">
+                            <div class="play-overlay">
+                                <i class="fas fa-play"></i>
+                            </div>
+                            <span class="video-duration">3:05</span>
+                        </div>
+                        <div class="video-info">
+                            <h4>Handling difficult riders</h4>
+                            <p>Tips from top-rated partners on de-escalation and maintaining 5 stars.</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section class="diagnostic-wizard-section reveal-up">
+            <div class="container">
+                <div class="wizard-card">
+                    <div class="wizard-sidebar">
+                        <i class="fas fa-magic text-gradient-blue"></i>
+                        <h3>Troubleshooting Wizard</h3>
+                        <p>Answer a few quick questions and we'll point you to the exact solution instantly.</p>
+                    </div>
+
+                    <div class="wizard-content" id="wizardContent">
+                        <div class="wizard-step active" id="step1">
+                            <h4>What do you need help with?</h4>
+                            <div class="wizard-options" data-aos="flip-up">
+                                <a href="404page.html" class="wizard-btn"><i class="fas fa-wallet"></i> Payments &
+                                    Earnings</a>
+                                <a href="404page.html" class="wizard-btn"><i class="fas fa-user-cog"></i> Account &
+                                    Documents</a>
+                                <a href="404page.html" class="wizard-btn"><i class="fas fa-car"></i> A Specific Ride</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <section class="user-routing-section">
             <div class="container">
                 <div class="routing-grid">
-                    <div class="routing-card rider-card active" data-user="rider">
+                    <div class="routing-card rider-card active" data-user="rider" data-aos="fade" data-aos-delay="400">
                         <div class="card-icon">
                             <i class="fas fa-user"></i>
                         </div>
@@ -84,7 +161,7 @@
                             <i class="fas fa-arrow-right"></i>
                         </a>
                     </div>
-                    <div class="routing-card driver-card" data-user="driver">
+                    <div class="routing-card driver-card" data-user="driver" data-aos="fade" data-aos-delay="500">
                         <div class="card-icon">
                             <i class="fas fa-car"></i>
                         </div>
@@ -133,7 +210,7 @@
         <section class="emergency-section">
             <div class="container">
                 <div class="emergency-grid">
-                    <div class="emergency-card">
+                    <div class="emergency-card" data-aos="fade-down" data-aos-delay="300">
                         <div class="emergency-icon">
                             <i class="fas fa-shield-alt"></i>
                         </div>
@@ -143,7 +220,7 @@
                             <a href="404page.html" class="emergency-btn">Report an Incident</a>
                         </div>
                     </div>
-                    <div class="contact-cta-card">
+                    <div class="contact-cta-card" data-aos="fade-down" data-aos-delay="400">
                         <div class="cta-icon">
                             <i class="fas fa-headset"></i>
                         </div>
@@ -156,10 +233,97 @@
                 </div>
             </div>
         </section>
+        <section id="faq" class="faq-section reveal-up" data-aos="fade-up">
+            <div class="container">
+                <div class="section-header text-center mb-8">
+                    <h2 class="section-title">Frequently Asked Questions</h2>
+                    <p class="section-subtitle">Common questions from new partners. Didn't find your answer?</p>
+                </div>
+                <div class="faq-list">
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h4>Can I use someone else's car?</h4>
+                            <span class="faq-toggle">+</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Yes! The vehicle doesn't need to be in your name, but you must have written permission
+                                from the owner and all required documents (RC, insurance).</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h4>What's the approval timeline?</h4>
+                            <span class="faq-toggle">+</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>95% of complete applications approved within 24 hours. Upload clear photos and we'll get
+                                you on the road fast.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h4>Do I need commercial license?</h4>
+                            <span class="faq-toggle">+</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>No private light motor vehicle license is fine. Commercial endorsement required only for
+                                heavy vehicles.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h4>Are there model year limits?</h4>
+                            <span class="faq-toggle">+</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Economy: 2015+, Premium: 2020+, XL: No limit if maintained well. Always condition > age.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h4>How often vehicle inspections?</h4>
+                            <span class="faq-toggle">+</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Monthly self-checklist + random spot inspections. Major 50-point every 6 months free of
+                                charge.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h4>Can I switch ride tiers?</h4>
+                            <span class="faq-toggle">+</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Yes! Upgrade anytime with vehicle change + rating requirement. Downgrades instant.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h4>Pet policy for vehicles?</h4>
+                            <span class="faq-toggle">+</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>No permanent pet damage. Seat covers recommended. Clean between rides required.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h4>What's rejected most often?</h4>
+                            <span class="faq-toggle">+</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>1. Blurry document photos (30%), 2. Expired insurance (25%), 3. Dirty vehicles (20%).</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
 
 
-    <footer class="driver-footer">
+    <footer class="driver-footer" data-aos="fade-down">
         <div class="container">
             <div class="footer-grid">
 
@@ -219,7 +383,15 @@
             </div>
         </div>
     </footer>
-
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 800,
+            easing: 'ease-out-cubic',
+            once: true,
+            offset: 50,
+        });
+    </script>
     <script src="script.js"></script>
     <script>
         const quickFixesData = {
@@ -281,7 +453,7 @@
             const fixes = quickFixesData[userType];
 
             grid.innerHTML = fixes.map((fix, index) => `
-                <div class="quick-fix-card" style="animation-delay: ${index * 0.1}s">
+                <div class="quick-fix-card" style="animation-delay: ${index * 0.1}s" data-aos='flip-up'>
                     <div class="fix-icon">
                         <i class="${fix.icon}"></i>
                     </div>
@@ -299,7 +471,7 @@
 
             const topicList = document.getElementById('kbTopicList');
             topicList.innerHTML = kb.topics.map(topic => `
-                <li class="kb-topic-item">
+                <li class="kb-topic-item" data-aos='fade-down'>
                     <a href="404page.html" class="kb-topic-link">
                         <i class="${topic.icon}"></i>
                         <span class="topic-name">${topic.name}</span>
@@ -310,7 +482,7 @@
 
             const articlesGrid = document.getElementById('kbArticlesGrid');
             articlesGrid.innerHTML = kb.articles.map((article, index) => `
-                <a href='404page.html' class="kb-article-card" style="animation-delay: ${index * 0.05}s">
+                <a href='404page.html' class="kb-article-card" style="animation-delay: ${index * 0.05}s" data-aos='flip-down'>
                     <div class="article-category">${article.category}</div>
                     <h4 class="article-title">${article.title}</h4>
                     <div class="article-meta">
@@ -355,6 +527,37 @@
                 this.classList.add('clicked');
                 setTimeout(() => this.classList.remove('clicked'), 300);
             });
+        });
+        document.addEventListener("DOMContentLoaded", function () {
+
+            const faqItems = document.querySelectorAll(".faq-item");
+
+            faqItems.forEach(item => {
+
+                const question = item.querySelector(".faq-question");
+                const answer = item.querySelector(".faq-answer");
+                const toggle = item.querySelector(".faq-toggle");
+
+                question.addEventListener("click", () => {
+
+                    const isOpen = item.classList.contains("active");
+
+                    faqItems.forEach(faq => {
+                        faq.classList.remove("active");
+                        faq.querySelector(".faq-answer").style.maxHeight = null;
+                        faq.querySelector(".faq-toggle").textContent = "+";
+                    });
+
+                    if (!isOpen) {
+                        item.classList.add("active");
+                        answer.style.maxHeight = answer.scrollHeight + "px";
+                        toggle.textContent = "-";
+                    }
+
+                });
+
+            });
+
         });
     </script>
 </body>

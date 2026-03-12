@@ -13,6 +13,7 @@
         href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@400;600;700;800;900&display=swap"
         rel="stylesheet" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 
 <header class="header">
@@ -94,11 +95,11 @@
     <div class="container">
         <div class="services-hero-content">
             <span class="services-badge">Our Services</span>
-            <h1 class="services-hero-title">Premium Transportation<br><span class="text-gradient">Solutions</span>
+            <h1 class="services-hero-title" data-aos="fade-right">Premium Transportation<br><span class="text-gradient">Solutions</span>
             </h1>
-            <p class="services-hero-subtitle">From daily commutes to luxury travel, discover the perfect ride for
+            <p class="services-hero-subtitle" data-aos="fade-up">From daily commutes to luxury travel, discover the perfect ride for
                 every journey. Experience convenience, safety, and comfort with Stackly.</p>
-            <div class="services-hero-stats">
+            <div class="services-hero-stats" data-aos="fade-down">
                 <div class="h-stat">
                     <span class="h-stat-value">50K+</span>
                     <span class="h-stat-label">Active Drivers</span>
@@ -127,7 +128,7 @@
                     <i class="fas fa-truck-monster"></i>
                     <span>XL</span>
                 </div>
-            </div>
+            </div>  
         </div>
     </div>
 </section>
@@ -444,7 +445,7 @@
 </section>
 
 
-<section class="b2b-services-section">
+<section class="b2b-services-section" data-aos="fade-up" data-aos-delay="300">
     <div class="container">
         <div class="section-header text-center">
             <span class="section-badge">Beyond Rides</span>
@@ -600,7 +601,7 @@
         <div class="app-experience-wrapper">
 
             <div class="app-features-left">
-                <div class="app-feature-block" data-feature="schedule">
+                <div class="app-feature-block" data-feature="schedule" data-aos="fade-up" data-aos-delay="100">
                     <div class="afb-icon">
                         <i class="fas fa-calendar-check"></i>
                     </div>
@@ -610,7 +611,7 @@
                             events without worry.</p>
                     </div>
                 </div>
-                <div class="app-feature-block" data-feature="split">
+                <div class="app-feature-block" data-feature="split" data-aos="fade-up" data-aos-delay="200">
                     <div class="afb-icon">
                         <i class="fas fa-users"></i>
                     </div>
@@ -620,7 +621,7 @@
                             passenger.</p>
                     </div>
                 </div>
-                <div class="app-feature-block" data-feature="multidrop">
+                <div class="app-feature-block" data-feature="multidrop" data-aos="fade-up" data-aos-delay="300">
                     <div class="afb-icon">
                         <i class="fas fa-route"></i>
                     </div>
@@ -651,7 +652,7 @@
 
 
             <div class="app-features-right">
-                <div class="app-feature-block" data-feature="accessibility">
+                <div class="app-feature-block" data-feature="accessibility" data-aos="fade-down" data-aos-delay="100">
                     <div class="afb-icon">
                         <i class="fas fa-universal-access"></i>
                     </div>
@@ -661,7 +662,7 @@
                             comfortable.</p>
                     </div>
                 </div>
-                <div class="app-feature-block" data-feature="safety">
+                <div class="app-feature-block" data-feature="safety" data-aos="fade-down" data-aos-delay="100">
                     <div class="afb-icon">
                         <i class="fas fa-shield-alt"></i>
                     </div>
@@ -671,7 +672,7 @@
                         </p>
                     </div>
                 </div>
-                <div class="app-feature-block" data-feature="rewards">
+                <div class="app-feature-block" data-feature="rewards" data-aos="fade-down" data-aos-delay="100">
                     <div class="afb-icon">
                         <i class="fas fa-gift"></i>
                     </div>
@@ -686,7 +687,7 @@
 </section>
 
 
-<section class="guarantees-section">
+<section class="guarantees-section" data-aos="zoom">
     <div class="container">
         <div class="section-header text-center">
             <span class="section-badge">Why Choose Us</span>
@@ -805,7 +806,7 @@
 </section>
 
 
-<section class="operations-section">
+<section class="operations-section" data-aos="fade-down">
     <div class="container">
         <div class="section-header text-center">
             <span class="section-badge">Where We Operate</span>
@@ -947,6 +948,16 @@
         </div>
     </div>
 </footer>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+    AOS.init({
+        duration: 800,
+        easing: 'ease-out',
+        once: true,
+        offset: 120,
+        delay: 0
+    });
+</script>
 <script src="script.js"></script>
 <script>
     document.addEventListener("DOMContentLoaded", () => {

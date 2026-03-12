@@ -1,117 +1,311 @@
-/* =========================================
-   Section 1: Hero & Floating Receipt
-   ========================================= */
-.earnings-hero {
+.earnings-hero-v2 {
     position: relative;
-    padding: 160px 5% 80px;
+    padding: 80px 5% 100px;
     background-color: var(--bg-main);
+    background-image: var(--linear-bg);
+    min-height: 85vh;
+    display: flex;
+    align-items: center;
     overflow: hidden;
 }
 
-/* 3D Glass Receipt */
-.receipt-card {
-    background: rgba(17, 24, 39, 0.85);
-    backdrop-filter: blur(20px);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    border-radius: var(--radius-xl);
-    padding: var(--space-6);
-    width: 360px;
-    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.6), 0 0 40px rgba(16, 185, 129, 0.1);
+.hero-grid-v2 {
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: var(--space-12);
+    align-items: center;
+    position: relative;
+    z-index: 2;
 }
 
-.receipt-header {
+.sub-action-text {
+    font-size: 0.95rem;
+    color: var(--text-secondary);
+    font-weight: 600;
+    margin-left: var(--space-4);
+}
+
+.hero-visual {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-visual img {
+    width: 600px;
+    height: 500px;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+.payout-marquee-section {
+    background: var(--bg-surface);
+    border-top: 1px solid var(--border-light);
+    border-bottom: 1px solid var(--border-light);
+    padding: 12px 0;
+    overflow: hidden;
+}
+
+.marquee-container {
+    display: flex;
+    width: 100%;
+}
+
+.marquee-track {
+    display: flex;
+    gap: 40px;
+    white-space: nowrap;
+    animation: scroll-marquee 25s linear infinite;
+}
+
+.marquee-item {
+    color: var(--text-secondary);
+    font-size: 0.95rem;
     display: flex;
     align-items: center;
-    gap: var(--space-2);
-    font-weight: 700;
-    font-size: 1.1rem;
-    margin-bottom: var(--space-5);
-    border-bottom: 1px dashed var(--border-light);
-    padding-bottom: var(--space-4);
+    gap: 8px;
 }
 
-.receipt-route {
+.marquee-item strong {
+    color: var(--text-primary);
+}
+
+.marquee-item i.fa-check-circle {
+    color: var(--color-success);
+}
+
+.marquee-item i.fa-gift,
+.marquee-item i.fa-fire {
+    color: #F59E0B;
+}
+
+@keyframes scroll-marquee {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+.heatmap-section {
+    padding: var(--space-12) 5%;
+    background: var(--bg-main);
+}
+
+.heatmap-card {
+    max-width: 900px;
+    margin: 0 auto;
+    background: var(--bg-surface);
+    border: 1px solid var(--border-light);
+    border-radius: var(--radius-2xl);
+    padding: var(--space-8);
+}
+
+.heatmap-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: var(--space-8);
+}
+
+.heatmap-header h3 {
+    font-size: 1.25rem;
+}
+
+.heatmap-legend {
     display: flex;
     gap: var(--space-4);
-    margin-bottom: var(--space-5);
 }
 
-.route-dots {
+.legend-item {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+}
+
+.dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+}
+
+.heatmap-chart {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    height: 200px;
+    padding-bottom: 30px;
+    position: relative;
+    border-bottom: 1px solid var(--border-light);
+}
+
+.chart-col {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 5px;
+    width: 40px;
+    height: 100%;
+    position: relative;
 }
 
-.dot-start {
-    width: 10px;
-    height: 10px;
-    background: var(--color-accent);
-    border-radius: 50%;
+.chart-bar {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    border-radius: 6px 6px 0 0;
+    height: 0;
+    transition: height 1.5s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-.route-line {
-    width: 2px;
-    height: 25px;
-    background: var(--border-light);
-    margin: 4px 0;
+.time-label {
+    position: absolute;
+    bottom: -25px;
+    font-size: 0.8rem;
+    color: var(--text-muted);
 }
 
-.dot-end {
-    width: 10px;
-    height: 10px;
+.low {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.med {
+    background: rgba(59, 130, 246, 0.5);
+}
+
+.high {
     background: var(--color-primary);
-    border-radius: 50%;
+    box-shadow: 0 0 15px rgba(16, 185, 129, 0.4);
 }
 
-.route-text p {
-    font-size: 0.9rem;
-    color: var(--text-secondary);
-    margin-bottom: 14px;
+.tiers-section {
+    padding: var(--space-12) 5%;
+    background-color: var(--bg-main);
+    background-image: var(--linear-bg);
+    border-top: 1px solid var(--border-light);
 }
 
-.route-text p:last-child {
-    margin-bottom: 0;
-    color: var(--text-primary);
-    font-weight: 500;
+.pro-tiers-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-6);
+    max-width: 1100px;
+    margin: 0 auto;
 }
 
-.receipt-row {
-    display: flex;
-    justify-content: space-between;
-    font-family: 'Courier New', monospace;
-    /* Receipt style font */
-    font-size: 0.95rem;
-    color: var(--text-secondary);
-    margin-bottom: var(--space-3);
+.pro-card {
+    background: var(--bg-main);
+    border: 1px solid var(--border-light);
+    border-radius: var(--radius-2xl);
+    padding: var(--space-6);
+    text-align: center;
+    position: relative;
+    transition: transform 0.3s ease;
 }
 
-.highlight-row {
-    color: var(--color-primary);
+.pro-card:hover {
+    transform: translateY(-5px);
+}
+
+.gold-tier {
+    border-color: rgba(245, 158, 11, 0.4);
+    box-shadow: 0 10px 30px rgba(245, 158, 11, 0.05);
+}
+
+.pro-badge {
+    position: absolute;
+    top: -12px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #F59E0B;
+    color: #fff;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 0.8rem;
     font-weight: 700;
+    text-transform: uppercase;
 }
 
-.receipt-divider {
-    border-top: 1px dashed var(--border-light);
-    margin: var(--space-4) 0;
-}
-
-.receipt-total {
+.pro-icon {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    font-size: 1.2rem;
+    justify-content: center;
+    font-size: 1.5rem;
+    margin: 0 auto var(--space-4);
+}
+
+.silver {
+    background: rgba(156, 163, 175, 0.1);
+    color: #9CA3AF;
+}
+
+.gold {
+    background: rgba(245, 158, 11, 0.1);
+    color: #F59E0B;
+}
+
+.platinum {
+    background: rgba(59, 130, 246, 0.1);
+    color: #60A5FA;
+}
+
+.pro-card h3 {
+    font-size: 1.3rem;
+    margin-bottom: 4px;
+}
+
+.pro-boost {
     font-weight: 800;
+    font-size: 1.1rem;
+    margin-bottom: var(--space-6);
+    color: var(--text-secondary);
 }
 
-.total-amount {
-    font-size: 2rem;
-    font-family: var(--font-heading);
+.pro-perks {
+    list-style: none;
+    padding: 0;
+    text-align: left;
 }
 
-/* =========================================
-   Section 2: The Formula Wrapper
-   ========================================= */
+.pro-perks li {
+    margin-bottom: var(--space-3);
+    font-size: 0.95rem;
+    color: var(--text-primary);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.pro-perks i {
+    color: var(--color-primary);
+}
+
+@media (max-width: 992px) {
+    .hero-grid-v2 {
+        grid-template-columns: 1fr;
+    }
+
+    .pro-tiers-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .heatmap-header {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .hero-visual img {
+        width: 100%;
+    }
+}
+
 .formula-section {
     padding: var(--space-12) 5%;
     background-color: var(--bg-surface);
@@ -189,7 +383,6 @@
 
     .math-symbol {
         display: none;
-        /* Hide symbols on small screens to save space */
     }
 
     .formula-total {
@@ -198,12 +391,10 @@
     }
 }
 
-/* =========================================
-   Section 3: Smart Tools (Zig-Zag)
-   ========================================= */
 .smart-tools-section {
     padding: var(--space-12) 5%;
     background-color: var(--bg-main);
+    background-image: var(--linear-bg);
 }
 
 .tool-row {
@@ -253,7 +444,6 @@
     justify-content: center;
 }
 
-/* Mock Streak UI */
 .mock-streak {
     background: var(--bg-surface);
     border: 1px solid var(--border-light);
@@ -303,7 +493,6 @@
     font-size: 1.2rem;
 }
 
-/* Mock Quest UI */
 .mock-quest {
     background: var(--bg-surface);
     border: 1px solid var(--border-light);
@@ -360,14 +549,12 @@
     .tool-icon {
         margin: 0 auto var(--space-4);
     }
-    .tool-visual{
+
+    .tool-visual {
         width: 100%;
     }
 }
 
-/* =========================================
-   Section 4: Payout Flexibility
-   ========================================= */
 .payout-section {
     padding: var(--space-12) 5%;
     background-color: var(--bg-surface);

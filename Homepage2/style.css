@@ -1,17 +1,261 @@
-/* =========================================
-   Widget Cluster Container
-   ========================================= */
+.driver-dynamic-hero {
+    position: relative;
+    padding: 160px 5% 100px;
+    min-height: 90vh;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    background-color: var(--bg-main);
+    background-image: var(--linear-bg);
+}
+
+.hero-grid {
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: var(--space-12);
+    align-items: center;
+    position: relative;
+    z-index: 2;
+    width: 100%;
+}
+
+.hero-title {
+    font-size: 4rem;
+    line-height: 1.1;
+    margin-bottom: var(--space-6);
+    min-height: 140px;
+}
+
+.animated-text {
+    display: inline-block;
+    transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+.animated-text.fade-out {
+    opacity: 0;
+    transform: translateY(-10px);
+}
+
+.trust-indicators {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    margin-top: var(--space-4);
+    color: #FBBF24;
+    font-size: 0.9rem;
+}
+
+.trust-indicators span {
+    color: var(--text-secondary);
+    margin-left: 8px;
+    font-weight: 500;
+}
+
+.hero-visual-slideshow {
+    position: relative;
+    width: 100%;
+    height: 550px;
+    perspective: 1000px;
+}
+
+.slide-card {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: var(--radius-2xl);
+    overflow: hidden;
+    border: 1px solid var(--border-light);
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.6), 0 0 40px rgba(16, 185, 129, 0.1);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(30px) scale(0.95);
+    transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+    z-index: 1;
+}
+
+.slide-card.active {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0) scale(1);
+    z-index: 2;
+}
+
+.slide-bg {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(0.6);
+    transition: transform 6s linear;
+}
+
+.slide-card.active .slide-bg {
+    transform: scale(1.05);
+}
+
+.slide-ui-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: var(--space-6);
+    display: flex;
+    flex-direction: column;
+    pointer-events: none;
+}
+
+.ui-pill {
+    background: rgba(17, 24, 39, 0.8);
+    backdrop-filter: blur(10px);
+    border: 1px solid var(--color-primary);
+    color: #fff;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    width: max-content;
+}
+
+.live-dot {
+    width: 8px;
+    height: 8px;
+    background: var(--color-primary);
+    border-radius: 50%;
+    box-shadow: 0 0 10px var(--color-primary);
+    animation: blink 1.5s infinite;
+}
+
+.ui-panel {
+    background: rgba(17, 24, 39, 0.85);
+    backdrop-filter: blur(12px);
+    border: 1px solid var(--border-light);
+    padding: var(--space-4);
+    border-radius: var(--radius-lg);
+    color: #fff;
+}
+
+.bottom-panel {
+    margin-top: auto;
+    display: flex;
+    align-items: center;
+    gap: var(--space-3);
+    font-weight: 600;
+}
+
+.top-panel {
+    width: max-content;
+}
+
+.panel-label {
+    display: block;
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    text-transform: uppercase;
+    margin-bottom: 4px;
+}
+
+.panel-value {
+    font-family: var(--font-heading);
+    font-size: 2.5rem;
+    font-weight: 800;
+    line-height: 1;
+}
+
+.ui-chart-mock {
+    display: flex;
+    align-items: flex-end;
+    gap: 8px;
+    height: 80px;
+    margin-top: auto;
+}
+
+.ui-chart-mock .bar {
+    width: 30px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 4px 4px 0 0;
+    transition: height 1s ease;
+}
+
+.ui-chart-mock .bar.active {
+    background: var(--color-primary);
+    box-shadow: 0 0 15px rgba(16, 185, 129, 0.5);
+}
+
+.h-40 {
+    height: 40%;
+}
+
+.h-70 {
+    height: 70%;
+}
+
+.h-50 {
+    height: 50%;
+}
+
+.h-100 {
+    height: 100%;
+}
+
+.center-panel {
+    margin: auto;
+    text-align: center;
+    padding: var(--space-6) var(--space-8);
+}
+
+.success-circle {
+    width: 60px;
+    height: 60px;
+    background: rgba(16, 185, 129, 0.2);
+    color: var(--color-primary);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    margin: 0 auto var(--space-4);
+    border: 2px solid var(--color-primary);
+}
+
+.center-panel h4 {
+    font-size: 1.5rem;
+    margin-bottom: 4px;
+}
+
+.center-panel p {
+    color: var(--text-secondary);
+    margin: 0;
+}
+
+@media (max-width: 1024px) {
+    .hero-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .hero-title {
+        font-size: 3rem;
+        min-height: 100px;
+    }
+
+    .hero-visual-slideshow {
+        height: 450px;
+    }
+}
+
 .widgets-cluster {
     position: relative;
     width: 450px;
     height: 500px;
 }
 
-/* Base Glass Widget Style */
 .glass-widget {
     position: absolute;
     background: rgba(17, 24, 39, 0.65);
-    /* var(--bg-surface) with opacity */
     backdrop-filter: blur(16px);
     -webkit-backdrop-filter: blur(16px);
     border: 1px solid rgba(255, 255, 255, 0.08);
@@ -21,7 +265,6 @@
     z-index: 2;
 }
 
-/* Floating Animations (Different timings for organic feel) */
 .float-1 {
     animation: floatOrganic 7s ease-in-out infinite;
 }
@@ -48,9 +291,6 @@
     }
 }
 
-/* =========================================
-   Widget 1: Earnings Chart
-   ========================================= */
 .widget-earnings {
     top: 0;
     left: 0;
@@ -85,7 +325,6 @@
     margin-bottom: var(--space-4);
 }
 
-/* The Animated Bar Chart */
 .bar-chart {
     display: flex;
     align-items: flex-end;
@@ -110,7 +349,6 @@
     background-color: var(--text-muted);
     border-radius: 4px;
     height: 0;
-    /* Starts at 0, JS animates it up */
     transition: height 1.5s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
@@ -119,9 +357,6 @@
     box-shadow: 0 0 15px rgba(16, 185, 129, 0.4);
 }
 
-/* =========================================
-   Widget 2: Demand Radar
-   ========================================= */
 .widget-radar {
     bottom: 40px;
     right: 0;
@@ -130,7 +365,6 @@
     align-items: center;
     gap: var(--space-4);
     background: rgba(16, 185, 129, 0.1);
-    /* Slight green tint */
     border: 1px solid rgba(16, 185, 129, 0.2);
 }
 
@@ -196,9 +430,6 @@
     color: var(--text-secondary);
 }
 
-/* =========================================
-   Widget 3: Driver Status
-   ========================================= */
 .widget-status {
     top: 55%;
     left: -40px;
@@ -232,7 +463,6 @@
     color: var(--text-secondary);
 }
 
-/* Responsive adjustments */
 @media (max-width: 1024px) {
     .widgets-cluster {
         width: 100%;
@@ -246,9 +476,6 @@
     }
 }
 
-/* =========================================
-   Earnings Section Base
-   ========================================= */
 .earnings-section {
     padding: var(--space-12) 5%;
     background-color: var(--bg-main);
@@ -282,7 +509,6 @@
     border-radius: var(--radius-2xl);
     display: grid;
     grid-template-columns: 1.2fr 1fr;
-    /* Left side slightly wider */
     overflow: hidden;
     box-shadow: var(--shadow-xl);
 }
@@ -308,9 +534,6 @@
     font-size: 1.05rem;
 }
 
-/* =========================================
-   Custom Range Slider Magic
-   ========================================= */
 .slider-header {
     display: flex;
     justify-content: space-between;
@@ -333,27 +556,22 @@
     padding: 10px 0;
 }
 
-/* Reset default browser styles */
 .custom-slider {
     -webkit-appearance: none;
     width: 100%;
     background: transparent;
     outline: none;
-    /* CSS Variable updated by JS to fill the track */
     --slider-fill: 27%;
 }
 
-/* The Track */
 .custom-slider::-webkit-slider-runnable-track {
     width: 100%;
     height: 8px;
     border-radius: 4px;
-    /* Draws a gradient up to the thumb position, then solid gray */
     background: linear-gradient(to right, var(--color-primary) var(--slider-fill), var(--bg-surface-light) var(--slider-fill));
     cursor: pointer;
 }
 
-/* The Thumb (The draggable circle) */
 .custom-slider::-webkit-slider-thumb {
     -webkit-appearance: none;
     height: 28px;
@@ -363,7 +581,6 @@
     border: 4px solid var(--color-primary);
     cursor: grab;
     margin-top: -10px;
-    /* Centers thumb on the track */
     box-shadow: 0 0 15px rgba(16, 185, 129, 0.5);
     transition: transform 0.1s ease;
 }
@@ -371,7 +588,6 @@
 .custom-slider::-webkit-slider-thumb:active {
     cursor: grabbing;
     transform: scale(1.1);
-    /* Pop effect when dragging */
 }
 
 .slider-labels {
@@ -382,9 +598,6 @@
     color: var(--text-muted);
 }
 
-/* =========================================
-   Result Display
-   ========================================= */
 .result-label {
     font-size: 1.1rem;
     color: var(--text-secondary);
@@ -397,7 +610,6 @@
     font-weight: 800;
     line-height: 1.1;
     margin: var(--space-2) 0 var(--space-4);
-    /* Adding a quick animation class for JS to toggle */
     transition: transform 0.1s ease-out;
 }
 
@@ -411,7 +623,6 @@
     line-height: 1.5;
 }
 
-/* Responsive */
 @media (max-width: 992px) {
     .calculator-card {
         grid-template-columns: 1fr;
@@ -427,12 +638,10 @@
     }
 }
 
-/* =========================================
-   Bento Grid Layout (Section 3)
-   ========================================= */
 .perks-bento-section {
     padding: var(--space-12) 5%;
     background-color: var(--bg-main);
+    background-image: var(--linear-bg);
 }
 
 .bento-grid {
@@ -489,7 +698,6 @@
     font-size: 0.95rem;
 }
 
-/* Asymmetrical Sizing */
 .bento-large {
     grid-column: span 2;
     grid-row: span 1;
@@ -510,7 +718,6 @@
     flex-shrink: 0;
 }
 
-/* Abstract Graphic for the large card */
 .visual-payout {
     margin-top: auto;
     padding-top: var(--space-6);
@@ -528,9 +735,6 @@
     box-shadow: var(--glow-primary);
 }
 
-/* =========================================
-   Timeline Layout (Section 4)
-   ========================================= */
 .onboarding-section {
     padding: var(--space-12) 5%;
     background-color: var(--bg-surface);
@@ -542,14 +746,11 @@
     margin: 0 auto var(--space-8);
     position: relative;
     padding-left: 50px;
-    /* Space for the line */
 }
 
-/* The Gray Background Line */
 .timeline-track {
     position: absolute;
     left: 24px;
-    /* Centers it relative to the 50px padding */
     top: 0;
     bottom: 0;
     width: 2px;
@@ -557,14 +758,12 @@
     z-index: 1;
 }
 
-/* The Green Fill Line (Animated via JS) */
 .timeline-fill {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 0%;
-    /* Starts at 0 */
     background-color: var(--color-primary);
     box-shadow: 0 0 10px rgba(16, 185, 129, 0.5);
     transition: height 0.1s ease-out;
@@ -583,7 +782,6 @@
 .step-indicator {
     position: absolute;
     left: -50px;
-    /* Pulls it over the track */
     top: 0;
     width: 48px;
     height: 48px;
@@ -598,7 +796,6 @@
     transition: all 0.4s ease;
 }
 
-/* Active State applied via JS when line touches it */
 .timeline-step.active .step-indicator {
     border-color: var(--color-primary);
     color: var(--color-primary);
@@ -618,7 +815,6 @@
 
 .step-content h3 {
     color: var(--text-muted);
-    /* Starts muted, lights up when active */
     transition: color 0.4s ease;
     margin-bottom: var(--space-2);
 }
@@ -627,7 +823,6 @@
     color: var(--text-secondary);
 }
 
-/* Responsive adjustments */
 @media (max-width: 992px) {
     .bento-grid {
         grid-template-columns: 1fr;
@@ -646,12 +841,15 @@
     }
 }
 
-/* =========================================
-   Section 5: Testimonial Fading Carousel
-   ========================================= */
 .testimonials-section {
     padding: var(--space-12) 5%;
-    background-color: var(--bg-main);
+    /* background-color: var(--bg-main); */
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+        url('./assets/testimonial.webp');
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }
 
 .testimonial-carousel {
@@ -663,7 +861,6 @@
 .testimonial-track {
     position: relative;
     min-height: 280px;
-    /* Prevents layout jump when cards fade */
 }
 
 .testimonial-card {
@@ -686,7 +883,6 @@
     visibility: visible;
     transform: translateY(0) scale(1);
     position: relative;
-    /* Keeps it in document flow */
     z-index: 2;
     box-shadow: var(--shadow-xl);
 }
@@ -731,7 +927,6 @@
     font-size: 0.85rem;
 }
 
-/* Carousel Dots */
 .carousel-dots {
     display: flex;
     justify-content: center;
@@ -755,16 +950,229 @@
     box-shadow: 0 0 10px rgba(16, 185, 129, 0.5);
 }
 
-/* =========================================
-   Section 6: Final CTA Banner
-   ========================================= */
+.stats-section {
+    padding: var(--space-16) 5%;
+    background-color: var(--bg-main);
+    background-image: var(--linear-bg);
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: var(--space-8);
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.stat-card {
+    background: linear-gradient(145deg, var(--bg-surface), rgba(16, 185, 129, 0.05));
+    border: 1px solid rgba(16, 185, 129, 0.2);
+    border-radius: var(--radius-2xl);
+    padding: var(--space-8);
+    text-align: center;
+    transition: all var(--transition-smooth);
+    position: relative;
+    overflow: hidden;
+}
+
+.stat-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(16, 185, 129, 0.1), transparent);
+    transition: left 0.6s;
+}
+
+.stat-card:hover::before {
+    left: 100%;
+}
+
+.stat-card:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: var(--glow-primary), 0 20px 40px rgba(0, 0, 0, 0.4);
+}
+
+.stat-number {
+    font-family: var(--font-heading);
+    font-size: clamp(1.5rem, 8vw, 3.5rem);
+    font-weight: 900;
+    background: linear-gradient(135deg, var(--text-primary), var(--color-primary));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: var(--space-2);
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 1s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.stat-number.animate {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.stat-label {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: var(--space-1);
+}
+
+.stat-unit {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+}
+
+.how-it-works-section {
+    padding: var(--space-16) 5%;
+    background-color: var(--bg-surface);
+}
+
+.works-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+    gap: var(--space-8);
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.works-step {
+    background: var(--bg-main);
+    border: 1px solid var(--border-light);
+    border-radius: var(--radius-2xl);
+    padding: var(--space-8);
+    text-align: center;
+    transition: all var(--transition-smooth);
+    transform: translateY(40px);
+}
+
+.works-step:hover {
+    transform: translateY(-10px);
+    border-color: rgba(16, 185, 129, 0.4);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+    border: 1px solid;
+}
+
+.step-number {
+    width: 60px;
+    height: 60px;
+    background: var(--color-primary);
+    color: var(--color-on-primary);
+    border-radius: var(--radius-round);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--font-heading);
+    font-size: 1.5rem;
+    font-weight: 800;
+    margin: 0 auto var(--space-4);
+    box-shadow: var(--glow-primary);
+}
+
+.step-icon {
+    font-size: 3rem;
+    color: var(--color-primary);
+    margin-bottom: var(--space-4);
+    filter: drop-shadow(0 0 10px rgba(16, 185, 129, 0.3));
+}
+
+.works-step h3 {
+    font-size: 1.3rem;
+    margin-bottom: var(--space-3);
+}
+
+.works-step p {
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+
+.safety-section {
+    padding: var(--space-16) 5%;
+    background-image: var(--linear-bg);
+}
+
+.safety-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: var(--space-8);
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.safety-feature {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: var(--space-6);
+    transition: all var(--transition-smooth);
+}
+
+.safety-feature:hover {
+    transform: translateY(-5px);
+}
+
+.feature-icon {
+    width: 80px;
+    height: 80px;
+    background: rgba(16, 185, 129, 0.15);
+    border: 2px solid rgba(16, 185, 129, 0.3);
+    border-radius: var(--radius-round);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    color: var(--color-primary);
+    margin-bottom: var(--space-4);
+    transition: all var(--transition-fast);
+}
+
+.safety-feature:hover .feature-icon {
+    transform: scale(1.1);
+    box-shadow: 0 0 30px rgba(16, 185, 129, 0.5);
+}
+
+.safety-pulse {
+    animation: safetyPulse 2s ease-in-out infinite;
+}
+
+@keyframes safetyPulse {
+
+    0%,
+    100% {
+        box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.7);
+        transform: scale(1);
+    }
+
+    50% {
+        box-shadow: 0 0 30px 15px rgba(16, 185, 129, 0);
+        transform: scale(1.05);
+    }
+}
+
+.safety-glow {
+    filter: drop-shadow(0 0 10px var(--color-primary));
+    font-size: 2.2rem !important;
+}
+
 .driver-cta-section {
     padding: 100px 5%;
     position: relative;
     background-color: var(--bg-main);
     overflow: hidden;
     border-top: 1px solid var(--border-light);
+    background-image:
+        linear-gradient(rgba(15, 51, 13, 0.65),
+            rgba(12, 54, 21, 0.75)),
+        url('./assets/cta.webp');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
 }
+
 
 .cta-glow-bg {
     position: absolute;
@@ -815,5 +1223,11 @@
 
     .testimonial-card {
         width: auto;
+    }
+
+    .stats-grid,
+    .works-grid,
+    .safety-grid {
+        grid-template-columns: 1fr;
     }
 }

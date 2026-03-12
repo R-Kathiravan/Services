@@ -12,7 +12,7 @@
         href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@400;600;700;800;900&display=swap"
         rel="stylesheet" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 
 <body class="driver-theme">
@@ -50,81 +50,75 @@
             </div>
         </div>
     </header>
-
-    <section class="driver-hero">
+    <section class="driver-dynamic-hero">
         <div class="hero-glow-blob"></div>
 
-        <div class="hero-container">
-            <div class="hero-content reveal-up">
+        <div class="container hero-grid">
+
+            <div class="hero-text-content">
                 <div class="hero-badge">Turn kilometers into cash</div>
-                <h1 class="hero-title">
-                    Drive when you want, <br>
-                    <span class="text-gradient-green">earn what you need.</span>
+                <h1 class="hero-title" data-aos="fade-right">
+                    The best way to <br>
+                    <span class="text-gradient-green animated-text" id="changingHeadline">drive your schedule.</span>
                 </h1>
-                <p class="hero-subtitle">
-                    Set your own schedule, be your own boss, and get paid instantly. Join the highest-earning network of
-                    partner drivers today.
+                <p class="hero-subtitle" data-aos="fade-up">
+                    Set your own hours, keep 100% of your tips, and get paid instantly. Join the highest-earning network
+                    of partner drivers today.
                 </p>
-                <div class="hero-actions">
-                    <a href="404page.html" class="btn-driver-primary btn-large">Start Earning</a>
-                    <a href="404page.html" class="btn-driver-secondary btn-large">Calculate Payouts &darr;</a>
+                <div class="hero-actions" data-aos="fade-down">
+                    <button class="btn-driver-primary btn-large">Apply to Drive</button>
+                    <div class="trust-indicators">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                        <span>4.9/5 Average Driver Rating</span>
+                    </div>
                 </div>
             </div>
 
-            <div class="hero-visual reveal-left delay-200">
-                <div class="widgets-cluster">
+            <div class="hero-visual-slideshow" data-aos="fade" data-aos-delay="600">
 
-                    <div class="glass-widget widget-earnings float-1">
-                        <div class="widget-header">
-                            <span class="widget-title">Weekly Payout</span>
-                            <span class="widget-trend text-gradient-green">+14.2%</span>
+                <div class="slide-card active" data-slide="0">
+                    <img src="./assets/hero1.webp" alt="Driver navigating" class="slide-bg">
+                    <div class="slide-ui-overlay">
+                        <div class="ui-pill online-pill">
+                            <span class="live-dot"></span> You're Online
                         </div>
-                        <div class="widget-amount" id="clusterEarnings">$0</div>
-                        <div class="bar-chart" id="earningsChart">
-                            <div class="bar-col">
-                                <div class="bar" data-height="40%"></div>
-                            </div>
-                            <div class="bar-col">
-                                <div class="bar" data-height="65%"></div>
-                            </div>
-                            <div class="bar-col">
-                                <div class="bar" data-height="50%"></div>
-                            </div>
-                            <div class="bar-col">
-                                <div class="bar" data-height="85%"></div>
-                            </div>
-                            <div class="bar-col">
-                                <div class="bar active-bar" data-height="100%"></div>
-                            </div>
+                        <div class="ui-panel bottom-panel">
+                            <i class="fas fa-map-marker-alt text-gradient-green"></i> Finding rides near you...
                         </div>
                     </div>
-
-                    <div class="glass-widget widget-radar float-2">
-                        <div class="radar-container">
-                            <div class="radar-ring ring-1"></div>
-                            <div class="radar-ring ring-2"></div>
-                            <div class="radar-ring ring-3"></div>
-                            <div class="radar-pin">
-                                <i class="fas fa-map-marker-alt"></i>
-                            </div>
-                        </div>
-                        <div class="radar-text">
-                            <span class="radar-title">High Demand Zone</span>
-                            <span class="radar-sub">Surge pricing active in your area</span>
-                        </div>
-                    </div>
-
-                    <div class="glass-widget widget-status float-3">
-                        <div class="status-avatar">
-                            <i class="fas fa-star text-gradient-blue"></i>
-                        </div>
-                        <div class="status-info">
-                            <span class="status-name">Top Rated Partner</span>
-                            <span class="status-rating">4.98 Average Rating</span>
-                        </div>
-                    </div>
-
                 </div>
+
+                <div class="slide-card" data-slide="1">
+                    <img src="./assets/hero2.webp" alt="Financial success" class="slide-bg">
+                    <div class="slide-ui-overlay">
+                        <div class="ui-panel top-panel">
+                            <span class="panel-label">Today's Earnings</span>
+                            <span class="panel-value text-gradient-green">₹4,250.00</span>
+                        </div>
+                        <div class="ui-chart-mock">
+                            <div class="bar h-40"></div>
+                            <div class="bar h-70"></div>
+                            <div class="bar h-50"></div>
+                            <div class="bar h-100 active"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="slide-card" data-slide="2">
+                    <img src="./assets/hero3.webp" alt="Mobile payment" class="slide-bg">
+                    <div class="slide-ui-overlay">
+                        <div class="ui-panel center-panel float-anim">
+                            <div class="success-circle"><i class="fas fa-check"></i></div>
+                            <h4>Transfer Complete</h4>
+                            <p>₹4,250 sent to your bank</p>
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </div>
     </section>
@@ -139,7 +133,7 @@
 
             <div class="calculator-card">
 
-                <div class="calc-inputs">
+                <div class="calc-inputs" data-aos="fade-up" data-aos-delay="100">
 
                     <div class="form-group mb-6">
                         <label class="calc-label" for="calcCity">Where will you drive?</label>
@@ -172,7 +166,7 @@
 
                 </div>
 
-                <div class="calc-result">
+                <div class="calc-result" data-aos="fade-down" data-aos-delay="200">
                     <span class="result-label">Estimated Monthly Earnings</span>
                     <div class="result-amount text-gradient-green" id="resultAmount">$2,000</div>
                     <p class="result-disclaimer">
@@ -195,7 +189,7 @@
 
             <div class="bento-grid">
 
-                <div class="bento-card bento-large">
+                <div class="bento-card bento-large" data-aos="fade-up" data-aos-delay="500">
                     <div class="bento-icon"><i class="fas fa-wallet"></i></div>
                     <div class="bento-content">
                         <h3>Instant Payouts</h3>
@@ -207,7 +201,7 @@
                     </div>
                 </div>
 
-                <div class="bento-card">
+                <div class="bento-card" data-aos="fade-up" data-aos-delay="600">
                     <div class="bento-icon"><span class="material-icons">map</span></div>
                     <div class="bento-content">
                         <h3>Live Demand Heatmaps</h3>
@@ -216,7 +210,7 @@
                     </div>
                 </div>
 
-                <div class="bento-card">
+                <div class="bento-card" data-aos="fade-down" data-aos-delay="700">
                     <div class="bento-icon"><span class="material-icons">safety_check</span></div>
                     <div class="bento-content">
                         <h3>Premium Insurance</h3>
@@ -225,7 +219,7 @@
                     </div>
                 </div>
 
-                <div class="bento-card bento-wide">
+                <div class="bento-card bento-wide" data-aos="fade-down" data-aos-delay="800">
                     <div class="bento-content flex-row">
                         <div class="bento-icon"><i class="fas fa-headset"></i></div>
                         <div>
@@ -286,7 +280,7 @@
             </div>
         </div>
     </section>
-    <section class="testimonials-section reveal-up">
+    <section class="testimonials-section reveal-up" data-aos="zoom-in">
         <div class="container">
             <div class="section-header text-center mb-8">
                 <h2 class="section-title">Hear from our partners</h2>
@@ -350,7 +344,137 @@
         </div>
     </section>
 
-    <section class="driver-cta-section reveal-up">
+    <section class="stats-section reveal-up">
+        <div class="container">
+            <div class="section-header text-center mb-8">
+                <h2 class="section-title">Millions of kilometers driven safely</h2>
+                <p class="section-subtitle">Trusted by professional drivers across India. Join our network of successful
+                    partners.</p>
+            </div>
+            <div class="stats-grid">
+                <div class="stat-card" data-aos="flip-up" data-aos-delay="500">
+                    <div class="stat-number" data-target="25000">0</div>
+                    <div class="stat-label">Active Partners</div>
+                </div>
+                <div class="stat-card" data-aos="flip-down" data-aos-delay="600">
+                    <div class="stat-number" data-target="5000000">0</div>
+                    <div class="stat-label">Kilometers Driven</div>
+                </div>
+                <div class="stat-card" data-aos="flip-up" data-aos-delay="500">
+                    <div class="stat-number" data-target="12500000">0</div>
+                    <div class="stat-label">Payouts Delivered</div>
+                </div>
+                <div class="stat-card" data-aos="flip-down" data-aos-delay="500">
+                    <div class="stat-number" data-target="4.95">0</div>
+                    <div class="stat-label">Average Rating</div>
+                    <small class="stat-unit">/ 5 Stars</small>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="how-it-works-section reveal-up">
+        <div class="container">
+            <div class="section-header text-center mb-8">
+                <h2 class="section-title">How Stackly works for drivers</h2>
+                <p class="section-subtitle">Simple 4-step process to get you earning from day one with maximum
+                    flexibility.</p>
+            </div>
+            <div class="works-grid">
+                <div class="works-step reveal-delay-1" data-aos="fade-up" data-aos-delay="600">
+                    <div class="step-number">1</div>
+                    <div class="step-icon"><i class="fas fa-flag-checkered"></i></div>
+                    <h3>Go Online</h3>
+                    <p>Open the app and set your availability. Accept rides that fit your schedule and route
+                        preferences.</p>
+                </div>
+                <div class="works-step reveal-delay-2" data-aos="fade-down" data-aos-delay="600">
+                    <div class="step-number">2</div>
+                    <div class="step-icon"><span class="material-icons">payments</span></div>
+                    <h3>Earn Per Trip</h3>
+                    <p>Keep 85-90% of fares + 100% tips. Dynamic pricing during peak hours boosts your hourly rate
+                        automatically.</p>
+                </div>
+                <div class="works-step reveal-delay-3" data-aos="fade-down" data-aos-delay="600">
+                    <div class="step-number">3</div>
+                    <div class="step-icon"><i class="fas fa-wallet"></i></div>
+                    <h3>Cash Out Instantly</h3>
+                    <p>Transfer earnings to your bank up to 5x daily. No minimum balance, zero fees, money in account
+                        within minutes.</p>
+                </div>
+                <div class="works-step reveal-delay-4" data-aos="fade-up" data-aos-delay="600">
+                    <div class="step-number">4</div>
+                    <div class="step-icon"><i class="fas fa-chart-line"></i></div>
+                    <h3>Track & Optimize</h3>
+                    <p>Weekly insights show your busiest times/routes. Live heatmaps guide you to highest-demand areas.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="safety-section reveal-up">
+        <div class="container">
+            <div class="section-header text-center mb-8">
+                <h2 class="section-title">Your safety is priority #1</h2>
+                <p class="section-subtitle">Advanced technology and 24/7 monitoring keep you protected on every trip.
+                </p>
+            </div>
+            <div class="safety-grid">
+                <div class="safety-feature" data-aos="fade-up" data-aos-delay="300">
+                    <div class="feature-icon safety-pulse">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>Emergency Button</h3>
+                    <p>One-tap connects you to local authorities and support team. Auto-shares your location and trip
+                        details.</p>
+                </div>
+                <div class="safety-feature" data-aos="fade-up" data-aos-delay="400">
+                    <div class="feature-icon radar-container">
+                        <i class="fas fa-map-marker-alt radar-pin"></i>
+                        <div class="radar-ring ring-1"></div>
+                        <div class="radar-ring ring-2"></div>
+                        <div class="radar-ring ring-3"></div>
+                    </div>
+                    <h3>Live Route Tracking</h3>
+                    <p>Family/friends can follow your trips in real-time. Automated alerts if you deviate from route.
+                    </p>
+                </div>
+                <div class="safety-feature" data-aos="fade-up" data-aos-delay="500">
+                    <div class="feature-icon float-1">
+                        <span class="material-icons safety-glow">verified_user</span>
+                    </div>
+                    <h3>Background Checks</h3>
+                    <p>All riders verified with govt ID + criminal background. 100% of riders rated by previous drivers.
+                    </p>
+                </div>
+                <div class="safety-feature" data-aos="fade-down" data-aos-delay="500">
+                    <div class="feature-icon safety-pulse">
+                        <i class="fas fa-headset"></i>
+                    </div>
+                    <h3>24/7 Safety Team</h3>
+                    <p>Dedicated support monitors high-risk trips. Immediate response team available nationwide.</p>
+                </div>
+                <div class="safety-feature" data-aos="fade-down" data-aos-delay="600">
+                    <div class="feature-icon float-2">
+                        <span class="material-icons">local_hospital</span>
+                    </div>
+                    <h3>Medical Coverage</h3>
+                    <p>₹10 lakh accident coverage included. Additional health benefits for 100+ trips/month.</p>
+                </div>
+                <div class="safety-feature" data-aos="fade-down" data-aos-delay="600">
+                    <div class="feature-icon float-3">
+                        <i class="fas fa-car-crash"></i>
+                    </div>
+                    <h3>Vehicle Protection</h3>
+                    <p>Comprehensive insurance covers damage/theft. Includes tire/windshield repair for incidents.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="driver-cta-section reveal-up" data-aos="fade-up">
+
         <div class="cta-glow-bg"></div>
         <div class="container relative z-10 text-center">
             <h2 class="cta-huge-title">Ready to take the wheel?</h2>
@@ -361,7 +485,7 @@
         </div>
     </section>
 
-    <footer class="driver-footer">
+    <footer class="driver-footer" data-aos="fade-down">
         <div class="container">
             <div class="footer-grid">
 
@@ -422,47 +546,16 @@
         </div>
     </footer>
     <script src="script.js" defer></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
-        document.addEventListener('DOMContentLoaded', () => {
-
-            const bars = document.querySelectorAll('.bar');
-
-            setTimeout(() => {
-                bars.forEach(bar => {
-                    const targetHeight = bar.getAttribute('data-height');
-                    bar.style.height = targetHeight;
-                });
-            }, 400);
-
-            const clusterEarningsDisplay = document.getElementById('clusterEarnings');
-            const targetAmount = 1248.50;
-            const duration = 2000;
-            const frameRate = 1000 / 60;
-            const totalFrames = Math.round(duration / frameRate);
-            let frame = 0;
-
-            const countUpCluster = () => {
-                frame++;
-                const progress = 1 - Math.pow(1 - frame / totalFrames, 4);
-                const currentAmount = targetAmount * progress;
-
-                clusterEarningsDisplay.textContent = '$' + currentAmount.toLocaleString('en-US', {
-                    minimumFractionDigits: 2,
-                    maximumFractionDigits: 2
-                });
-
-                if (frame < totalFrames) {
-                    requestAnimationFrame(countUpCluster);
-                } else {
-                    clusterEarningsDisplay.textContent = '$' + targetAmount.toLocaleString('en-US', {
-                        minimumFractionDigits: 2,
-                        maximumFractionDigits: 2
-                    });
-                }
-            };
-
-            setTimeout(() => requestAnimationFrame(countUpCluster), 600);
+        AOS.init({
+            duration: 800,
+            easing: 'ease-out-cubic',
+            once: true,
+            offset: 50,
         });
+    </script>
+    <script>
         document.addEventListener('DOMContentLoaded', () => {
 
             const citySelect = document.getElementById('calcCity');
@@ -576,6 +669,43 @@
             });
 
             startAutoplay();
+        });
+        document.addEventListener('DOMContentLoaded', () => {
+
+            const heroStates = [
+                { text: "drive  your schedule.", cardIndex: 0 },
+                { text: "earn higher payouts.", cardIndex: 1 },
+                { text: "cash out instantly.", cardIndex: 2 }
+            ];
+
+            let currentIndex = 0;
+            const headlineElement = document.getElementById('changingHeadline');
+            const cards = document.querySelectorAll('.slide-card');
+
+            if (!headlineElement || cards.length === 0) return;
+            const cycleHero = () => {
+                currentIndex = (currentIndex + 1) % heroStates.length;
+                const nextState = heroStates[currentIndex];
+
+                headlineElement.classList.add('fade-out');
+
+                setTimeout(() => {
+
+                    headlineElement.textContent = nextState.text;
+                    headlineElement.classList.remove('fade-out');
+                    cards.forEach((card, index) => {
+                        if (index === nextState.cardIndex) {
+                            card.classList.add('active');
+                        } else {
+                            card.classList.remove('active');
+                        }
+                    });
+
+                }, 400);
+            };
+
+            setInterval(cycleHero, 4500);
+
         });
     </script>
 </body>

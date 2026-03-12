@@ -12,7 +12,7 @@
         href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@400;600;700;800;900&display=swap"
         rel="stylesheet" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 
 <body class="driver-theme">
@@ -50,58 +50,138 @@
             </div>
         </div>
     </header>
-    <section class="earnings-hero">
+    <section class="earnings-hero-v2 reveal-up">
         <div class="hero-glow-blob"></div>
-        <div class="container hero-container">
+        <div class="container hero-grid-v2">
 
-            <div class="hero-content reveal-up">
-                <div class="hero-badge">Transparent Payouts</div>
-                <h1 class="hero-title">
-                    Clear pricing, <br>
-                    <span class="text-gradient-green">higher payouts.</span>
+            <div class="hero-content">
+                <div class="hero-badge">Partner Wallet</div>
+                <h1 class="hero-title" data-aos="fade-right">
+                    Your earnings, <br>
+                    <span class="text-gradient-green">in real-time.</span>
                 </h1>
-                <p class="hero-subtitle">
-                    No hidden fees, no confusing math. With Stackly, you know exactly how much you’re making on every
-                    single trip, and you keep 100% of your tips.
+                <p class="hero-subtitle" data-aos="fade-down">
+                    Track your daily income, unlock surge multipliers, and cash out directly to your bank account
+                    instantly. Take total control of your cash flow.
                 </p>
-                <div class="hero-actions">
-                    <button class="btn-driver-primary btn-large">Start Earning</button>
+                <div class="hero-actions" data-aos="fade-up">
+                    <button class="btn-driver-primary btn-large">Become a Partner</button>
+                    <span class="sub-action-text"><i class="fas fa-bolt text-gradient-green"></i> 0% Transfer
+                        Fees</span>
                 </div>
             </div>
 
-            <div class="hero-visual reveal-left delay-200">
+            <div class="hero-visual" data-aos="flip-up">
+                <img src="./assets/cash.webp" alt="Money">
+            </div>
+        </div>
+    </section>
 
-                <div class="receipt-card float-anim">
-                    <div class="receipt-header">
-                        <i class="fas fa-check-circle text-gradient-green"></i>
-                        <span>Trip Completed</span>
+    <div class="payout-marquee-section">
+        <div class="marquee-container">
+            <div class="marquee-track" id="marqueeTrack">
+                <div class="marquee-item"><i class="fas fa-check-circle"></i> Rajesh K. cashed out
+                    <strong>₹4,250</strong>
+                </div>
+                <div class="marquee-item"><i class="fas fa-gift"></i> Priya S. earned a <strong>₹500 Bonus</strong>
+                </div>
+                <div class="marquee-item"><i class="fas fa-check-circle"></i> Amit M. cashed out <strong>₹2,100</strong>
+                </div>
+                <div class="marquee-item"><i class="fas fa-fire"></i> Sara T. hit a <strong>2.1x Surge</strong></div>
+                <div class="marquee-item"><i class="fas fa-check-circle"></i> Vikram D. cashed out
+                    <strong>₹8,900</strong>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <section class="heatmap-section reveal-up" data-aos="fade-down">
+        <div class="container">
+            <div class="section-header text-center mb-8">
+                <h2 class="section-title">Drive smarter, not harder</h2>
+                <p class="section-subtitle">Our predictive heatmap shows you exactly when and where to drive to maximize
+                    your hourly rate.</p>
+            </div>
+
+            <div class="heatmap-card">
+                <div class="heatmap-header">
+                    <h3>Today's Demand Forecast</h3>
+                    <div class="heatmap-legend">
+                        <span class="legend-item"><span class="dot low"></span> Standard</span>
+                        <span class="legend-item"><span class="dot med"></span> High</span>
+                        <span class="legend-item"><span class="dot high"></span> Surge (2x+)</span>
                     </div>
-                    <div class="receipt-route">
-                        <div class="route-dots">
-                            <span class="dot-start"></span>
-                            <span class="route-line"></span>
-                            <span class="dot-end"></span>
-                        </div>
-                        <div class="route-text">
-                            <p>Koramangala, Bangalore</p>
-                            <p>Kempegowda Int. Airport</p>
-                        </div>
+                </div>
+
+                <div class="heatmap-chart">
+                    <div class="chart-col">
+                        <div class="chart-bar low" data-height="20%"></div><span class="time-label">6AM</span>
                     </div>
-                    <div class="receipt-breakdown">
-                        <div class="receipt-row"><span>Base Fare</span><span>₹60.00</span></div>
-                        <div class="receipt-row"><span>Distance (42km)</span><span>₹540.00</span></div>
-                        <div class="receipt-row"><span>Time (55m)</span><span>₹82.50</span></div>
-                        <div class="receipt-row highlight-row"><span>Rider Tip (100% yours)</span><span>₹100.00</span>
-                        </div>
-                        <div class="receipt-divider"></div>
-                        <div class="receipt-total">
-                            <span>Your Payout</span>
-                            <span class="total-amount text-gradient-green" id="receiptTotal">₹0.00</span>
-                        </div>
+                    <div class="chart-col">
+                        <div class="chart-bar med" data-height="60%"></div><span class="time-label">9AM</span>
+                    </div>
+                    <div class="chart-col">
+                        <div class="chart-bar low" data-height="30%"></div><span class="time-label">12PM</span>
+                    </div>
+                    <div class="chart-col">
+                        <div class="chart-bar low" data-height="40%"></div><span class="time-label">3PM</span>
+                    </div>
+                    <div class="chart-col">
+                        <div class="chart-bar high" data-height="100%"></div><span class="time-label">6PM</span>
+                    </div>
+                    <div class="chart-col">
+                        <div class="chart-bar med" data-height="75%"></div><span class="time-label">9PM</span>
+                    </div>
+                    <div class="chart-col">
+                        <div class="chart-bar low" data-height="25%"></div><span class="time-label">12AM</span>
                     </div>
                 </div>
             </div>
+        </div>
+    </section>
 
+    <section class="tiers-section reveal-up">
+        <div class="container">
+            <div class="section-header text-center mb-8">
+                <h2 class="section-title">Earn more as you level up</h2>
+                <p class="section-subtitle">Maintain high ratings and complete regular trips to unlock Stackly Pro tiers
+                    for permanent earnings boosts.</p>
+            </div>
+
+            <div class="pro-tiers-grid">
+                <div class="pro-card" data-aos="fade-up" data-aos-delay="400">
+                    <div class="pro-icon silver"><i class="fas fa-medal"></i></div>
+                    <h3>Silver Partner</h3>
+                    <div class="pro-boost">Standard Rates</div>
+                    <ul class="pro-perks">
+                        <li><i class="fas fa-check"></i> Instant Payouts</li>
+                        <li><i class="fas fa-check"></i> Basic Support</li>
+                    </ul>
+                </div>
+
+                <div class="pro-card gold-tier" data-aos="fade-down" data-aos-delay="500">
+                    <div class="pro-badge">Popular</div>
+                    <div class="pro-icon gold"><i class="fas fa-trophy"></i></div>
+                    <h3>Gold Partner</h3>
+                    <div class="pro-boost text-gradient-green">+5% Per Ride</div>
+                    <ul class="pro-perks">
+                        <li><i class="fas fa-check"></i> Priority Airport Rematch</li>
+                        <li><i class="fas fa-check"></i> 5% Fuel Cashabck</li>
+                        <li><i class="fas fa-check"></i> Premium Support</li>
+                    </ul>
+                </div>
+
+                <div class="pro-card" data-aos="fade-up" data-aos-delay="500">
+                    <div class="pro-icon platinum"><i class="fas fa-crown"></i></div>
+                    <h3>Platinum Partner</h3>
+                    <div class="pro-boost">+12% Per Ride</div>
+                    <ul class="pro-perks">
+                        <li><i class="fas fa-check"></i> Highest Dispatch Priority</li>
+                        <li><i class="fas fa-check"></i> 10% Fuel Cashback</li>
+                        <li><i class="fas fa-check"></i> Free Vehicle Maintenance</li>
+                    </ul>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -114,7 +194,7 @@
             </div>
 
             <div class="formula-wrapper">
-                <div class="formula-card">
+                <div class="formula-card" data-aos="flip-down" data-aos-delay="300">
                     <div class="formula-icon"><i class="fas fa-flag-checkered"></i></div>
                     <h4>Base Fare</h4>
                     <p>A flat rate just for picking up the rider.</p>
@@ -122,7 +202,7 @@
 
                 <div class="math-symbol"><i class="fas fa-plus"></i></div>
 
-                <div class="formula-card">
+                <div class="formula-card" data-aos="flip-up" data-aos-delay="400">
                     <div class="formula-icon"><i class="fas fa-route"></i></div>
                     <h4>Time & Distance</h4>
                     <p>Earn per minute and per kilometer driven.</p>
@@ -130,7 +210,7 @@
 
                 <div class="math-symbol"><i class="fas fa-plus"></i></div>
 
-                <div class="formula-card">
+                <div class="formula-card" data-aos="flip-down" data-aos-delay="500">
                     <div class="formula-icon"><i class="fas fa-bolt"></i></div>
                     <h4>Surge Pricing</h4>
                     <p>Multipliers applied during peak busy hours.</p>
@@ -138,7 +218,7 @@
 
                 <div class="math-symbol"><i class="fas fa-plus"></i></div>
 
-                <div class="formula-card highlight-card">
+                <div class="formula-card highlight-card" data-aos="flip-up" data-aos-delay="600">
                     <div class="formula-icon text-gradient-green"><i class="fas fa-hand-holding-usd"></i></div>
                     <h4>100% Tips</h4>
                     <p>Every rupee tipped goes directly to you.</p>
@@ -162,13 +242,13 @@
             </div>
 
             <div class="tool-row reveal-up">
-                <div class="tool-content">
+                <div class="tool-content" data-aos="fade-up" data-aos-delay="100">
                     <div class="tool-icon"><i class="fas fa-fire"></i></div>
                     <h3>Consecutive Trip Bonuses</h3>
                     <p>Stay online during rush hours and complete 3 consecutive rides in a row to unlock an instant cash
                         bonus on top of your standard fares. No strings attached.</p>
                 </div>
-                <div class="tool-visual">
+                <div class="tool-visual" data-aos="fade-down" data-aos-delay="300">
                     <div class="mock-streak">
                         <span class="streak-circle active"><i class="fas fa-check"></i></span>
                         <span class="streak-line active"></span>
@@ -181,13 +261,13 @@
             </div>
 
             <div class="tool-row reverse reveal-up">
-                <div class="tool-content">
+                <div class="tool-content" data-aos="fade-down" data-aos-delay="300">
                     <div class="tool-icon"><i class="fas fa-calendar-check"></i></div>
                     <h3>Weekly Quests</h3>
                     <p>Set your own goals. Choose a target number of trips at the start of the week. Hit the target
                         before Sunday midnight, and a massive lump-sum bonus is yours.</p>
                 </div>
-                <div class="tool-visual">
+                <div class="tool-visual" data-aos="fade-up" data-aos-delay="100">
                     <div class="mock-quest">
                         <div class="quest-header"><span>Weekend Quest</span><span>42 / 50 Trips</span></div>
                         <div class="quest-bar-bg">
@@ -208,7 +288,7 @@
             </div>
 
             <div class="payout-grid">
-                <div class="payout-card">
+                <div class="payout-card" data-aos="flip-up" data-aos-delay="400">
                     <div class="payout-icon"><i class="fas fa-calendar-alt"></i></div>
                     <h3>Standard Weekly Payout</h3>
                     <p>Your earnings are automatically tallied and deposited into your registered bank account every
@@ -219,7 +299,7 @@
                     </ul>
                 </div>
 
-                <div class="payout-card premium-payout">
+                <div class="payout-card premium-payout" data-aos="flip-up" data-aos-delay="500">
                     <div class="payout-badge">Most Popular</div>
                     <div class="payout-icon text-gradient-green"><i class="fas fa-bolt"></i></div>
                     <h3>Instant Flex Pay</h3>
@@ -235,7 +315,7 @@
         </div>
     </section>
 
-    <footer class="driver-footer">
+    <footer class="driver-footer" data-aos="fade-down">
         <div class="container">
             <div class="footer-grid">
 
@@ -296,46 +376,69 @@
         </div>
     </footer>
     <script src="script.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 800,
+            easing: 'ease-out-cubic',
+            once: true,
+            offset: 50,
+        });
+    </script>
     <script>
         document.addEventListener('DOMContentLoaded', () => {
 
-            // Target the receipt total
-            const receiptTotalDisplay = document.getElementById('receiptTotal');
-            if (!receiptTotalDisplay) return;
+            const liveWalletBalance = document.getElementById('liveWalletBalance');
+            const heroProgressBar = document.getElementById('heroProgressBar');
 
-            // The calculated sum of the receipt (60 + 540 + 82.50 + 100)
-            const targetAmount = 782.50;
-            const duration = 2000; // 2 seconds
-            const frameRate = 1000 / 60;
-            const totalFrames = Math.round(duration / frameRate);
+            if (liveWalletBalance) {
+                const targetAmount = 12340.50;
+                const duration = 2000;
+                const frameRate = 1000 / 60;
+                const totalFrames = Math.round(duration / frameRate);
+                let frame = 0;
 
-            let frame = 0;
+                const countUpWallet = () => {
+                    frame++;
+                    const progress = 1 - Math.pow(1 - frame / totalFrames, 4);
+                    const currentAmount = targetAmount * progress;
 
-            const countUpReceipt = () => {
-                frame++;
-                // EaseOutQuart for smooth deceleration
-                const progress = 1 - Math.pow(1 - frame / totalFrames, 4);
-                const currentAmount = targetAmount * progress;
-
-                // Format as Indian Rupee
-                receiptTotalDisplay.textContent = '₹' + currentAmount.toLocaleString('en-IN', {
-                    minimumFractionDigits: 2,
-                    maximumFractionDigits: 2
-                });
-
-                if (frame < totalFrames) {
-                    requestAnimationFrame(countUpReceipt);
-                } else {
-                    // Ensure exact final value at the end
-                    receiptTotalDisplay.textContent = '₹' + targetAmount.toLocaleString('en-IN', {
-                        minimumFractionDigits: 2,
-                        maximumFractionDigits: 2
+                    liveWalletBalance.textContent = '₹' + currentAmount.toLocaleString('en-IN', {
+                        minimumFractionDigits: 2, maximumFractionDigits: 2
                     });
-                }
-            };
 
-            // Start counter slightly after page load so user sees it
-            setTimeout(() => requestAnimationFrame(countUpReceipt), 500);
+                    if (frame < totalFrames) {
+                        requestAnimationFrame(countUpWallet);
+                    } else {
+                        liveWalletBalance.textContent = '₹' + targetAmount.toLocaleString('en-IN', {
+                            minimumFractionDigits: 2, maximumFractionDigits: 2
+                        });
+                        if (heroProgressBar) heroProgressBar.style.width = '82%';
+                    }
+                };
+                setTimeout(() => requestAnimationFrame(countUpWallet), 300);
+            }
+
+            const marqueeTrack = document.getElementById('marqueeTrack');
+            if (marqueeTrack) {
+                const clone = marqueeTrack.innerHTML;
+                marqueeTrack.innerHTML += clone;
+            }
+
+            const heatmapBars = document.querySelectorAll('.chart-bar');
+            if (heatmapBars.length > 0) {
+                const observer = new IntersectionObserver((entries) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            const bar = entry.target;
+                            bar.style.height = bar.getAttribute('data-height');
+                        }
+                    });
+                }, { threshold: 0.5 });
+
+                heatmapBars.forEach(bar => observer.observe(bar));
+            }
+
         });
     </script>
 </body>

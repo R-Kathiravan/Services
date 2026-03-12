@@ -389,7 +389,7 @@
 
 .team-grid {
     display: grid;
-    grid-template-columns: repeat(6, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: var(--space-6);
     max-width: 1200px;
     margin: 0 auto;
@@ -767,5 +767,228 @@
 
     .team-grid {
         grid-template-columns: 1fr;
+    }
+}
+
+.sustainability-section {
+    padding: var(--space-16) 5%;
+    background-color: var(--bg-surface);
+    overflow: hidden;
+}
+
+.sus-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-12);
+    align-items: center;
+}
+
+.sus-badge {
+    display: inline-block;
+    color: var(--color-primary);
+    background: rgba(16, 185, 129, 0.1);
+    padding: 6px 16px;
+    border-radius: 20px;
+    font-weight: 700;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: var(--space-4);
+}
+
+.sus-title {
+    font-size: 3rem;
+    margin-bottom: var(--space-4);
+    line-height: 1.1;
+    color: var(--text-primary);
+}
+
+.sus-desc {
+    font-size: 1.125rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+    margin-bottom: var(--space-6);
+}
+
+.sus-list {
+    list-style: none;
+    padding: 0;
+    margin-bottom: var(--space-6);
+}
+
+.sus-list li {
+    display: flex;
+    align-items: center;
+    gap: var(--space-3);
+    margin-bottom: var(--space-3);
+    font-size: 1.05rem;
+    color: var(--text-primary);
+    font-weight: 500;
+}
+
+.sus-list i {
+    color: var(--color-primary);
+    background: rgba(16, 185, 129, 0.1);
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn-sus-primary {
+    display: inline-block;
+    color: var(--text-primary);
+    text-decoration: none;
+    font-weight: 700;
+    border-bottom: 2px solid var(--color-primary);
+    padding-bottom: 4px;
+    transition: all var(--transition-fast);
+}
+
+.btn-sus-primary:hover {
+    color: var(--color-primary);
+}
+
+.sus-visual {
+    position: relative;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.blob {
+    position: absolute;
+    filter: blur(60px);
+    opacity: 0.5;
+    z-index: 0;
+    border-radius: 50%;
+}
+
+.blob-1 {
+    width: 300px;
+    height: 300px;
+    background: var(--color-accent);
+    top: 10%;
+    right: 10%;
+}
+
+.blob-2 {
+    width: 250px;
+    height: 250px;
+    background: var(--color-primary);
+    bottom: 10%;
+    left: 10%;
+}
+
+.sus-image-wrapper {
+    position: absolute;
+    border-radius: var(--radius-2xl);
+    overflow: hidden;
+    box-shadow: var(--shadow-xl);
+    z-index: 1;
+    border: 1px solid var(--border-light);
+}
+
+.sus-image-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.img-main {
+    width: 350px;
+    height: 400px;
+    right: 5%;
+    z-index: 1;
+}
+
+.img-sub {
+    width: 250px;
+    height: 250px;
+    left: 0;
+    bottom: 5%;
+    z-index: 2;
+    border: 4px solid var(--bg-surface);
+}
+
+.sus-glass-card {
+    position: absolute;
+    top: 15%;
+    left: -5%;
+    background: rgba(17, 24, 39, 0.7);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: var(--space-4);
+    border-radius: var(--radius-lg);
+    display: flex;
+    align-items: center;
+    gap: var(--space-3);
+    z-index: 3;
+    color: #fff;
+}
+
+.sus-glass-card .card-icon {
+    color: #FBBF24;
+    font-size: 1.5rem;
+}
+
+.sus-glass-card h4 {
+    margin: 0;
+    font-size: 1.1rem;
+    color: var(--color-accent);
+}
+
+.sus-glass-card span {
+    font-size: 0.8rem;
+    color: var(--bg-surface);
+}
+
+.float-anim-1 {
+    animation: float-y 6s ease-in-out infinite;
+}
+
+.float-anim-2 {
+    animation: float-y 8s ease-in-out infinite reverse;
+}
+
+.float-anim-3 {
+    animation: float-y 5s ease-in-out infinite 1s;
+}
+
+@keyframes float-y {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-15px);
+    }
+}
+
+@media (max-width: 992px) {
+    .sus-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .sus-visual {
+        margin-top: var(--space-8);
+        height: 400px;
+    }
+
+    .img-main {
+        right: 10%;
+    }
+
+    .img-sub {
+        left: 10%;
+    }
+
+    .sus-glass-card {
+        left: 5%;
     }
 }
