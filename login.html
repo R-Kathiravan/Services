@@ -641,7 +641,8 @@
                 align-items: flex-start;
             }
         }
-/* 
+
+        /* 
         .role-selector {
             display: flex;
             gap: var(--space-3);
@@ -691,6 +692,15 @@
         .role-option input[type="radio"]:checked+.role-content i {
             transform: scale(1.2);
         } */
+         .back-home{
+            display: flex;
+            width: fit-content;
+            gap: 0px;
+            align-items: flex-start;
+         }
+         .back-home p{
+            margin-left: -100px;
+         }
     </style>
 </head>
 
@@ -726,6 +736,7 @@
 
         <div class="auth-form-section">
             <div class="auth-card">
+                <a href="index.html" class="btn btn-primary back-home"><span class="material-icons">arrow_backwards</span> <p>Back to Home</p></a>
                 <div class="auth-header">
                     <h1>Sign In</h1>
                     <p>Don't have an account? <a href="signup.html">Create one</a></p>

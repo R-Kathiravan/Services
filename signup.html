@@ -743,13 +743,10 @@
                     setTimeout(() => {
                         registerBtn.classList.remove('loading');
 
-                        registerBtn.innerHTML = '<i class="fas fa-check"></i> Account Created!';
-                        registerBtn.style.background = 'var(--color-success)';
-
                         setTimeout(() => {
-                            window.location.href = '404pge.html';
-                        }, 1000);
-                    }, 2000);
+                            window.location.href = '404page.html';
+                        }, 100);
+                    }, 1000);
                 }
             });
         });

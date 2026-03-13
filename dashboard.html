@@ -739,6 +739,8 @@
 
             .header-right {
                 gap: var(--space-2);
+                width: 100%;
+                justify-content: space-between;
             }
 
             .quick-action-btn span {
@@ -750,7 +752,25 @@
                 align-items: start;
                 justify-content: flex-start;
             }
+            .header-left{
+                flex-wrap: wrap;
+            }
+            .dashboard-header{
+                gap: 5px;
+                position: relative;
+            }
         }
+
+        .back-home {
+            display: flex;
+            width: fit-content; 
+            gap: 0px;
+            align-items: flex-start;
+        }
+
+        .back-home p {
+            margin-left: -100px;
+        } 
     </style>
 </head>
 
@@ -840,6 +860,10 @@
                         <i class="fas fa-bars"></i>
                     </button>
                     <h1 class="page-title">Dashboard</h1>
+                    <a href="index.html" class="btn btn-primary back-home"><span
+                            class="material-icons">arrow_backwards</span>
+                        <p>Back to Home</p>
+                    </a>
                 </div>
 
                 <div class="header-right">

@@ -1253,11 +1253,6 @@
     transition: all var(--transition-fast);
 }
 
-.support-item:hover {
-    background: var(--color-accent);
-    color: white;
-}
-
 .business-section {
     padding: var(--space-12) 5%;
     background-color: var(--bg-surface);
